@@ -1,0 +1,53 @@
+{
+  "vehicles": [
+    "demonhawk",
+    "18performante",
+    "r8ppi",
+    "eleanor",
+    "ambulance3",
+    "ambulance5",
+    "ambulance6",
+    "ambulance7",
+    "ambulance8",
+    "policeb1",
+    "policeb2",
+    "policeb3",
+    "policeb4",
+    "policeb5",
+    "policeb6",
+    "policeb7",
+    "policeb8",
+    "policeb9",
+    "sheriffw1",
+    "sheriffw2",
+    "sheriffw3",
+    "sheriffw4",
+    "sheriffb1",
+    "sheriffb2",
+    "sheriffb3",
+    "hpw1",
+    "hpw2",
+    "hpw3",
+    "hpw4",
+    "hpw5",
+    "hpw6",
+    "hpw7",
+    "hpb1",
+    "hpb2",
+    "hpb3",
+    "hpb4",
+    "hpb5",
+    "fbipw1",
+    "fbipw2",
+    "jp12",
+    "jeep2012"
+  ],
+  "peds": [
+    "addonpedname1",
+    "addonpedname2"
+  ],
+  "weapons": [
+    "addonweaponname1",
+    "addonweaponname2"
+  ]
+}
