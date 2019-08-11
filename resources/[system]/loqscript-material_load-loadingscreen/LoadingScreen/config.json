@@ -1,0 +1,42 @@
+[
+	{
+		"useBackgroundColour" : "false",
+		"backgroundColour" : "20,20,20",
+		"useBackgroundImage" : "true",
+		"backgroundImagePath" : "images/backgroundImg6.jpg",
+		"useTextColour" : "false",
+		"textColour" : "0,0,0",
+		"useBoldText" : "false",
+		"serverTitle" : "Scuffed RP",
+		"playAudioInBackground" : "true",
+		"YTVideoID" : "GvmZbb6TsCQ",
+		"videoVolume" : "3"
+	},
+	{
+		"rule1" : "Do not RDM or VDM",
+		"rule2" : "A microphone is a requirement",
+		"rule3" : "Exploiting Bugs = Perma Ban",
+		"rule4" : "Hacking = Perma Ban",
+		"rule5" : "No racism / polictics / religion",
+		"rule6" : "Do not harass others OOC",
+		"rule7" : "Dont be a dick! (Rule of Will Wheaton)"
+	},
+	{
+		"servers1" : "Website: www.idgaf.com",
+		"servers2" : "Teamspeak: Fuck Teamspeak",
+		"servers3" : "Discord: https://discord.gg/VQxpppP",
+		"servers4" : "Not a direct clone of SoL",
+		"servers5" : "Because I have class.",
+		"servers6" : "",
+		"servers7" : "Song: Roundtable Rival - Lindsey Stirling "
+	},
+	{
+		"content1" : "Character Customization",
+		"content2" : "Cellphone Messaging & Calling",
+		"content3" : "Banks & ATMs",
+		"content4" : "Multiple Jobs (mining, fishing, drugs, etc)",
+		"content5" : "Whitelisted Police & EMT Force",
+		"content6" : "Custom Vehicle Models",
+		"content7" : "Purchasable & Storable Vehicles"
+	}
+]
