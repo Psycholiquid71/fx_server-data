@@ -207,6 +207,11 @@ Config.AuthorizedVehicles = {
 			model = 'pbus',
 			label = 'Police Prison Bus',
 			price = 1
+		},
+		{
+			model = 'vulcan',
+			label = 'Police Vulcan Test',
+			price = 1
 		}
 		
 	},

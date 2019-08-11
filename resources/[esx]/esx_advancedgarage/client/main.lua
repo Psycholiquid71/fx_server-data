@@ -157,7 +157,9 @@ function ListOwnedCarsMenu()
 				if Config.UseVehicleNamesLua then
 					local hashVehicule = v.vehicle.model
 					local aheadVehName = GetDisplayNameFromVehicleModel(hashVehicule)
+					--local aheadVehName = string.gsub(GetDisplayNameFromVehicleModel(hashVehicule), "%s", "_")
 					local vehicleName  = GetLabelText(aheadVehName)
+					--print(hashVehicule.." | "..GetDisplayNameFromVehicleModel(hashVehicule).." | "..vehicleName)
 					local plate        = v.plate
 					local labelvehicle
 					

@@ -1,5 +1,5 @@
 cfg = {}
 
-cfg.healthtext = false
-cfg.armortext = false
+cfg.healthtext = true
+cfg.armortext = true
 cfg.deadtext = "Dead!"

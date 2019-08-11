@@ -967,6 +967,50 @@
         "IsZero": false
       },
       "heading": 312.33844
+    },
+    {
+      "name": "Sandy Shores Airfield",
+      "coordinates": {
+        "X": 1052.98132,
+        "Y": 3080.919,
+        "Z": 41.4908829,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 288.2079
+    },
+    {
+      "name": "Underground Car Lot",
+      "coordinates": {
+        "X": 157.218079,
+        "Y": -713.78186,
+        "Z": 33.1312,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 65.84896
+    },
+    {
+      "name": "Dealership",
+      "coordinates": {
+        "X": -40.90334,
+        "Y": -1104.64746,
+        "Z": 26.4223518,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 33.39628
+    },
+    {
+      "name": "GoPostal",
+      "coordinates": {
+        "X": 82.45562,
+        "Y": 107.476845,
+        "Z": 79.1979,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 353.507019
     }
   ],
   "blips": [
