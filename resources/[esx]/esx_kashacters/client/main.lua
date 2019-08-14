@@ -72,7 +72,8 @@ AddEventHandler('kashactersC:SpawnCharacter', function(spawn, isnew)
     SetCamActiveWithInterp(cam2, cam, 900, true, true)
     Citizen.Wait(900)
     exports.spawnmanager:setAutoSpawn(false)
-    TriggerEvent('esx_ambulancejob:multicharacter', source)
+    --TriggerEvent('esx_ambulancejob:multicharacter', source)
+	TriggerEvent("andreas_spawnlocation:setNui")
 	
  if isnew then
 	TriggerEvent('esx_identity:showRegisterIdentity')

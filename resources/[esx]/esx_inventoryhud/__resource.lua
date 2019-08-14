@@ -14,6 +14,7 @@ client_scripts {
   "client/player.lua",
   "client/motels.lua",
   "client/beds.lua",
+  "client/glovebox.lua",
   "locales/cs.lua",
   "locales/en.lua",
   "locales/fr.lua",

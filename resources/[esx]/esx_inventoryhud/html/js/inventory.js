@@ -16,7 +16,9 @@ window.addEventListener("message", function (event) {
         } else if (type === "motels") { //Added for motels to work
             $(".info-div").hide();
         } else if (type === "motelsbed") { //Added for motels to work
-            $(".info-div").hide();    
+            $(".info-div").hide(); 
+		} else if (type === "glovebox") {
+            $(".info-div").show();			
         } else if (type === "player") {
             $(".info-div").show();
         }
@@ -303,7 +305,13 @@ $(document).ready(function () {
                 $.post("http://esx_inventoryhud/TakeFromMotelBed", JSON.stringify({
                     item: itemData,
                     number: parseInt($("#count").val())
-                }));    
+                })); 
+			} else if (type === "glovebox" && itemInventory === "second") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/TakeFromGlovebox", JSON.stringify({
+                    item: itemData,
+                    number: parseInt($("#count").val())
+                }));				
             } else if (type === "player" && itemInventory === "second") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/TakeFromPlayer", JSON.stringify({
@@ -342,7 +350,13 @@ $(document).ready(function () {
                 $.post("http://esx_inventoryhud/PutIntoMotelBed", JSON.stringify({
                     item: itemData,
                     number: parseInt($("#count").val())
-                }));    
+                }));
+			} else if (type === "glovebox" && itemInventory === "main") {
+				disableInventory(500);
+				$.post("http://esx_inventoryhud/PutIntoGlovebox", JSON.stringify({
+					item: itemData,
+					number: parseInt($("#count").val())
+				}));				
             } else if (type === "player" && itemInventory === "main") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/PutIntoPlayer", JSON.stringify({

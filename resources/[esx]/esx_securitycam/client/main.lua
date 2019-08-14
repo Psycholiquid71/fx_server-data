@@ -87,7 +87,7 @@ Citizen.CreateThread(function()
 					DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
 
 					if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < 1.5 then
-						DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Starta kamerorna.", 0.80)
+						DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Turn on the cameras.", 0.80)
 					end
 				end
 			end
@@ -102,7 +102,7 @@ Citizen.CreateThread(function()
 						DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
 
 						if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < 1.5 then
-							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Börja hacka kamerorna.", 0.80)
+							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Start hacking the cameras.", 0.80)
 						end
 					end
 				end
@@ -118,7 +118,7 @@ Citizen.CreateThread(function()
 						DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
 
 						if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < 1.5 then
-							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Börja hacka kamerorna.", 0.80)
+							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Start hacking the cameras.", 0.80)
 						end
 					end
 				end
@@ -132,7 +132,7 @@ Citizen.CreateThread(function()
 						DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
 
 						if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < 1.5 then
-							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Ta bort virus.", 0.80)
+							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Remove virus.", 0.80)
 						end
 					end
 				end
@@ -146,7 +146,7 @@ Citizen.CreateThread(function()
 						DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
 
 						if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < 1.5 then
-							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Ta bort virus.", 0.80)
+							DrawText3D(v.Pos.x, v.Pos.y, v.Pos.z+0.9, "~w~[~g~E~w~] Remove virus.", 0.80)
 						end
 					end
 				end
@@ -611,7 +611,7 @@ Citizen.CreateThread(function()
 				end
 			elseif not policeHacked then
 				TriggerEvent("mhacking:show")
-				TriggerEvent("mhacking:start", 6, 45, mycbpolice)
+				TriggerEvent("mhacking:start", 6, 30, mycbpolice)
 				CurrentAction = nil
 			end
 		end
@@ -638,7 +638,7 @@ Citizen.CreateThread(function()
 				end
 			elseif not bankHacked then
 				TriggerEvent("mhacking:show")
-				TriggerEvent("mhacking:start", 6, 45, mycbbank)
+				TriggerEvent("mhacking:start", 6, 30, mycbbank)
 				CurrentAction = nil
 			end
 		end
