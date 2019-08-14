@@ -811,12 +811,12 @@ end)
 RegisterNetEvent('esx_securitycam:unhackanim')
 AddEventHandler('esx_securitycam:unhackanim', function()
 	local pid = PlayerPedId()
-	RequestAnimDict("anim@heists@humane_labs@emp@hack_door")
-	while (not HasAnimDictLoaded("anim@heists@humane_labs@emp@hack_door")) do Citizen.Wait(0) end
+	RequestAnimDict("mp_bank_heist_1")
+	while (not HasAnimDictLoaded("mp_bank_heist_1")) do Citizen.Wait(0) end
 
-	TaskPlayAnim(pid,"anim@heists@humane_labs@emp@hack_door","hack_loop",100.0, 200.0, 0.3, 9, 0.2, 0, 0, 0)
+	TaskPlayAnim(pid,"mp_bank_heist_1","hack_loop",100.0, 200.0, 0.3, 9, 0.2, 0, 0, 0)
 	Citizen.Wait(1000 * Config.AnimTime)
-	StopAnimTask(pid, "anim@heists@humane_labs@emp@hack_door","hack_loop", 1.0)
+	StopAnimTask(pid, "mp_bank_heist_1","hack_loop", 1.0)
 end)
 
 Citizen.CreateThread(function()
