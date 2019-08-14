@@ -32,6 +32,7 @@ local useInteractSound = true -- if you wanna use InteractSound (when u lockpick
 ------------------------------------------------------
 ------------------------------------------------------
 
+
 ------ l o c a l e s ------
 local noCar = "No car nearby"
 local text = "~r~lockpick~w~ door?" -- lockpick the door
@@ -54,7 +55,6 @@ local lastDoor = 0
 local noiseXYZ = { x = 346.53 , y = -1003.44 , z = -99.2}
 ---------------------------
 
-
 local PlayerData = {}
 
 Citizen.CreateThread(function ()
@@ -62,6 +62,16 @@ Citizen.CreateThread(function ()
     TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
     Citizen.Wait(1)
   end
+
+  TriggerEvent('instance:registerType', 'house')
+
+  RegisterNetEvent('instance:onCreate')
+  AddEventHandler('instance:onCreate', function(instance)
+    if instance.type == 'house' then
+      TriggerEvent('instance:enter', instance)
+    end
+  end)
+
 while ESX.GetPlayerData() == nil do
   Citizen.Wait(10)
 end
@@ -84,7 +94,7 @@ RegisterNetEvent('99kr-burglary:onUse')
 AddEventHandler('99kr-burglary:onUse', function()
 	local playerPed		= GetPlayerPed(-1)
   local coords		= GetEntityCoords(playerPed)
-	if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
+if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
 		local vehicle = nil
 
 		if IsPedInAnyVehicle(playerPed, false) then
@@ -100,16 +110,16 @@ AddEventHandler('99kr-burglary:onUse', function()
       if randi == 1 then
       TriggerServerEvent('99kr-burglary:removeKit')
       end
-			TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_BUM_BIN", 0, true)
+		  TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_BUM_BIN", 0, true)
 			  if useInteractSound then
-			    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3.0, 'lockpick', 0.7)
+			    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3.0, 'adLockpick', 0.7)
 			  end
 
 			Citizen.CreateThread(function()
 				ThreadID = GetIdOfThisThread()
-				CurrentAction = 'lockpick'
+				CurrentAction = 'adLockpick'
 
-				Citizen.Wait(22 * 1000)
+				Citizen.Wait(5000)
 
         if CurrentAction ~= nil then
           procent(100)
@@ -117,11 +127,11 @@ AddEventHandler('99kr-burglary:onUse', function()
 					SetVehicleDoorsLockedForAllPlayers(vehicle, false)
 					ClearPedTasksImmediately(playerPed)
 
-					ESX.ShowNotification(carUnlocked)
+					exports['mythic_notify']:DoHudText('success', 'Vehicle unlocked')
 				end
 				
 				CurrentAction = nil
-				--TerminateThisThread()
+				TerminateThisThread()
 			end)
 		end
 
@@ -143,12 +153,8 @@ AddEventHandler('99kr-burglary:onUse', function()
 		end)
 	end
 end)
-
-
-
-
-RegisterNetEvent('99kr-burglary:Lockpick')
-AddEventHandler('99kr-burglary:Lockpick', function(xPlayer)
+RegisterNetEvent('99kr-burglary:adLockpick')
+AddEventHandler('99kr-burglary:adLockpick', function(xPlayer)
   lockpicking = true
   Citizen.Wait(100)
   lockpicking = false
@@ -161,7 +167,7 @@ local burglaryPlaces = {
     locked = true,
     pos = { x = 1229.1, y = -725.47, z = 60.80, h = 89.98 }, -- door coords
     inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
-    animPos = { x = 1229.53, y = -724.81, z = 60.96, h = 277.96 }, -- The animation position
+    animPos = { x = 1229.1, y = -725.47, z = 60.80, h = 89.98 }, -- The animation position
     doorTime = {}
     },
   ["Grove Street 1"] = {
@@ -175,9 +181,145 @@ local burglaryPlaces = {
   ["Grove Street 2"] = {
     door = 3,
      locked = true,
-    pos = { x = 85.58 , y = -1959.38 , z = 21.12, h = 220.54 },  -- door coords
+    pos = { x = 85.58 , y = -1959.38 , z = 21.33, h = 196.13 },  -- door coords
     inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
-    animPos = { x = 85.58 , y = -1959.38 , z = 21.12, h = 220.54 }, -- The animation position
+    animPos = { x = 85.58 , y = -1959.38 , z = 21.33, h = 196.13 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 4"] = {
+    door = 4,
+     locked = true,
+    pos = { x = 76.4 , y = -1948.07 , z = 21.17, h = 68.8 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 76.4 , y = -1948.07 , z = 21.17, h = 68.8 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 5"] = {
+    door = 5,
+     locked = true,
+    pos = { x = 72.22 , y = -1939.12 , z = 21.37, h = 126.91 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 72.22 , y = -1939.12 , z = 21.37, h = 126.91 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 6"] = {
+    door = 6,
+     locked = true,
+    pos = { x = 118.43 , y = -1920.96 , z = 21.32, h = 240.15 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 118.43 , y = -1920.96 , z = 21.32, h = 240.15 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 7"] = {
+    door = 7,
+     locked = true,
+    pos = { x = 100.86 , y = -1912.17 , z = 21.41, h = 333.28 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 100.86 , y = -1912.17 , z = 21.41, h = 333.28 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 8"] = {
+    door = 8,
+     locked = true,
+    pos = { x = 56.56 , y = -1922.7 , z = 21.91, h = 156.18 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 56.56 , y = -1922.7 , z = 21.91, h = 156.18 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 8"] = {
+    door = 9,
+     locked = true,
+    pos = { x = 39.0 , y = -1911.65 , z = 21.95, h = 41.56 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 39.0 , y = -1911.65 , z = 21.95, h = 41.56 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 9"] = {
+    door = 10,
+     locked = true,
+    pos = { x = 5.2 , y = -1884.25 , z = 23.7, h = 229.01 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 5.2 , y = -1884.25 , z = 23.7, h = 229.01 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 10"] = {
+    door = 11,
+     locked = true,
+    pos = { x = -4.72 , y = -1872.05 , z = 24.15, h = 236.19 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -4.72 , y = -1872.05 , z = 24.15, h = 236.19 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 11"] = {
+    door = 12,
+     locked = true,
+    pos = { x = -20.64 , y = -1859.1 , z = 25.41, h = 227.03 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -20.64 , y = -1859.1 , z = 25.41, h = 227.03 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 12"] = {
+    door = 13,
+     locked = true,
+    pos = { x = -34.19 , y = -1847.15 , z = 26.19, h = 49.77 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -34.19 , y = -1847.15 , z = 26.19, h = 49.77 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 13"] = {
+    door = 14,
+     locked = true,
+    pos = { x = -50.51 , y = -1783.19 , z = 28.3, h = 312.51 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -50.51 , y = -1783.19 , z = 28.3, h = 312.51 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 14"] = {
+    door = 15,
+     locked = true,
+    pos = { x = -42.01 , y = -1792.18 , z = 27.83, h = 306.68 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -42.01 , y = -1792.18 , z = 27.83, h = 306.68 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 15"] = {
+    door = 16,
+     locked = true,
+    pos = { x = 21.23 , y = -1844.74 , z = 24.6, h = 229.17 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 21.23 , y = -1844.74 , z = 24.6, h = 229.17 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 16"] = {
+    door = 17,
+     locked = true,
+    pos = { x = 29.92 , y = -1854.71 , z = 24.07, h = 235.18 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 29.92 , y = -1854.71 , z = 24.07, h = 235.18 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 17"] = {
+    door = 18,
+     locked = true,
+    pos = { x = 45.93 , y = -1864.17 , z = 23.28, h = 312.99 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 45.93 , y = -1864.17 , z = 23.28, h = 312.99 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 18"] = {
+    door = 19,
+     locked = true,
+    pos = { x = 54.4 , y = -1873.01 , z = 22.81, h = 307.48 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 45.93 , y = -1864.17 , z = 23.28, h = 312.99 }, -- The animation position
+    doorTime = {}
+   },
+   ["Grove Street 3"] = {
+    door = 20,
+     locked = true,
+    pos = { x = 114.4 , y = -1961.23 , z = 21.12, h = 220.54 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 114.4 , y = -1961.23 , z = 21.12, h = 220.54 }, -- The animation position
     doorTime = {}
    }
 }
@@ -223,7 +365,7 @@ Citizen.CreateThread(function()
             RemoveResidents()
             savedDoor = v.door
             houseIn = house
-            v.doorTime = GetGameTimer() + 20 * 1000
+            v.doorTime = GetGameTimer() + 600 * 1000
             confMenu(house)
             for k, v in pairs(burglaryInside) do
               if v.amount < 1 then
@@ -297,7 +439,6 @@ Citizen.CreateThread(function()
           teleport(exitPos)
           lastDoor = 0
           timer = true
-          
         end
       end
     end
@@ -323,15 +464,15 @@ function confMenu(house)
   exitPos = {pos ={x = v.pos.x, y = v.pos.y, z = v.pos.z, h = v.pos.h }}
   Citizen.CreateThread(function()
     local inventory = ESX.GetPlayerData().inventory
-    local LockpickAmount = nil
+    local adLockpickAmount = nil
       for i=1, #inventory, 1 do                          
-        if inventory[i].name == 'lockpick' then
-          LockpickAmount = inventory[i].count
+        if inventory[i].name == 'adLockpick' then
+          adLockpickAmount = inventory[i].count
         end
       end
-        if LockpickAmount > 0 then
+        if adLockpickAmount > 0 then
           SpawnResidents(home)
-          HouseBreak(house)
+          HouseBreak(house) 
           v.locked = false
           Citizen.Wait(math.random(15000,30000))
           local random = math.random(0, 100)
@@ -341,8 +482,10 @@ function confMenu(house)
         else 
           ESX.ShowNotification(noLockpickText)
         end
+       
 	end)
 end
+
                         
 function steal(k)
   local goods = item[math.random(#item)] 
@@ -354,7 +497,7 @@ function steal(k)
   Citizen.Wait(2000)
   procent(50)
   TriggerServerEvent('99kr-burglary:Add', goods, 1)
-  ESX.ShowNotification(youFound .. k ..' '.. goods)
+  exports['mythic_notify']:DoHudText('success', 'Search Complete')
   values.amount = values.amount - 1
   ClearPedTasks(playerPed)
   FreezeEntityPosition(playerPed, false)
@@ -371,18 +514,20 @@ function HouseBreak(house)
   loaddict("mini@safe_cracking")
   TaskPlayAnim(playerPed, "mini@safe_cracking", "idle_base", 3.5, - 8, - 1, 2, 0, 0, 0, 0, 0)
   if useInteractSound then
-    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3.0, 'lockpick', 0.7)
+    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3.0, 'adlockpick', 0.7)
   end
   procent(70)
   rand = math.random(1, 10)
   if rand == 1 then
-    TriggerServerEvent('99kr-burglary:Remove', 'lockpick', 1)
+    TriggerServerEvent('99kr-burglary:Remove', 'adlockpick', 1)
   end  
   fade()
   ClearPedTasks(playerPed)
   FreezeEntityPosition(playerPed, false)
   SetCoords(playerPed, v.inside.x, v.inside.y, v.inside.z - 0.98)
   SetEntityHeading(playerPed, v.inside.h)
+  TriggerEvent('instance:create', 'house')
+ 
 end 
 
 function ShowSubtitle(text)
@@ -444,6 +589,7 @@ function fade()
   DoScreenFadeIn(1000)
 end
 
+
 function loaddict(dict)
   while not HasAnimDictLoaded(dict) do
     RequestAnimDict(dict)
@@ -477,6 +623,7 @@ function SpawnResidents(home)
 		while not HasModelLoaded("a_f_y_hipster_01") do 
 		  Wait(0)
     end
+    
     for _,resident in pairs(residents) do
 		 ped = CreatePed(4, resident.model, resident.coord, resident.rotation, false, false)
 			table.insert(peds, ped)
@@ -495,13 +642,15 @@ function SpawnResidents(home)
 
       if resident.aggressive then
         GiveWeaponToPed(ped, GetHashKey("WEAPON_PISTOL"), 255, true, false)
+      
       end
 
       
   end
-      
-  
+
+ 
 end
+
 
 function RemoveResidents()
 	for _,ped in pairs(peds) do
@@ -546,7 +695,9 @@ function teleport(confMenu)
   SetCoords(playerPed, confMenu.pos.x, confMenu.pos.y, confMenu.pos.z - 0.98)
   SetEntityHeading(playerPed, confMenu.pos.h)
   DoingBreak = false
+  TriggerEvent('instance:close')
 end
+
 
 function GetHouseValues(house, pair)
   for k, v in pairs(pair) do
@@ -622,8 +773,8 @@ Citizen.CreateThread(function()
         local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
         local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, gym[k].x, gym[k].y, gym[k].z)
         if dist <= 0.5 then
-          DrawText3D(plyCoords.x, plyCoords.y, plyCoords.z, "~w~Press ~r~[H] ~w~ to use pawn shop!", 0.4)
-          if IsControlJustPressed(0, Keys['H'])then
+          DrawText3D(plyCoords.x, plyCoords.y, plyCoords.z, "~w~Press ~r~[E] ~w~ to use pawn shop!", 0.4)
+          if IsControlJustPressed(0, Keys['E'])then
             OpenSellMenu()
           end
         end		
@@ -638,6 +789,7 @@ function OpenSellMenu()
       'default', GetCurrentResourceName(), 'pawn_sell_menu',
       {
           title    = 'Do you have any of the following you want to sell?',
+          align    = 'top-right',
           elements = {
               {label = 'Ring ($100)', value = 'ring'},
               {label = 'Rolex ($350)', value = 'rolex'},
@@ -651,6 +803,8 @@ function OpenSellMenu()
       },
       function(data, menu)
           if data.current.value == 'ring' then
+														
+												  
               TriggerServerEvent('99kr-burglary:sellring')
           elseif data.current.value == 'rolex' then
               TriggerServerEvent('99kr-burglary:sellrolex')
