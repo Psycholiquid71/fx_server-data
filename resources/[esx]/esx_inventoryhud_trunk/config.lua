@@ -115,15 +115,15 @@ Config.VehicleLimit = {
     [10] = 300000, --Industrial
     [11] = 70000, --Utility
     [12] = 100000, --Vans
-    [13] = 0, --Cycles
-    [14] = 5000, --Boats
+    [13] = 5000, --Cycles
+    [14] = 15000, --Boats
     [15] = 20000, --Helicopters
-    [16] = 0, --Planes
+    [16] = 20000, --Planes
     [17] = 40000, --Service
     [18] = 40000, --Emergency
-    [19] = 0, --Military
+    [19] = 20000, --Military
     [20] = 300000, --Commercial
-    [21] = 0 --Trains
+    [21] = 300000, --Trains
 }
 
 Config.VehiclePlate = {
