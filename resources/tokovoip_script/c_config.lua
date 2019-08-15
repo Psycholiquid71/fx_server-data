@@ -40,7 +40,7 @@ TokoVoipConfig = {
 		local_click_off = false, -- Is local click off sound active
 		remote_click_on = true, -- Is remote click on sound active
 		remote_click_off = true, -- Is remote click off sound active
-		enableStereoAudio = true, -- If set to true, positional audio will be stereo (you can hear people more on the left or the right around you)
+		enableStereoAudio = false, -- If set to true, positional audio will be stereo (you can hear people more on the left or the right around you)
 
 		localName = "", -- If set, this name will be used as the user's teamspeak display name
 		localNamePrefix = "[" .. GetPlayerServerId(PlayerId()) .. "] ", -- If set, this prefix will be added to the user's teamspeak display name

@@ -371,7 +371,6 @@ Citizen.CreateThread(
             Citizen.Wait(1)
             if isInInventory then
                 local playerPed = PlayerPedId()
-				EnableControlAction(0, Keys["N"], true) --Enable Talking
                 DisableControlAction(0, 1, true) -- Disable pan
                 DisableControlAction(0, 2, true) -- Disable tilt
                 DisableControlAction(0, 24, true) -- Attack

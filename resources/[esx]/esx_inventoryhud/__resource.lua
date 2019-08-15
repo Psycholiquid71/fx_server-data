@@ -9,12 +9,13 @@ ui_page "html/ui.html"
 client_scripts {
   "@es_extended/locale.lua",
   "client/main.lua",
+  "client/shop.lua",
   "client/trunk.lua",
   "client/property.lua",
-  "client/player.lua",
   "client/motels.lua",
   "client/beds.lua",
   "client/glovebox.lua",
+  "client/player.lua",
   "locales/cs.lua",
   "locales/en.lua",
   "locales/fr.lua",
@@ -22,6 +23,7 @@ client_scripts {
 }
 
 server_scripts {
+  "@mysql-async/lib/MySQL.lua",
   "@es_extended/locale.lua",
   "server/main.lua",
   "locales/cs.lua",

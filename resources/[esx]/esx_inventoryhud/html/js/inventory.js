@@ -13,13 +13,15 @@ window.addEventListener("message", function (event) {
             $(".info-div").show();
         } else if (type === "property") {
             $(".info-div").hide();
-        } else if (type === "motels") { //Added for motels to work
+		} else if (type === "motels") { //Added for motels to work
             $(".info-div").hide();
         } else if (type === "motelsbed") { //Added for motels to work
             $(".info-div").hide(); 
 		} else if (type === "glovebox") {
-            $(".info-div").show();			
-        } else if (type === "player") {
+            $(".info-div").show();														  
+		} else if (type === "player") {
+            $(".info-div").show();
+        } else if (type === "shop") {
             $(".info-div").show();
         }
 
@@ -69,6 +71,8 @@ window.addEventListener("message", function (event) {
         });
     } else if (event.data.action == "setSecondInventoryItems") {
         secondInventorySetup(event.data.itemList);
+    } else if (event.data.action == "setShopInventoryItems") {
+        shopInventorySetup(event.data.itemList)
     } else if (event.data.action == "setInfoText") {
         $(".info-div").html(event.data.text);
     } else if (event.data.action == "nearPlayers") {
@@ -115,6 +119,19 @@ function secondInventorySetup(items) {
 
         $("#otherInventory").append('<div class="slot"><div id="itemOther-' + index + '" class="item" style = "background-image: url(\'img/items/' + item.name + '.png\')">' +
             '<div class="item-count">' + count + '</div> <div class="item-name">' + item.label + '</div> </div ><div class="item-name-bg"></div></div>');
+        $('#itemOther-' + index).data('item', item);
+        $('#itemOther-' + index).data('inventory', "second");
+    });
+}
+
+function shopInventorySetup(items) {
+    $("#otherInventory").html("");
+    $.each(items, function (index, item) {
+        //count = setCount(item)
+        cost = setCost(item);
+
+        $("#otherInventory").append('<div class="slot"><div id="itemOther-' + index + '" class="item" style = "background-image: url(\'img/items/' + item.name + '.png\')">' +
+            '<div class="item-count">' + cost + '</div> <div class="item-name">' + item.label + '</div> </div ><div class="item-name-bg"></div></div>');
         $('#itemOther-' + index).data('item', item);
         $('#itemOther-' + index).data('inventory', "second");
     });
@@ -176,6 +193,18 @@ function setCount(item) {
     }
 
     return count;
+}
+
+function setCost(item) {
+    cost = item.price
+
+    if (item.price == 0){
+        cost = "$" + item.price
+    }
+    if (item.price > 0) {
+        cost = "$" + item.price
+    }
+    return cost;
 }
 
 function formatMoney(n, c, d, t) {
@@ -294,7 +323,7 @@ $(document).ready(function () {
                     item: itemData,
                     number: parseInt($("#count").val())
                 }));
-            } else if (type === "motels" && itemInventory === "second") { //Added for lsrp-motels
+			} else if (type === "motels" && itemInventory === "second") { //Added for lsrp-motels
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/TakeFromMotel", JSON.stringify({
                     item: itemData,
@@ -311,10 +340,16 @@ $(document).ready(function () {
                 $.post("http://esx_inventoryhud/TakeFromGlovebox", JSON.stringify({
                     item: itemData,
                     number: parseInt($("#count").val())
-                }));				
+                }));	
             } else if (type === "player" && itemInventory === "second") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/TakeFromPlayer", JSON.stringify({
+                    item: itemData,
+                    number: parseInt($("#count").val())
+                }));
+            } else if (type === "shop" && itemInventory === "second") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/TakeFromShop", JSON.stringify({
                     item: itemData,
                     number: parseInt($("#count").val())
                 }));
@@ -339,7 +374,7 @@ $(document).ready(function () {
                     item: itemData,
                     number: parseInt($("#count").val())
                 }));
-            } else if (type === "motels" && itemInventory === "main") { //Added for lsrp-motels
+			} else if (type === "motels" && itemInventory === "main") { //Added for lsrp-motels
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/PutIntoMotel", JSON.stringify({
                     item: itemData,
@@ -356,8 +391,8 @@ $(document).ready(function () {
 				$.post("http://esx_inventoryhud/PutIntoGlovebox", JSON.stringify({
 					item: itemData,
 					number: parseInt($("#count").val())
-				}));				
-            } else if (type === "player" && itemInventory === "main") {
+				}));												   
+			} else if (type === "player" && itemInventory === "main") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/PutIntoPlayer", JSON.stringify({
                     item: itemData,
