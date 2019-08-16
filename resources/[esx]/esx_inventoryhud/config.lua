@@ -48,20 +48,19 @@ Config.Shops = {
         Items = {
             {name = 'bread'},
             {name = 'water'},
-            {name = 'cigarette'},
+            {name = 'firstaidkit'},
             {name = 'lighter'},
             {name = 'rollingpaper'},
-            {name = 'phone'},
+            {name = 'lotteryticket'},
             {name = 'sandwich'},
             {name = 'hamburger'},
-            {name = 'cupcake'},
+            {name = 'bandage'},
             {name = 'chips'},
-            {name = 'pistachio'},
-            {name = 'chocolate'},
-            {name = 'cashew'},
+            {name = 'narcan'},
+            {name = 'bobbypin'},
+            {name = 'adlockpick'},
             {name = 'cocacola'},
-            {name = 'drpepper'},
-            {name = 'energy'},
+            {name = 'notepad'},
             {name = 'lemonade'},
             {name = 'icetea'}
         }
@@ -106,13 +105,14 @@ Config.Shops = {
             {name = 'lowgradefert'},
             {name = 'highgradefert'},
             {name = 'plantpot'},
-            {name = 'drugscales'}
+            {name = 'drugscales'},
+            {name = 'adlockpick'}
         }
     },
 
     PrisonShop = {
         Locations = {
-            {x = 1728.41, y = 2584.31, z = 45.84},
+            {x = 1698.53, y = 2578.82, z = -69.42},
         },
         Items = {
             {name = 'bread'},

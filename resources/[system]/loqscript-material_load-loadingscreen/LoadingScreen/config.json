@@ -2,14 +2,14 @@
 	{
 		"useBackgroundColour" : "false",
 		"backgroundColour" : "20,20,20",
-		"useBackgroundImage" : "true",
+		"useBackgroundImage" : "false",
 		"backgroundImagePath" : "images/backgroundImg6.jpg",
 		"useTextColour" : "false",
 		"textColour" : "0,0,0",
 		"useBoldText" : "false",
-		"serverTitle" : "Scuffed RP",
+		"serverTitle" : "PixelWorldRP",
 		"playAudioInBackground" : "true",
-		"YTVideoID" : "GvmZbb6TsCQ",
+		"YTVideoID" : "4rw8KOdzNo0",
 		"videoVolume" : "3"
 	},
 	{
@@ -23,12 +23,12 @@
 	},
 	{
 		"servers1" : "Website: www.idgaf.com",
-		"servers2" : "Teamspeak: Fuck Teamspeak",
+		"servers2" : "Teamspeak: homebase-networks.asuscomm.com",
 		"servers3" : "Discord: https://discord.gg/VQxpppP",
-		"servers4" : "Not a direct clone of SoL",
-		"servers5" : "Because I have class.",
+		"servers4" : "PixelWorldRP Car Development Server",
+		"servers5" : "",
 		"servers6" : "",
-		"servers7" : "Song: Roundtable Rival - Lindsey Stirling "
+		"servers7" : "Song: Numb/Encore - Linkin Park/Jay-Z "
 	},
 	{
 		"content1" : "Character Customization",
