@@ -12,9 +12,9 @@ Config.SellWeed = true	-- if true, players can sell weed
 Config.SellMeth = true	-- if true, players can sell meth
 Config.SellCoke = true	-- if true, players can sell coke
 Config.SellOpiu = true	-- if true, players can sell opium
-Config.WeedPrice = 30	-- sell price for single, not pooch (black money)
-Config.MethPrice = 50	-- sell price for single, not pooch (black money)
-Config.CokePrice = 100	-- sell price for single, not pooch (black money)
-Config.OpiuPrice = 220	-- sell price for single, not pooch (black money)
+Config.WeedPrice = 5	-- sell price for single, not pooch (black money)
+Config.MethPrice = 7	-- sell price for single, not pooch (black money)
+Config.CokePrice = 10	-- sell price for single, not pooch (black money)
+Config.OpiuPrice = 11	-- sell price for single, not pooch (black money)
 Config.DistanceFromCity = 10000 -- set distance that player cant sell drugs too far from city
 Config.CityPoint = {x= -255.94, y= -983.93, z= 30.21}
