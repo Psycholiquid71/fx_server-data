@@ -1132,6 +1132,17 @@
         "IsZero": false
       },
       "heading": 197.426788
+    },
+    {
+      "name": "Motorcycle Shop",
+      "coordinates": {
+        "X": 1139.76331,
+        "Y": 2125.911,
+        "Z": 56.0305672,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 156.902542
     }
   ],
   "blips": [

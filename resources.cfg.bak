@@ -1,0 +1,391 @@
+# essential mode pre load 
+add_ace resource.essentialmode command.sets allow
+add_ace resource.essentialmode command.add_principal allow
+add_ace resource.essentialmode command.add_ace allow
+
+# resources mandatory
+start loqscript-material_load-loadingscreen
+start mapmanager
+start chat
+start spawnmanager
+start sessionmanager
+start fivem
+start hardcap
+#start rconlog
+start playernames
+start fivem-ipl
+start bob74_ipl
+#start staff
+
+# custom db enabled
+set mysql_connection_string "server=localhost;uid=root;password=P@ssword12;database=essentialmode"
+
+# mysql
+set es_enableCustomData 1
+set mysql_debug 1
+set mysql_debug_output "console"
+set mysql_slow_query_warning 200
+start mysql-async
+start async
+
+# essential core mods
+start essentialmode
+start esplugin_mysql
+start pNotify
+start es_extended
+start esx_kashacters
+start mhacking
+start mtracker
+
+# esx ui
+start esx_menu_default
+start esx_menu_list
+start esx_menu_dialog
+start NativeUI
+start mythic_progressbar
+start mythic_progbar
+
+# esx required
+start instance
+start cron
+start skinchanger
+start esx_skin
+start esx_addonaccount
+start esx_addoninventory
+start esx_datastore
+start esx_society
+#start esx_service
+start esx_billing
+start esx_property
+start esx_advancedgarage
+start esx_carlock
+
+# voice
+start vdk_call
+start esx_addons_gcphone
+start gcphone
+#start screenshot-basic
+
+# esx jobs
+start esx_jobs
+start esx_joblisting
+start esx_mechanicjob
+start esx_policejob
+#start esx_taxijob
+start esx_ambulancejob
+start esx_realestateagentjob
+#start esx_bankerjob
+start esx_nightclub
+start esx_nightclub_taki
+start esx_nightclubaddon
+
+# esx other
+start LegacyFuel
+#start elsplus
+#start es_ui
+start esx_voice
+start chat-theme-civlifechat
+start esx_rpchat
+start esx_identity
+start esx_status
+start esx_basicneeds
+start esx_optionalneeds
+start esx_vehicleshop
+start esx_lscustom
+start esx_lscustom_civ
+start esx_clotheshop
+start esx_license
+start esx_shops
+start esx_extraitems
+start esx_dmvschool
+start SimpleCarHUD
+#start esx-qalle-camerasystem
+start securitycams
+start esx_vangelico_robbery
+start 99kr-burglary
+#start esx-kr-advanced-shops
+#start SoL_bankstorerobbery
+start esx_moneywash
+#start esx_barbershop
+start ESX_Healthbar-UI
+start esx_mask
+start esx_doorlock
+#start WeazelNewsCam
+#start esx_tattooshop
+#start esx_animations
+start esx-kr-vehicle-push
+#start es_wsync
+#start esx_fighting
+start esx_inventoryhud
+start esx_inventoryhud_trunk
+start lsrp-motels
+#start Lenzh_chopshop
+#start esx_advanced_holdup
+#start esx_boatshop
+#start esx_ktackle
+start esx_lockpick
+#start ESX_CommunityService
+#start ESX_SodaMachine
+start esx-qalle-jail
+#start esx_weaponshop
+start esx_jk_drugs
+#start esx_illegal_drugs
+start esx_teleports
+#start esx_drugeffects
+#start esx_nocarjack
+start esx_duty
+#start SoL_outlawalert
+#start esx_outlawalert
+start esx_npcdrugsales
+#start esx_taximeter
+#start showid
+#start adminreports
+#start pingkick
+#start progressBars
+#start esx_accessories
+#start nocarjack
+start esx_plasticsurgery
+start esx_scoreboard
+start lsrp-motels
+start lkrp_notepad
+start simpletp
+start vehicle-control
+start vTow
+start RollWindow
+start loffe_robbery
+start BadgerAnims
+start esx_e_radardetector
+start esx_bobbypin
+start ELS-FiveM
+
+
+# vehicles
+start Lambo
+start jeepdemon
+start jp12
+start jeep2012
+start r8ppi
+start TR22
+start mustang19
+start mclaren
+start enzo
+start PANAMERA17TURBO
+start 16CHALLENGER
+start eleanor
+start RATTFUKT
+start def90
+start nissantitan17
+start ben17
+start d99
+start gt86rb
+start enzo
+start DLOADER5
+start m8gte
+start f430s
+start yosemite6str
+start monstert
+start 718boxster
+start dloader2
+start dloader3
+start broncoc
+start 228gto
+start 599
+
+
+
+# mechanic vehicles
+start flatbed3
+
+
+#uber vehicles
+
+#ambulance vehicles
+start ambulance3
+start ambulance5
+start ambulance6
+start ambulance7
+start ambulance8
+
+#illegal vehicles
+
+
+#Police
+start policeb
+start i40
+start polchiron
+
+#LS Sheriffs
+start sheriffw
+start sheriffb
+
+#LS Highway Patrol
+start hpb
+start hpw
+
+#FBI
+start fbipw
+
+#Fire Dept
+	#Station 1
+start firetruk
+start tahoefd
+	#Station 2
+start firetruk2
+start firetruk3
+start tahoefdc
+	#Station 3
+start firetruk4
+start firetruk5	
+start safdcrownvic
+	#Station 4
+start firetruk10
+start maverick2
+start dinghy5	
+
+
+#military vehicles
+start humvees
+
+# trailers
+start thauler
+start trailercar
+
+# Ultrunz Cars
+start 458i
+start 599
+start 675LT
+start 911r
+start beem4
+start bikelete
+start billigseg
+start billstang
+start blue
+start Boi4M
+start cargoheli
+start cb500
+start cbr1000
+start dastang
+start dastangpd
+start dawn
+start f430
+start ferfxx
+start flatbed2
+start h2
+start hornet
+start Ladybird
+start lambmx
+start LAMtmc
+start m3
+start m4
+start mono
+start PGT2
+start picycle
+start policecart
+start poopsie
+start ramrod
+start rod
+start rs3
+start schafter
+start urus
+start vogue
+start WCP1
+start wmcslave
+start wraith
+start y25
+start y450q
+start Yacht
+start zebgtr
+
+# custom ymaps
+start PillboxHospital
+#start DrugWarehouse
+#start nw_bahamaMama
+start OCRPRacetrack_Models
+start OCRPRacetrack
+start es_upgrades
+start coffee_policestation
+start c_policestation_needs
+start prison-map-addon
+#start cityhall
+start rdd
+start casino
+start fgarage
+#start dwmansion
+start coast
+start SSS
+start NurburgringNordschleife
+
+# standalone mods
+#start fivemqueue
+start medSystem
+#start radiant_animations
+#start PvP
+#start disabledispatch
+start vMenu
+#start 3dme
+#start interact-sound
+#start gamz-food
+start new_banking
+start pillbox_beds
+#start esx_sopletare
+#start FiveM-Point-finger
+#start afkkick
+start RealisticVehicleFailure
+start RealisticTraffic
+start RealisticDrivingV
+start RealisticAirControl
+start RealisticBrakeLights
+#start Weaponry
+#start ToastysCruiseControl
+#start allcity_wallet
+#start core_hideintrunk
+#start Asser-Indicators
+#start CarRental
+#start neonToggle
+#start vehcontrol
+#start timetrials
+#start NoPlayerBlips
+#start fivem-toggleid
+#start qalle-wheelchair
+start peds
+#start modelblacklist
+#start qalle-tools
+#start crouch-n-prone
+#start RG_Hospital
+#start tab
+start wraith_alpr
+#start holograms
+#start JM_AItest
+#start CameraTech
+#start JAM
+start carhud
+#start discord
+#start HeliScript
+
+# Logging
+#start Serverlogging
+#start D2FiveM
+
+# Police training facility
+#start esx_gunrange
+#start esx_gunrange2
+#start LEO_Training_Facility
+
+# map mods
+#start humantree92mapaddons 
+#start opendoor_madrazo
+#start PBHospital
+#start prison-map-addon
+#start gd_airport_ai_begone
+
+# custom assets
+#start mapAssets
+#start pedAssets
+
+# ped resources
+#start siege
+
+# clothe stream
+start beards
+start eup-stream
+start eup-ui
