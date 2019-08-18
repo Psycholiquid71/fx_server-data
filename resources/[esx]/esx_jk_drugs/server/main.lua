@@ -304,7 +304,7 @@ AddEventHandler('esx_jk_drugs:pickedUpCannabis', function()
 	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
 		TriggerClientEvent('esx:showNotification', _source, _U('weed_inventoryfull'))
 	else
-		xPlayer.addInventoryItem(xItem.name, 3)
+		xPlayer.addInventoryItem(xItem.name, math.random(1, 5))
 	end
 end)
 
@@ -327,7 +327,7 @@ AddEventHandler('esx_jk_drugs:pickedUpCocaPlant', function()
 	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
 		TriggerClientEvent('esx:showNotification', _source, _U('cocaine_inventoryfull'))
 	else
-		xPlayer.addInventoryItem(xItem.name, 5)
+		xPlayer.addInventoryItem(xItem.name, math.random(1, 5))
 	end
 end)
 
@@ -350,7 +350,7 @@ AddEventHandler('esx_jk_drugs:pickedUpEphedra', function()
 	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
 		TriggerClientEvent('esx:showNotification', _source, _U('ephedra_inventoryfull'))
 	else
-		xPlayer.addInventoryItem(xItem.name, 2)
+		xPlayer.addInventoryItem(xItem.name, math.random(1, 5))
 	end
 end)
 
@@ -373,7 +373,7 @@ AddEventHandler('esx_jk_drugs:pickedUpPoppy', function()
 	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
 		TriggerClientEvent('esx:showNotification', _source, _U('opium_inventoryfull'))
 	else
-		xPlayer.addInventoryItem(xItem.name, 7)
+		xPlayer.addInventoryItem(xItem.name, math.random(1, 5))
 	end
 end)
 
@@ -403,7 +403,7 @@ AddEventHandler('esx_jk_drugs:processCannabis', function()
 				TriggerClientEvent('esx:showNotification', _source, _U('weed_processingenough'))
 			else
 				xPlayer.removeInventoryItem('cannabis', 1)
-				xPlayer.addInventoryItem('marijuana', 5)
+				xPlayer.addInventoryItem('marijuana', math.random(1, 5))
 
 				TriggerClientEvent('esx:showNotification', _source, _U('weed_processed'))
 			end
@@ -438,7 +438,7 @@ AddEventHandler('esx_jk_drugs:processCocaPlant', function()
 				TriggerClientEvent('esx:showNotification', _source, _U('cocaine_processingenough'))
 			else
 				xPlayer.removeInventoryItem('coca', 3)
-				xPlayer.addInventoryItem('cocaine', 1)
+				xPlayer.addInventoryItem('cocaine', math.random(2, 6))
 
 				TriggerClientEvent('esx:showNotification', _source, _U('cocaine_processed'))
 			end
@@ -472,7 +472,7 @@ AddEventHandler('esx_jk_drugs:processEphedra', function()
 				TriggerClientEvent('esx:showNotification', _source, _U('ephedrine_processingenough'))
 			else
 				xPlayer.removeInventoryItem('ephedra', 1)
-				xPlayer.addInventoryItem('ephedrine', 1)
+				xPlayer.addInventoryItem('ephedrine', math.random(1, 5))
 
 				TriggerClientEvent('esx:showNotification', _source, _U('ephedrine_processed'))
 			end
@@ -506,7 +506,7 @@ AddEventHandler('esx_jk_drugs:processEphedrine', function()
 				TriggerClientEvent('esx:showNotification', _source, _U('meth_processingenough'))
 			else
 				xPlayer.removeInventoryItem('ephedrine', 2)
-				xPlayer.addInventoryItem('meth', 1)
+				xPlayer.addInventoryItem('meth', math.random(1, 2))
 
 				TriggerClientEvent('esx:showNotification', _source, _U('meth_processed'))
 			end
@@ -540,7 +540,7 @@ AddEventHandler('esx_jk_drugs:processCoke', function()
 				TriggerClientEvent('esx:showNotification', _source, _U('crack_processingenough'))
 			else
 				xPlayer.removeInventoryItem('cocaine', 2)
-				xPlayer.addInventoryItem('crack', 1)
+				xPlayer.addInventoryItem('crack', math.random(1, 3))
 
 				TriggerClientEvent('esx:showNotification', _source, _U('crack_processed'))
 			end
@@ -573,8 +573,8 @@ AddEventHandler('esx_jk_drugs:processPoppy', function()
 			elseif xPoppy.count < 2 then
 				TriggerClientEvent('esx:showNotification', _source, _U('opium_processingenough'))
 			else
-				xPlayer.removeInventoryItem('poppy', 2)
-				xPlayer.addInventoryItem('opium', 1)
+				xPlayer.removeInventoryItem('poppy', 5)
+				xPlayer.addInventoryItem('opium', math.random(1, 3))
 
 				TriggerClientEvent('esx:showNotification', _source, _U('opium_processed'))
 			end
@@ -608,7 +608,7 @@ AddEventHandler('esx_jk_drugs:processOpium', function()
 				TriggerClientEvent('esx:showNotification', _source, _U('heroine_processingenough'))
 			else
 				xPlayer.removeInventoryItem('opium', 5)
-				xPlayer.addInventoryItem('heroine', 1)
+				xPlayer.addInventoryItem('heroine', math.random(1, 2))
 
 				TriggerClientEvent('esx:showNotification', _source, _U('heroine_processed'))
 			end
@@ -765,19 +765,70 @@ AddEventHandler('esx_jk_drugs:removeItem', function(item)
 end)
 
 ESX.RegisterUsableItem('marijuana', function(source)
+        
+    local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+		if xPlayer.getInventoryItem('baggies').count > 0 and xPlayer.getInventoryItem('marijuana').count >= 10 then
+    		xPlayer.removeInventoryItem('marijuana', 10)
+            xPlayer.removeInventoryItem('baggies', 1)
+            xPlayer.addInventoryItem('weed_pooch', 1)
+		elseif xPlayer.getInventoryItem('baggies').count <= 0 then
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough baggies.')
+    	elseif xPlayer.getInventoryItem('marijuana').count < 10 then 
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough marijuana.')
+    	else 
+        	TriggerClientEvent('esx:showNotification', source, '~r~You need atleast 10 marijuana and 1 baggie..')
+    	end
+end)
+
+ESX.RegisterUsableItem('papers', function(source)
+        
+    local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+		if xPlayer.getInventoryItem('papers').count > 0 and xPlayer.getInventoryItem('marijuana').count >= 2 then
+    		xPlayer.removeInventoryItem('marijuana', 2)
+            xPlayer.removeInventoryItem('papers', 1)
+            xPlayer.addInventoryItem('weed', 1)
+		elseif xPlayer.getInventoryItem('papers').count <= 0 then
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough papers.')
+    	elseif xPlayer.getInventoryItem('marijuana').count < 2 then 
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough marijuana.')
+    	else 
+        	TriggerClientEvent('esx:showNotification', source, '~r~You need atleast 10 marijuana and 1 paper..')
+    	end
+end)
+
+ESX.RegisterUsableItem('weed', function(source)
 		local xPlayer = ESX.GetPlayerFromId(source)
-		xPlayer.removeInventoryItem('marijuana', 1)
+		xPlayer.removeInventoryItem('weed', 1)
 	
-		TriggerClientEvent('esx_jk_drugs:useItem', source, 'marijuana')
+		TriggerClientEvent('esx_jk_drugs:useItem', source, 'weed')
 
 		Citizen.Wait(1000)
 end)
 
 ESX.RegisterUsableItem('cocaine', function(source)
+        
+    local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+		if xPlayer.getInventoryItem('baggies').count > 0 and xPlayer.getInventoryItem('cocaine').count >= 8 then
+    		xPlayer.removeInventoryItem('cocaine', 8)
+            xPlayer.removeInventoryItem('baggies', 1)
+            xPlayer.addInventoryItem('coke_pooch', 1)
+		elseif xPlayer.getInventoryItem('baggies').count <= 0 then
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough baggies.')
+    	elseif xPlayer.getInventoryItem('cocaine').count < 8 then 
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough cocaine.')
+    	else 
+        	TriggerClientEvent('esx:showNotification', source, '~r~You need atleast 8 cocaine and 1 baggie..')
+    	end
+end)
+
+ESX.RegisterUsableItem('coke_pooch', function(source)
 		local xPlayer = ESX.GetPlayerFromId(source)
-		xPlayer.removeInventoryItem('cocaine', 1)
+		xPlayer.removeInventoryItem('coke_pooch', 1)
 	
-		TriggerClientEvent('esx_jk_drugs:useItem', source, 'cocaine')
+		TriggerClientEvent('esx_jk_drugs:useItem', source, 'coke_pooch')
 
 		Citizen.Wait(1000)
 end)
@@ -792,12 +843,46 @@ ESX.RegisterUsableItem('crack', function(source)
 end)
 
 ESX.RegisterUsableItem('meth', function(source)
+        
+    local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+		if xPlayer.getInventoryItem('baggies').count > 0 and xPlayer.getInventoryItem('meth').count >= 5 then
+    		xPlayer.removeInventoryItem('meth', 5)
+            xPlayer.removeInventoryItem('baggies', 1)
+            xPlayer.addInventoryItem('meth_pooch', 1)
+		elseif xPlayer.getInventoryItem('baggies').count <= 0 then
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough baggies.')
+    	elseif xPlayer.getInventoryItem('marijuana').count < 5 then 
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough meth crystals.')
+    	else 
+        	TriggerClientEvent('esx:showNotification', source, '~r~You need atleast 5 meth crystals and 1 baggie..')
+    	end
+end)
+
+ESX.RegisterUsableItem('meth_pooch', function(source)
 		local xPlayer = ESX.GetPlayerFromId(source)
 		xPlayer.removeInventoryItem('meth', 1)
 	
-		TriggerClientEvent('esx_jk_drugs:useItem', source, 'meth')
+		TriggerClientEvent('esx_jk_drugs:useItem', source, 'meth_pooch')
 
 		Citizen.Wait(1000)
+end)
+
+ESX.RegisterUsableItem('needles', function(source)
+        
+    local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+		if xPlayer.getInventoryItem('needles').count > 0 and xPlayer.getInventoryItem('opium').count >= 10 then
+    		xPlayer.removeInventoryItem('opium', 10)
+            xPlayer.removeInventoryItem('needles', 1)
+            xPlayer.addInventoryItem('heroine', 1)
+		elseif xPlayer.getInventoryItem('needles').count <= 0 then
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough needles.')
+    	elseif xPlayer.getInventoryItem('opium').count < 10 then 
+        	TriggerClientEvent('esx:showNotification', source, '~r~Not enough opium.')
+    	else 
+        	TriggerClientEvent('esx:showNotification', source, '~r~You need atleast 10 opium and 1 needle..')
+    	end
 end)
 
 ESX.RegisterUsableItem('heroine', function(source)

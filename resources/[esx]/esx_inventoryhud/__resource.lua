@@ -61,6 +61,7 @@ files {
   "html/img/items/laptop.png",
   "html/img/items/fishingrod.png",
   "html/img/items/alive_chicken.png",
+  "html/img/items/baggies.png",
   "html/img/items/bait.png",
   "html/img/items/bandage.png",
   "html/img/items/beer.png",
@@ -101,6 +102,7 @@ files {
   "html/img/items/heroine.png",
   "html/img/items/iron.png",
   "html/img/items/narcan.png",
+  "html/img/items/marijuana.png",
   "html/img/items/meth.png",
   "html/img/items/meth_pooch.png",
   "html/img/items/opium.png",
@@ -178,5 +180,6 @@ files {
   "html/img/items/gardensalad.png",
   "html/img/items/icedtea.png",
   "html/img/items/powerade.png",
-  "html/img/items/teddybear.png"
+  "html/img/items/teddybear.png",
+  "html/img/items/weed_pooch.png"
 }

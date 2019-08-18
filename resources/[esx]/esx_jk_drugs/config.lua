@@ -26,17 +26,17 @@ Config.Locale = 'en' -- Only fully supported for English
 
 --Script Stuff--
 Config.Delays = {
-	WeedProcessing = 1000 * 10,
-	CocaineProcessing = 2000 * 10,
-	EphedrineProcessing = 2000 * 10,
+	WeedProcessing = 1000 * 5,
+	CocaineProcessing = 1000 * 7,
+	EphedrineProcessing = 1000 * 3,
 	MethProcessing = 2000 * 10,
-	PoppyProcessing = 2000 * 10,
-	CrackProcessing = 2000 * 10,
-	HeroineProcessing = 1000 * 10
+	PoppyProcessing = 1000 * 4,
+	CrackProcessing = 1000 * 5,
+	HeroineProcessing = 1000 * 7
 }
 
 Config.WeedDumpItems = {
-	marijuana = 25,
+	marijuana = 2,
 	cannabis  = 1,
 	dabs	  = 120,
 }
@@ -47,9 +47,10 @@ Config.CocaineDumpItems = {
 }
 
 Config.MethDumpItems = {
-	meth = 135,
-	ephedra = 10,
-	ephedrine = 25,
+	meth = 10,
+	ephedra = 5,
+	ephedrine = 7,
+	meth_pooch = 25,
 }
 
 Config.CrackDumpItems = {

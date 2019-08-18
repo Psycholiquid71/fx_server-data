@@ -21,7 +21,7 @@ Locales ['en'] = {
   ['weed_processed'] = 'you\'ve cleaned ~b~1x~s~ ~g~Cannabis~s~ and got ~b~5x~s~ ~g~Marijuana~s~',
   ['weed_processingtoofar'] = 'you walked away while cleaning so it was ~r~canceled~s~.',
   ['weed_sell'] = 'Press ~INPUT_CONTEXT~ to give your weed to Smoke on the Water',
-  ['weed_use'] = 'You smoked a doobie',
+  ['weed_use'] = 'You smoked a joint',
 
   -- cocaine
   ['cocaine_pickupprompt'] = 'press ~INPUT_CONTEXT~ to harvest the ~g~CocaPlant~s~ plant.',
@@ -35,7 +35,7 @@ Locales ['en'] = {
   ['cocaine_processed'] = 'you\'ve processed ~b~3x~s~ ~g~CocaPlant~s~ to ~b~1x~s~ ~g~Cocaine~s~',
   ['cocaine_processingtoofar'] = 'the processing has been ~r~canceled~s~ due to you abandoning the area.',
   ['cocaine_sell'] = 'Press ~INPUT_CONTEXT~ to give your coke to The Golfing Society',
-  ['cocaine_use'] = 'You ate a pile of coke!',
+  ['cocaine_use'] = 'You snorted some coke!',
 
   -- ephedrine
   ['ephedrine_pickupprompt'] = 'press ~INPUT_CONTEXT~ to harvest the ~g~Ephedra~s~ plant.',
@@ -61,7 +61,7 @@ Locales ['en'] = {
   ['meth_processed'] = 'you\'ve processed ~b~2x~s~ ~g~Ephedrine~s~ to ~b~1x~s~ ~g~Meth~s~',
   ['meth_processingtoofar'] = 'the processing has been ~r~canceled~s~ due to you abandoning the area.',
   ['meth_sell'] = 'Press ~INPUT_CONTEXT~ to give your meth to Willie',
-  ['meth_use'] = 'You dropped some ice trying to smoke!',
+  ['meth_use'] = 'You smoked some blue ice!',
 
   -- crack
   -- ['crack_pickupprompt'] = 'press ~INPUT_CONTEXT~ to harvest the ~g~Ephedrine~s~ plant.',
@@ -74,7 +74,7 @@ Locales ['en'] = {
   ['crack_processed'] = 'you\'ve processed ~b~2x~s~ ~g~Cocaine~s~ to ~b~1x~s~ ~g~Crack~s~',
   ['crack_processingtoofar'] = 'the processing has been ~r~canceled~s~ due to you abandoning the area.',
   ['crack_sell'] = 'Press ~INPUT_CONTEXT~ to load off on Jerome',
-  ['crack_use'] = 'Probably wouldn\'t drop your crack if you didn\'t smoke it',
+  ['crack_use'] = 'You smoked some crack!',
 
   -- opium
   ['opium_pickupprompt'] = 'press ~INPUT_CONTEXT~ to harvest the ~g~Poppy~s~ plant.',

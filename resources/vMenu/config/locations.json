@@ -12,15 +12,114 @@
       "heading": 356.1
     },
     {
-      "name": "Fisherman Cloakroom",
+      "name": "Mission Row Jail",
       "coordinates": {
-        "X": 866.7791,
-        "Y": -1640.32129,
-        "Z": 30.1865311,
+        "X": 464.9925,
+        "Y": -996.340149,
+        "Z": 24.9147644,
         "IsNormalized": false,
         "IsZero": false
       },
-      "heading": 274.15976
+      "heading": 50.2763023
+    },
+    {
+      "name": "Sandy Shores PD",
+      "coordinates": {
+        "X": 1855.31592,
+        "Y": 3686.76636,
+        "Z": 34.267086,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 287.3009
+    },
+    {
+      "name": "Paleto Bay Sherrifs Office",
+      "coordinates": {
+        "X": -441.894135,
+        "Y": 6017.399,
+        "Z": 31.6718159,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 133.442841
+    },
+    {
+      "name": "Bolingbroke Prison",
+      "coordinates": {
+        "X": 1809.24817,
+        "Y": 2608.593,
+        "Z": 45.5997353,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 303.5392
+    },
+    {
+      "name": "Police On / Off Duty",
+      "coordinates": {
+        "X": 459.787781,
+        "Y": -990.7091,
+        "Z": 30.6896763,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 82.88392
+    },
+    {
+      "name": "Hospital On / Off Duty",
+      "coordinates": {
+        "X": 342.207,
+        "Y": -579.586243,
+        "Z": 43.3150444,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 344.6111
+    },
+    {
+      "name": "Hospital Heli Pad",
+      "coordinates": {
+        "X": 342.538452,
+        "Y": -584.5091,
+        "Z": 74.16569,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 78.707
+    },
+    {
+      "name": "Medic Money Washing",
+      "coordinates": {
+        "X": 393.312347,
+        "Y": 318.081238,
+        "Z": 103.098991,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 358.336182
+    },
+    {
+      "name": "Mechanic Money Wash",
+      "coordinates": {
+        "X": -154.924362,
+        "Y": -1348.51062,
+        "Z": 29.91941,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 92.4555054
+    },
+    {
+      "name": "Mechanic On / Off Duty",
+      "coordinates": {
+        "X": -345.454437,
+        "Y": -123.13517,
+        "Z": 39.00962,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 246.1502
     },
     {
       "name": "Job Center",
@@ -32,6 +131,501 @@
         "IsZero": false
       },
       "heading": 27.2796555
+    },
+    {
+      "name": "Job Center Marker",
+      "coordinates": {
+        "X": -265.328461,
+        "Y": -963.345459,
+        "Z": 31.22313,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 201.873871
+    },
+    {
+      "name": "Legion Garage",
+      "coordinates": {
+        "X": 216.0653,
+        "Y": -810.118835,
+        "Z": 30.7219124,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 262.653778
+    },
+    {
+      "name": "Zancudo Military Base Front",
+      "coordinates": {
+        "X": -1596.83875,
+        "Y": 2806.47949,
+        "Z": 17.09716,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 46.5552254
+    },
+    {
+      "name": "Zancudo Military Base Back",
+      "coordinates": {
+        "X": -2293.12622,
+        "Y": 3383.82056,
+        "Z": 30.55671,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 52.7578735
+    },
+    {
+      "name": "Heroine Bulk Sell",
+      "coordinates": {
+        "X": -432.249237,
+        "Y": -2444.00562,
+        "Z": 26.8761883,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 319.113647
+    },
+    {
+      "name": "Jerome Drug Dealer",
+      "coordinates": {
+        "X": -4.44825268,
+        "Y": -1229.18469,
+        "Z": 29.2952232,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 5.90481472
+    },
+    {
+      "name": "Marijuana Field",
+      "coordinates": {
+        "X": 2215.90747,
+        "Y": 5569.952,
+        "Z": 53.8197327,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 253.776367
+    },
+    {
+      "name": "Marijuana Processing",
+      "coordinates": {
+        "X": 2329.35986,
+        "Y": 2571.33813,
+        "Z": 46.71517,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 118.778938
+    },
+    {
+      "name": "Marajuana Bulk Sell",
+      "coordinates": {
+        "X": -1171.30469,
+        "Y": -1573.55322,
+        "Z": 4.66362762,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 27.3759918
+    },
+    {
+      "name": "Cocaine Field",
+      "coordinates": {
+        "X": 1851.61157,
+        "Y": 4915.936,
+        "Z": 45.15363,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 245.629913
+    },
+    {
+      "name": "Cocaine Processing",
+      "coordinates": {
+        "X": -2081.80664,
+        "Y": -1012.57288,
+        "Z": 5.884127,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 71.47646
+    },
+    {
+      "name": "Crack Processing",
+      "coordinates": {
+        "X": 974.709534,
+        "Y": -100.912071,
+        "Z": 74.8662949,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 69.2913055
+    },
+    {
+      "name": "Cocaine Bulk Sell",
+      "coordinates": {
+        "X": -1368.09363,
+        "Y": 55.99316,
+        "Z": 53.70448,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 284.9667
+    },
+    {
+      "name": "Ephedra Field",
+      "coordinates": {
+        "X": 1584.28589,
+        "Y": -1979.79419,
+        "Z": 93.46075,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 258.390381
+    },
+    {
+      "name": "Ephedra Processing",
+      "coordinates": {
+        "X": -1076.95593,
+        "Y": -1677.73267,
+        "Z": 4.57523537,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 128.814453
+    },
+    {
+      "name": "Ephedrine Processing",
+      "coordinates": {
+        "X": 1392.71,
+        "Y": 3607.43018,
+        "Z": 38.9419365,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 153.621
+    },
+    {
+      "name": "Meth Bulk Sell",
+      "coordinates": {
+        "X": -55.0824547,
+        "Y": 6523.492,
+        "Z": 31.4908352,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 134.692841
+    },
+    {
+      "name": "Poppy Field",
+      "coordinates": {
+        "X": -1796.11328,
+        "Y": 1954.97986,
+        "Z": 126.912178,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 57.56005
+    },
+    {
+      "name": "Humane Lab Poppy Processing",
+      "coordinates": {
+        "X": 3561.07,
+        "Y": 3675.27,
+        "Z": 28.13,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 86.45
+    },
+    {
+      "name": "Opium Processing",
+      "coordinates": {
+        "X": 1975.29236,
+        "Y": 3820.413,
+        "Z": 33.4454231,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 99.96118
+    },
+    {
+      "name": "Opium Bulk Sell",
+      "coordinates": {
+        "X": 2455.83447,
+        "Y": 4979.3374,
+        "Z": 46.8102951,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 31.8029366
+    },
+    {
+      "name": "Casino Entrance",
+      "coordinates": {
+        "X": 927.0835,
+        "Y": 46.77825,
+        "Z": 80.90275,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 240.349747
+    },
+    {
+      "name": "Casino Inside",
+      "coordinates": {
+        "X": 908.746033,
+        "Y": -942.6571,
+        "Z": 44.4045525,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 264.629669
+    },
+    {
+      "name": "Franklin's House",
+      "coordinates": {
+        "X": 14.0389681,
+        "Y": 545.496948,
+        "Z": 176.001633,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 12.5135422
+    },
+    {
+      "name": "Westone Mansion",
+      "coordinates": {
+        "X": -2584.822,
+        "Y": 1915.845,
+        "Z": 167.312912,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 163.975281
+    },
+    {
+      "name": "Grapeseed Monestary",
+      "coordinates": {
+        "X": 2127.50513,
+        "Y": 4659.44531,
+        "Z": 33.3345337,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 94.26971
+    },
+    {
+      "name": "Vinewood Garage and Heli",
+      "coordinates": {
+        "X": -706.5538,
+        "Y": 967.9311,
+        "Z": 237.588608,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 238.732452
+    },
+    {
+      "name": "Vinewood Car Dealership",
+      "coordinates": {
+        "X": -572.7738,
+        "Y": 954.9998,
+        "Z": 242.801483,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 124.019989
+    },
+    {
+      "name": "Vinewood Aquadrome",
+      "coordinates": {
+        "X": -191.398468,
+        "Y": 792.226746,
+        "Z": 198.107422,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 168.091675
+    },
+    {
+      "name": "Vinewood Camping",
+      "coordinates": {
+        "X": -833.2417,
+        "Y": 849.6969,
+        "Z": 202.8867,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 329.7642
+    },
+    {
+      "name": "Vinewood Mustic Festival",
+      "coordinates": {
+        "X": -1949.91479,
+        "Y": 327.878845,
+        "Z": 89.88382,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 197.865845
+    },
+    {
+      "name": "Vinewood Snackbar 1",
+      "coordinates": {
+        "X": -878.388,
+        "Y": 423.716339,
+        "Z": 87.2104645,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 186.874237
+    },
+    {
+      "name": "Vinewood Resaurant",
+      "coordinates": {
+        "X": -784.9199,
+        "Y": 564.790161,
+        "Z": 125.548439,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 124.041664
+    },
+    {
+      "name": "Vinewood Cafe",
+      "coordinates": {
+        "X": -818.0278,
+        "Y": 628.70575,
+        "Z": 128.062088,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 133.404236
+    },
+    {
+      "name": "Vinewood Trailerpark",
+      "coordinates": {
+        "X": -553.5692,
+        "Y": 354.814362,
+        "Z": 84.8866,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 218.335464
+    },
+    {
+      "name": "Sandy Shores Alive",
+      "coordinates": {
+        "X": 1342.20618,
+        "Y": 3643.95679,
+        "Z": 41.1956253,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 351.732056
+    },
+    {
+      "name": "Teleport to Racetrack",
+      "coordinates": {
+        "X": 1177.46082,
+        "Y": -2978.68555,
+        "Z": 5.90213966,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 95.42659
+    },
+    {
+      "name": "German Racetrack",
+      "coordinates": {
+        "X": 3664.31274,
+        "Y": -6536.313,
+        "Z": 2190.57861,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 136.694168
+    },
+    {
+      "name": "Moab",
+      "coordinates": {
+        "X": 5046.88428,
+        "Y": -699.9343,
+        "Z": 43.86187,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 350.9451
+    },
+    {
+      "name": "Sandy Shores Scrap Yard",
+      "coordinates": {
+        "X": 1014.70123,
+        "Y": 3613.938,
+        "Z": 32.6959534,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 312.33844
+    },
+    {
+      "name": "Sandy Shores Airfield",
+      "coordinates": {
+        "X": 1052.98132,
+        "Y": 3080.919,
+        "Z": 41.4908829,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 288.2079
+    },
+    {
+      "name": "Underground Car Lot",
+      "coordinates": {
+        "X": 157.218079,
+        "Y": -713.78186,
+        "Z": 33.1312,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 65.84896
+    },
+    {
+      "name": "Dealership",
+      "coordinates": {
+        "X": -40.90334,
+        "Y": -1104.64746,
+        "Z": 26.4223518,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 33.39628
+    },
+    {
+      "name": "GoPostal",
+      "coordinates": {
+        "X": 82.45562,
+        "Y": 107.476845,
+        "Z": 79.1979,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 353.507019
+    },
+    {
+      "name": "Fisherman Cloakroom",
+      "coordinates": {
+        "X": 866.7791,
+        "Y": -1640.32129,
+        "Z": 30.1865311,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 274.15976
     },
     {
       "name": "Fisher Boat Spawn",
@@ -98,17 +692,6 @@
         "IsZero": false
       },
       "heading": 33.0336037
-    },
-    {
-      "name": "Job Center Marker",
-      "coordinates": {
-        "X": -265.328461,
-        "Y": -963.345459,
-        "Z": 31.22313,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 201.873871
     },
     {
       "name": "Fueler Cloakroom",
@@ -386,631 +969,37 @@
       "heading": 73.1314545
     },
     {
-      "name": "Legion Garage",
+      "name": "Inside Humane Labs 1",
       "coordinates": {
-        "X": 216.0653,
-        "Y": -810.118835,
-        "Z": 30.7219124,
+        "X": 3540.46875,
+        "Y": 3670.703,
+        "Z": 20.9917831,
         "IsNormalized": false,
         "IsZero": false
       },
-      "heading": 262.653778
+      "heading": 333.1474
     },
     {
-      "name": "Hospital Heli Pad",
+      "name": "Inside Humane Labs 2",
       "coordinates": {
-        "X": 342.538452,
-        "Y": -584.5091,
-        "Z": 74.16569,
+        "X": 3554.75781,
+        "Y": 3670.41455,
+        "Z": 28.1271248,
         "IsNormalized": false,
         "IsZero": false
       },
-      "heading": 78.707
+      "heading": 79.9633255
     },
     {
-      "name": "Sandy Shores PD",
+      "name": "Humane Labs Entrance",
       "coordinates": {
-        "X": 1855.31592,
-        "Y": 3686.76636,
-        "Z": 34.267086,
+        "X": 3624.519,
+        "Y": 3756.29688,
+        "Z": 28.5157356,
         "IsNormalized": false,
         "IsZero": false
       },
-      "heading": 287.3009
-    },
-    {
-      "name": "Paleto Bay Sherrifs Office",
-      "coordinates": {
-        "X": -441.894135,
-        "Y": 6017.399,
-        "Z": 31.6718159,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 133.442841
-    },
-    {
-      "name": "Bolingbroke Prison",
-      "coordinates": {
-        "X": 1809.24817,
-        "Y": 2608.593,
-        "Z": 45.5997353,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 303.5392
-    },
-    {
-      "name": "Zancudo Military Base Front",
-      "coordinates": {
-        "X": -1596.83875,
-        "Y": 2806.47949,
-        "Z": 17.09716,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 46.5552254
-    },
-    {
-      "name": "Zancudo Military Base Back",
-      "coordinates": {
-        "X": -2293.12622,
-        "Y": 3383.82056,
-        "Z": 30.55671,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 52.7578735
-    },
-    {
-      "name": "Mission Row Jail",
-      "coordinates": {
-        "X": 464.9925,
-        "Y": -996.340149,
-        "Z": 24.9147644,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 50.2763023
-    },
-    {
-      "name": "Vagos Garage Ephedrine Processing",
-      "coordinates": {
-        "X": -1076.95593,
-        "Y": -1677.73267,
-        "Z": 4.57523537,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 128.814453
-    },
-    {
-      "name": "Fredrick's Crane Heroine Drop Off",
-      "coordinates": {
-        "X": -432.249237,
-        "Y": -2444.00562,
-        "Z": 26.8761883,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 319.113647
-    },
-    {
-      "name": "Jerome Drug Dealer",
-      "coordinates": {
-        "X": -4.44825268,
-        "Y": -1229.18469,
-        "Z": 29.2952232,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 5.90481472
-    },
-    {
-      "name": "Marajuana Drop Off (Also Canibus)",
-      "coordinates": {
-        "X": -1171.30469,
-        "Y": -1573.55322,
-        "Z": 4.66362762,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 27.3759918
-    },
-    {
-      "name": "Concaine Drop Off",
-      "coordinates": {
-        "X": -1368.09363,
-        "Y": 55.99316,
-        "Z": 53.70448,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 284.9667
-    },
-    {
-      "name": "Meth Drop off",
-      "coordinates": {
-        "X": -55.0824547,
-        "Y": 6523.492,
-        "Z": 31.4908352,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 134.692841
-    },
-    {
-      "name": "Opium Drop Off",
-      "coordinates": {
-        "X": 2455.83447,
-        "Y": 4979.3374,
-        "Z": 46.8102951,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 31.8029366
-    },
-    {
-      "name": "Trevor's Place Opium Processing",
-      "coordinates": {
-        "X": 1975.29236,
-        "Y": 3820.413,
-        "Z": 33.4454231,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 99.96118
-    },
-    {
-      "name": "Liquor Ace",
-      "coordinates": {
-        "X": 1392.71,
-        "Y": 3607.43018,
-        "Z": 38.9419365,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 153.621
-    },
-    {
-      "name": "Weed Farm",
-      "coordinates": {
-        "X": 2329.35986,
-        "Y": 2571.33813,
-        "Z": 46.71517,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 118.778938
-    },
-    {
-      "name": "Humane Lab Opiods",
-      "coordinates": {
-        "X": 3561.07568,
-        "Y": 3675.272,
-        "Z": 33.88875,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 86.45108
-    },
-    {
-      "name": "Cocaine Field",
-      "coordinates": {
-        "X": 1851.61157,
-        "Y": 4915.936,
-        "Z": 45.15363,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 245.629913
-    },
-    {
-      "name": "Ephedrine Field",
-      "coordinates": {
-        "X": 1584.28589,
-        "Y": -1979.79419,
-        "Z": 93.46075,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 258.390381
-    },
-    {
-      "name": "Poppy Field",
-      "coordinates": {
-        "X": -1796.11328,
-        "Y": 1954.97986,
-        "Z": 126.912178,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 57.56005
-    },
-    {
-      "name": "Humane Labs Opiod Processing",
-      "coordinates": {
-        "X": 3561.24756,
-        "Y": 3674.51221,
-        "Z": 28.1218681,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 82.74134
-    },
-    {
-      "name": "Marijuana Harvesting",
-      "coordinates": {
-        "X": 2215.90747,
-        "Y": 5569.952,
-        "Z": 53.8197327,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 253.776367
-    },
-    {
-      "name": "Cocaine Processing",
-      "coordinates": {
-        "X": -2081.80664,
-        "Y": -1012.57288,
-        "Z": 5.884127,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 71.47646
-    },
-    {
-      "name": "Crack Processing",
-      "coordinates": {
-        "X": 974.709534,
-        "Y": -100.912071,
-        "Z": 74.8662949,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 69.2913055
-    },
-    {
-      "name": "Hospital On / Off Duty",
-      "coordinates": {
-        "X": 342.207,
-        "Y": -579.586243,
-        "Z": 43.3150444,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 344.6111
-    },
-    {
-      "name": "Medic Money Washing",
-      "coordinates": {
-        "X": 393.312347,
-        "Y": 318.081238,
-        "Z": 103.098991,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 358.336182
-    },
-    {
-      "name": "Police On / Off Duty",
-      "coordinates": {
-        "X": 459.787781,
-        "Y": -990.7091,
-        "Z": 30.6896763,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 82.88392
-    },
-    {
-      "name": "Mechanic Money Wash",
-      "coordinates": {
-        "X": -154.924362,
-        "Y": -1348.51062,
-        "Z": 29.91941,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 92.4555054
-    },
-    {
-      "name": "Mechanic On / Off Duty",
-      "coordinates": {
-        "X": -345.454437,
-        "Y": -123.13517,
-        "Z": 39.00962,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 246.1502
-    },
-    {
-      "name": "Casino Entrance",
-      "coordinates": {
-        "X": 927.0835,
-        "Y": 46.77825,
-        "Z": 80.90275,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 240.349747
-    },
-    {
-      "name": "Casino Inside",
-      "coordinates": {
-        "X": 908.746033,
-        "Y": -942.6571,
-        "Z": 44.4045525,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 264.629669
-    },
-    {
-      "name": "City Hall Entrance",
-      "coordinates": {
-        "X": 238.596252,
-        "Y": -410.3058,
-        "Z": 47.924324,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 173.022079
-    },
-    {
-      "name": "City Hall Inside",
-      "coordinates": {
-        "X": 277.6101,
-        "Y": -269.125977,
-        "Z": 53.9399872,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 160.929291
-    },
-    {
-      "name": "Franklin's House",
-      "coordinates": {
-        "X": 14.0389681,
-        "Y": 545.496948,
-        "Z": 176.001633,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 12.5135422
-    },
-    {
-      "name": "Rockwood Hospital",
-      "coordinates": {
-        "X": -458.114136,
-        "Y": -367.888916,
-        "Z": -186.460938,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 0.114506431
-    },
-    {
-      "name": "Westone Mansion",
-      "coordinates": {
-        "X": -2584.822,
-        "Y": 1915.845,
-        "Z": 167.312912,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 163.975281
-    },
-    {
-      "name": "Grapeseed Monestary",
-      "coordinates": {
-        "X": 2127.50513,
-        "Y": 4659.44531,
-        "Z": 33.3345337,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 94.26971
-    },
-    {
-      "name": "Vinewood Garage and Heli",
-      "coordinates": {
-        "X": -706.5538,
-        "Y": 967.9311,
-        "Z": 237.588608,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 238.732452
-    },
-    {
-      "name": "Vinewood Car Dealership",
-      "coordinates": {
-        "X": -572.7738,
-        "Y": 954.9998,
-        "Z": 242.801483,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 124.019989
-    },
-    {
-      "name": "Vinewood Aquadrome",
-      "coordinates": {
-        "X": -191.398468,
-        "Y": 792.226746,
-        "Z": 198.107422,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 168.091675
-    },
-    {
-      "name": "Vinewood Camping",
-      "coordinates": {
-        "X": -833.2417,
-        "Y": 849.6969,
-        "Z": 202.8867,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 329.7642
-    },
-    {
-      "name": "Vinewood Mustic Festival",
-      "coordinates": {
-        "X": -1949.91479,
-        "Y": 327.878845,
-        "Z": 89.88382,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 197.865845
-    },
-    {
-      "name": "Vinewood Snackbar 1",
-      "coordinates": {
-        "X": -878.388,
-        "Y": 423.716339,
-        "Z": 87.2104645,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 186.874237
-    },
-    {
-      "name": "Vinewood Resaurant",
-      "coordinates": {
-        "X": -784.9199,
-        "Y": 564.790161,
-        "Z": 125.548439,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 124.041664
-    },
-    {
-      "name": "Vinewood Cafe",
-      "coordinates": {
-        "X": -818.0278,
-        "Y": 628.70575,
-        "Z": 128.062088,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 133.404236
-    },
-    {
-      "name": "Vinewood Trailerpark",
-      "coordinates": {
-        "X": -553.5692,
-        "Y": 354.814362,
-        "Z": 84.8866,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 218.335464
-    },
-    {
-      "name": "Sandy Shores Alive",
-      "coordinates": {
-        "X": 1342.20618,
-        "Y": 3643.95679,
-        "Z": 41.1956253,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 351.732056
-    },
-    {
-      "name": "Teleport to Racetrack",
-      "coordinates": {
-        "X": 1177.46082,
-        "Y": -2978.68555,
-        "Z": 5.90213966,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 95.42659
-    },
-    {
-      "name": "German Racetrack",
-      "coordinates": {
-        "X": 3664.31274,
-        "Y": -6536.313,
-        "Z": 2190.57861,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 136.694168
-    },
-    {
-      "name": "Moab",
-      "coordinates": {
-        "X": 5046.88428,
-        "Y": -699.9343,
-        "Z": 43.86187,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 350.9451
-    },
-    {
-      "name": "Sandy Shores Scrap Yard",
-      "coordinates": {
-        "X": 1014.70123,
-        "Y": 3613.938,
-        "Z": 32.6959534,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 312.33844
-    },
-    {
-      "name": "Sandy Shores Airfield",
-      "coordinates": {
-        "X": 1052.98132,
-        "Y": 3080.919,
-        "Z": 41.4908829,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 288.2079
-    },
-    {
-      "name": "Underground Car Lot",
-      "coordinates": {
-        "X": 157.218079,
-        "Y": -713.78186,
-        "Z": 33.1312,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 65.84896
-    },
-    {
-      "name": "Dealership",
-      "coordinates": {
-        "X": -40.90334,
-        "Y": -1104.64746,
-        "Z": 26.4223518,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 33.39628
-    },
-    {
-      "name": "GoPostal",
-      "coordinates": {
-        "X": 82.45562,
-        "Y": 107.476845,
-        "Z": 79.1979,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 353.507019
+      "heading": 142.005829
     }
   ],
   "blips": [

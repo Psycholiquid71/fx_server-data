@@ -119,24 +119,25 @@ RegisterNetEvent('esx_jk_drugs:useItem')
 AddEventHandler('esx_jk_drugs:useItem', function(itemName)
     ESX.UI.Menu.CloseAll()
 
-    if itemName == 'marijuana' then
+    if itemName == 'weed' then
         local lib, anim = 'amb@world_human_smoking_pot@male@base', 'base'
         local playerPed = PlayerPedId()
-
+        
         ESX.ShowNotification(_U('weed_use'))
         ESX.Streaming.RequestAnimDict(lib, function()
             TaskPlayAnim(playerPed, lib, anim, 8.0, -8.0, -1, 32, 0, false, false, false)
-
             Citizen.Wait(500)
             while IsEntityPlayingAnim(playerPed, lib, anim, 3) do
                 Citizen.Wait(0)
-                DisableAllControlActions(0)
+                
+                
+                --DisableAllControlActions(0)
             end
 
             TriggerEvent('esx_jk_drugs:onPot')
         end)
 
-    elseif itemName == 'cocaine' then
+    elseif itemName == 'coke_pooch' then
         local lib, anim = 'anim@mp_player_intcelebrationmale@face_palm', 'face_palm' -- TODO better animations
         local playerPed = PlayerPedId()
 
@@ -153,7 +154,7 @@ AddEventHandler('esx_jk_drugs:useItem', function(itemName)
             TriggerEvent('esx_jk_drugs:cokedOut')
         end)
 
-    elseif itemName == 'meth' then
+    elseif itemName == 'meth_pooch' then
         local lib, anim = 'mp_weapons_deal_sting', 'crackhead_bag_loop' -- TODO better animations
         local playerPed = PlayerPedId()
 
@@ -187,7 +188,7 @@ AddEventHandler('esx_jk_drugs:useItem', function(itemName)
             TriggerEvent('esx_jk_drugs:crackedOut')
         end)
 
-    elseif itemName == 'heroine' then
+    elseif itemName == 'opium_pooch' then
         local lib, anim = 'rcmpaparazzo1ig_4', 'miranda_shooting_up' -- TODO better animations
         local playerPed = PlayerPedId()
 

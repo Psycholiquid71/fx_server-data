@@ -54,7 +54,7 @@ Citizen.CreateThread(function()
 							local pedType = GetPedType(ped)
 							if pedType ~= 28 and IsPedAPlayer(ped) == false then
 								currentped = pos
-								if distance <= 3 and ped  ~= GetPlayerPed(-1) and ped ~= oldped and IsControlJustPressed(1, 38) then
+								if distance <= 3 and ped  ~= GetPlayerPed(-1) and ped ~= oldped and IsControlJustPressed(1, 74) then
 									TriggerServerEvent('check')
 									if distanceFromCity < Config.DistanceFromCity then
 										if playerHasDrugs and sold == false and selling == false then 

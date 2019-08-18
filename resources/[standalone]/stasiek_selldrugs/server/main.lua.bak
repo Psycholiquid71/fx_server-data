@@ -12,7 +12,7 @@ AddEventHandler('sellDrugs', function()
 	local methqtySingle = xPlayer.getInventoryItem('meth').count
 	local cokeqty = xPlayer.getInventoryItem('coke_pooch').count
 	local cokeqtySingle = xPlayer.getInventoryItem('cocaine').count
-	local opiuqty = xPlayer.getInventoryItem('heroine').count
+	local opiuqty = xPlayer.getInventoryItem('opium_pooch').count
 	local opiuqtySingle = xPlayer.getInventoryItem('opium').count
 	local x = 0
 	local blackMoney = 0
@@ -104,7 +104,7 @@ AddEventHandler('sellDrugs', function()
 		end
 	elseif Config.SellOpiu and opiuqty > 0 or Config.SellOpiu and opiuqtySingle > 0 then
 			if opiuqty > 0 and Config.SellPooch then
-			drugType = 'heroine'
+			drugType = 'opium_pooch'
 			if opiuqty == 1 then
 				x = 1
 			elseif opiuqty == 2 then
@@ -141,7 +141,7 @@ AddEventHandler('sellDrugs', function()
 		blackMoney = Config.MethPrice * 5 * x
 	elseif drugType=='coke_pooch' then
 		blackMoney = Config.CokePrice * 5 * x
-	elseif drugType=='heroine' then
+	elseif drugType=='opium_pooch' then
 		blackMoney = Config.OpiuPrice * 5 * x
 	elseif drugType=='weed' then	--single
 		blackMoney = Config.WeedPrice * x
@@ -160,7 +160,7 @@ AddEventHandler('sellDrugs', function()
 	xPlayer.addAccountMoney('black_money', blackMoney)
 	TriggerClientEvent('sold', _source)
 	--TriggerClientEvent('esx:showNotification', _source, _U('you_have_sold') .. '~b~'..x..'~w~' .. _U(drugType) .. blackMoney .. '$')
-	TriggerClientEvent('esx:showNotification', _source, _U('you_have_sold') .. '~b~'..x..'~w~ of '.. _U(drugType) ..' for ' .. blackMoney .. '$')
+	TriggerClientEvent('esx:showNotification', _source, _U('you_have_sold') .. '~b~'..x..'~w~ of '.. drugType ..' for ' .. blackMoney .. '$')
 end)
 
 
@@ -175,7 +175,7 @@ AddEventHandler('check', function()
 	local methqtySingle = xPlayer.getInventoryItem('meth').count
 	local cokeqty = xPlayer.getInventoryItem('coke_pooch').count
 	local cokeqtySingle = xPlayer.getInventoryItem('cocaine').count
-	local opiuqty = xPlayer.getInventoryItem('heroine').count
+	local opiuqty = xPlayer.getInventoryItem('opium_pooch').count
 	local opiuqtySingle = xPlayer.getInventoryItem('opium').count
 	--check cops count on server
 	local cops = 0
@@ -227,16 +227,74 @@ end)
 RegisterServerEvent('drugsInProgress')
 AddEventHandler('drugsInProgress', function(street1, street2, sex)
       --TriggerClientEvent("outlawNotify", -1, "~r~Selling drugs by ~w~"..sex.."~r~near~w~"..street1.."~r~ and ~w~"..street2)
-	TriggerClientEvent("outlawNotify", -1, "~r~Someone is selling drugs ~w~"..sex.." ~r~between ~w~"..street1.."~r~ a ~w~"..street2)
+	TriggerClientEvent("outlawNotify", -1, "~r~Sprzedarz dragów przez ~w~"..sex.." ~r~między ~w~"..street1.."~r~ a ~w~"..street2)
 end)
 --if you need you can translate it to your language too
 RegisterServerEvent('drugsInProgressS1')
 AddEventHandler('drugsInProgressS1', function(street1, sex)
       --TriggerClientEvent("outlawNotify", -1, "~r~Selling drugs by ~w~"..sex.."~r~near~w~"..street1)
-	TriggerClientEvent("outlawNotify", -1, "~r~Someone is selling drugs ~w~"..sex.." ~r~at the street ~w~"..street1)
+	TriggerClientEvent("outlawNotify", -1, "~r~Sprzedarz dragów przez ~w~"..sex.." ~r~przy ulicy ~w~"..street1)
 end)
 
 RegisterServerEvent('drugsInProgressPos')
 AddEventHandler('drugsInProgressPos', function(gx, gy, gz)
 	TriggerClientEvent('drugsPlace', -1, gx, gy, gz)
+end)
+
+RegisterServerEvent('craftingjoint')
+AddEventHandler('craftingjoint', function(itemValue)
+
+    local _source = source
+    local _itemValue = itemValue
+    TriggerClientEvent('esx:ShowNotificationpn', _source, _U('assembling_joint'))
+
+    if _itemValue == 'joint' then
+        SetTimeout(5000, function()        
+
+            local xPlayer           = ESX.GetPlayerFromId(_source)
+			local paperqtySingle     = xPlayer.getInventoryItem('papers').count
+            local weedqtySingle      = xPlayer.getInventoryItem('weed').count
+
+            if paperqtySingle < 1 then
+                TriggerClientEvent('esx:ShowNotificationpn', _source, _U('not_enough') .. _U('papers') .. '~w~')
+            elseif weedqtySingle < 2 then
+                TriggerClientEvent('esx:ShowNotificationpn', _source, _U('not_enough') .. _U('weed') .. '~w~')
+            else
+                TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('joint') .. ' ~w~!')
+                    xPlayer.removeInventoryItem('papers', 1)
+                    xPlayer.removeInventoryItem('weed', 2)
+                    xPlayer.addInventoryItem('joint', 1)
+            end
+
+        end)
+    end
+end)
+
+RegisterServerEvent('craftingweedbg')
+AddEventHandler('craftingweedbg', function(itemValue)
+
+    local _source = source
+    local _itemValue = itemValue
+    TriggerClientEvent('esx:ShowNotificationpn', _source, _U('assembling_weedbg'))
+
+    if _itemValue == 'weed_pooch' then
+        SetTimeout(5000, function()        
+
+            local xPlayer           = ESX.GetPlayerFromId(_source)
+			local paperqtySingle     = xPlayer.getInventoryItem('baggie').count
+            local weedqtySingle      = xPlayer.getInventoryItem('weed').count
+
+            if paperqtySingle < 1 then
+                TriggerClientEvent('esx:ShowNotificationpn', _source, _U('not_enough') .. _U('baggies') .. '~w~')
+            elseif weedqtySingle < 2 then
+                TriggerClientEvent('esx:ShowNotificationpn', _source, _U('not_enough') .. _U('weed') .. '~w~')
+            else
+                TriggerClientEvent('esx:showNotification', _source, _U('craft') .. _U('joint') .. ' ~w~!')
+                    xPlayer.removeInventoryItem('baggies', 1)
+                    xPlayer.removeInventoryItem('weed', 2)
+                    xPlayer.addInventoryItem('weed_pooch', 1)
+            end
+
+        end)
+    end
 end)
