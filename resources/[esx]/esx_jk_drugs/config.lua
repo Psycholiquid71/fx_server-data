@@ -38,7 +38,7 @@ Config.Delays = {
 Config.WeedDumpItems = {
 	marijuana = 2,
 	cannabis  = 1,
-	dabs	  = 120,
+	weed_pooch = 10,
 }
 
 Config.CocaineDumpItems = {
@@ -59,7 +59,7 @@ Config.CrackDumpItems = {
 
 Config.OpiumDumpItems = {
 	opium = 75,
-	poppy = 10,
+	poppy = 2,
 }
 
 Config.HeroineDumpItems = {

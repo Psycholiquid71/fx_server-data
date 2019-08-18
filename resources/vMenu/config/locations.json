@@ -177,17 +177,6 @@
       "heading": 52.7578735
     },
     {
-      "name": "Heroine Bulk Sell",
-      "coordinates": {
-        "X": -432.249237,
-        "Y": -2444.00562,
-        "Z": 26.8761883,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 319.113647
-    },
-    {
       "name": "Jerome Drug Dealer",
       "coordinates": {
         "X": -4.44825268,
@@ -362,6 +351,17 @@
         "IsZero": false
       },
       "heading": 31.8029366
+    },
+    {
+      "name": "Heroine Bulk Sell",
+      "coordinates": {
+        "X": -432.249237,
+        "Y": -2444.00562,
+        "Z": 26.8761883,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 319.113647
     },
     {
       "name": "Casino Entrance",

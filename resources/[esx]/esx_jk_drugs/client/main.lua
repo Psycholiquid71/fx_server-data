@@ -188,7 +188,7 @@ AddEventHandler('esx_jk_drugs:useItem', function(itemName)
             TriggerEvent('esx_jk_drugs:crackedOut')
         end)
 
-    elseif itemName == 'opium_pooch' then
+    elseif itemName == 'heroine' then
         local lib, anim = 'rcmpaparazzo1ig_4', 'miranda_shooting_up' -- TODO better animations
         local playerPed = PlayerPedId()
 
