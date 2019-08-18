@@ -883,7 +883,7 @@ ESX.RegisterUsableItem('needles', function(source)
     	else 
         	TriggerClientEvent('esx:showNotification', source, '~r~You need atleast 10 opium and 1 needle..')
     	end
-end)
+end) 
 
 ESX.RegisterUsableItem('heroine', function(source)
 		local xPlayer = ESX.GetPlayerFromId(source)

@@ -219,9 +219,9 @@ Citizen.CreateThread( function()
 				ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
 					local sex = nil
 					if skin.sex == 0 then
-						sex = "mężczyznę" --male/change it to your language
+						sex = "Male" --male/change it to your language
 					else
-						sex = "kobietę" --female/change it to your language
+						sex = "female" --female/change it to your language
 					end
 					TriggerServerEvent('drugsInProgressPos', plyPos.x, plyPos.y, plyPos.z)
 					if s2 == 0 then
@@ -253,6 +253,38 @@ Citizen.CreateThread( function()
         end
     end
 end)
+
+RegisterNetEvent('stasiek_selling')
+AddEventHandler('stasiek_selling', function()
+
+    local playerPed = PlayerPedId()
+    PedPosition        = GetEntityCoords(playerPed)
+    local PlayerCoords = { x = PedPosition.x, y = PedPosition.y, z = PedPosition.z }
+    
+    local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
+    local plyPos = GetEntityCoords(GetPlayerPed(-1),  true)
+    local streetName, crossing = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, plyPos.x, plyPos.y, plyPos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
+    local streetName, crossing = GetStreetNameAtCoord(x, y, z)
+    streetName = GetStreetNameFromHashKey(streetName)
+    crossing = GetStreetNameFromHashKey(crossing)
+	
+	if Config.UseGCPhone then
+        if crossing ~= nil then
+            local coords      = GetEntityCoords(GetPlayerPed(-1))
+
+            TriggerServerEvent('esx_addons_gcphone:startCall', 'police', "Some shady prick is selling drugs on " .. streetName .. " and " .. crossing, PlayerCoords, {
+                PlayerCoords = { x = PedPosition.x, y = PedPosition.y, z = PedPosition.z },
+            })
+        else
+            TriggerServerEvent('esx_addons_gcphone:startCall', "police", "Some shady prick is selling drugs on " .. streetName, PlayerCoords, {
+                PlayerCoords = { x = PedPosition.x, y = PedPosition.y, z = PedPosition.z },
+            })
+        end
+    else
+		TriggerServerEvent('stasiek_policeAlert')
+	end
+end)
+
 
 RegisterNetEvent('drugsPlace')
 AddEventHandler('drugsPlace', function(tx, ty, tz)

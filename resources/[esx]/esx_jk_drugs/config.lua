@@ -9,10 +9,10 @@ Config.ShowBlips	= true -- Ehh, hopefully self explanatory... but if not it show
 Config.ShowMarkers 	= true -- Ehh, hopefully self explanatory... but if not it shows the circles on the ground for you
 
 --Cop Stuff--
-Config.GiveBlack = true -- Disable to give regular cash when selling drugs
+Config.GiveBlack = false -- Disable to give regular cash when selling drugs
 Config.ForceMulti	= false -- Force sellers to have to open the menu after every deal (chance to send notification)
-Config.EnableCops   = false -- Set true to send police notification (uses esx_phone)
-Config.UseGCPhone		= true -- Use GCphone instead of esx_phone
+Config.EnableCops   = true -- Set true to send police notification (uses esx_phone)
+Config.UseGCPhone	= true -- Use GCphone instead of esx_phone
 Config.RequireCops	= false -- Requires Police online to sell drugs
 Config.RequiredCopsCoke  = 1
 Config.RequiredCopsMeth  = 1
@@ -36,34 +36,37 @@ Config.Delays = {
 }
 
 Config.WeedDumpItems = {
-	marijuana = 2,
 	cannabis  = 1,
+	marijuana = 2,
 	weed_pooch = 10,
 }
 
 Config.CocaineDumpItems = {
-	cocaine = 95,
 	coca	= 5,
+	cocaine = 15,
+	coke_pooch	= 30,
 }
 
 Config.MethDumpItems = {
-	meth = 10,
 	ephedra = 5,
 	ephedrine = 7,
+	meth = 10,
 	meth_pooch = 25,
 }
 
 Config.CrackDumpItems = {
-	crack = 135,
+	crack = 10,
+	crack_pooch = 20,
 }
 
 Config.OpiumDumpItems = {
-	opium = 75,
 	poppy = 2,
+	opium = 15,
+	heroine = 30,
 }
 
 Config.HeroineDumpItems = {
-	heroine = 165
+	heroine = 30,
 }
 
 Config.FieldZones = {

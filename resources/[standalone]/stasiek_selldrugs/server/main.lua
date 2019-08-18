@@ -220,23 +220,38 @@ end)
 
 RegisterServerEvent('drugsNotify')
 AddEventHandler('drugsNotify', function()
-	TriggerClientEvent("drugsEnable", source)
+	TriggerClientEvent("stasiek_selling", source)
+	
 end)
 
 --if you need you can translate it to your language
 RegisterServerEvent('drugsInProgress')
 AddEventHandler('drugsInProgress', function(street1, street2, sex)
-      --TriggerClientEvent("outlawNotify", -1, "~r~Selling drugs by ~w~"..sex.."~r~near~w~"..street1.."~r~ and ~w~"..street2)
+    TriggerClientEvent("outlawNotify", -1, "~r~Selling drugs by ~w~"..sex.."~r~near~w~"..street1.."~r~ and ~w~"..street2)
 	TriggerClientEvent("outlawNotify", -1, "~r~Someone is selling drugs ~w~"..sex.." ~r~between ~w~"..street1.."~r~ a ~w~"..street2)
 end)
 --if you need you can translate it to your language too
 RegisterServerEvent('drugsInProgressS1')
 AddEventHandler('drugsInProgressS1', function(street1, sex)
-      --TriggerClientEvent("outlawNotify", -1, "~r~Selling drugs by ~w~"..sex.."~r~near~w~"..street1)
+    TriggerClientEvent("outlawNotify", -1, "~r~Selling drugs by ~w~"..sex.."~r~near~w~"..street1)
 	TriggerClientEvent("outlawNotify", -1, "~r~Someone is selling drugs ~w~"..sex.." ~r~at the street ~w~"..street1)
 end)
 
 RegisterServerEvent('drugsInProgressPos')
 AddEventHandler('drugsInProgressPos', function(gx, gy, gz)
 	TriggerClientEvent('drugsPlace', -1, gx, gy, gz)
+end)
+
+RegisterServerEvent('stasiek_policeAlert')
+AddEventHandler('stasiek_policeAlert', function()
+	local _source = source
+	local xPlayers = ESX.GetPlayers()
+
+	for i=1, #xPlayers, 1 do
+		local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
+		
+		if xPlayer.job.name == 'police' then
+			TriggerClientEvent('esx:showNotification', xPlayers[i], (_U('police_alert')))
+		end
+	end
 end)
