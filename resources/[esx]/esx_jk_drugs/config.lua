@@ -80,7 +80,7 @@ Config.ProcessZones = {
 	WeedProcessing = {coords = vector3(2329.02, 2571.29, 46.68), name = 'Hippy Hangout', color = 25, sprite = 496, radius = 1.0},
 	CocaineProcessing = {coords = vector3(-2083.58, -1011.96, 5.88), name = 'Yacht', color = 4, sprite = 455, radius = 1.0},
 	EphedrineProcessing = {coords = vector3(-1078.62, -1679.62, 4.58), name = 'Vagos Garage', color = 62, sprite = 310, radius = 1.0},
-	MethProcessing = {coords = vector3(1391.94, 3605.94, 38.94), name = 'Liquor Ace', color = 25, sprite = 93, radius = 1.0},
+	MethProcessing = {coords = vector3(-231.08, -2655.48, 6.0), name = 'Industrial Docksw', color = 25, sprite = 93, radius = 1.0},
 	CrackProcessing = {coords = vector3(974.72, -100.91, 74.87), name = 'Lost MC Clubhouse', color = 72, sprite = 226, radius = 1.0},
 	PoppyProcessing ={coords = vector3(3559.76, 3674.54, 28.12), name = 'Humane Labs', color = 38, sprite = 499, radius = 1.0},
 	HeroineProcessing = {coords = vector3(1976.76, 3819.58, 33.45), name = 'Trevor\'s', color = 59, sprite = 388, radius = 1.0},
@@ -99,7 +99,7 @@ Config.Peds = {
 	WeedProcess =		{ ped = -264140789, x = 2328.29, y = 2569.61,	z = 45.68, 	h = 325.04 },
 	CokeProcess =		{ ped = -264140789, x = -2084.48, y = -1011.68,	z = 4.88,	h = 252.42 },
 	EphedrineProcess =	{ ped = 516505552, x = -1079.49, y = -1679.92,	z = 3.58,	h = 181.96 },
-	MethProcess =		{ ped = 516505552, x = 1976.83,	y = 3819.67,	z = 32.45,	h = 120.83 },
+	MethProcess =		{ ped = 233415434, x = -228.83,	y = -2655.01,	z = 5.0,	h = 236.64 },
 	OpiumProcess =		{ ped = -730659924, x = 3559.03, y = 3674.78,	z = 27.12,	h = 224.32 },
 	CrackProcess =		{ ped = -730659924, x = 973.68, y = -100.35,	z = 73.85,	h = 277.73 },
 }

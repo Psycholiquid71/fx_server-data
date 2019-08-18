@@ -1000,6 +1000,138 @@
         "IsZero": false
       },
       "heading": 142.005829
+    },
+    {
+      "name": "Weed Warehouse",
+      "coordinates": {
+        "X": 1061.9032,
+        "Y": -3189.76416,
+        "Z": -39.1464653,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 170.336655
+    },
+    {
+      "name": "Cocaine Warehouse",
+      "coordinates": {
+        "X": 1089.07422,
+        "Y": -3193.20581,
+        "Z": -38.99347,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 192.820419
+    },
+    {
+      "name": "Money Washing Room",
+      "coordinates": {
+        "X": 1119.18872,
+        "Y": -3195.50342,
+        "Z": -40.4018974,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 272.670441
+    },
+    {
+      "name": "Hidden Chop Shop",
+      "coordinates": {
+        "X": 1006.11279,
+        "Y": -3161.274,
+        "Z": -38.9078064,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 141.020309
+    },
+    {
+      "name": "Meth Lab",
+      "coordinates": {
+        "X": 1001.3045,
+        "Y": -3195.61768,
+        "Z": -38.99157,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 263.2201
+    },
+    {
+      "name": "Underground Import Garage",
+      "coordinates": {
+        "X": 788.3312,
+        "Y": -3001.79248,
+        "Z": -38.9995461,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 288.425873
+    },
+    {
+      "name": "Import / Export Vehicle Shop",
+      "coordinates": {
+        "X": 731.9136,
+        "Y": -2987.47144,
+        "Z": -38.9998627,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 182.041077
+    },
+    {
+      "name": "Forgery Office",
+      "coordinates": {
+        "X": 1162.65063,
+        "Y": -3192.558,
+        "Z": -39.0079765,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 26.6664677
+    },
+    {
+      "name": "Biker Clubhouse",
+      "coordinates": {
+        "X": 1119.22119,
+        "Y": -3151.84351,
+        "Z": -37.0627747,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 301.072144
+    },
+    {
+      "name": "Underground bunker",
+      "coordinates": {
+        "X": 899.9903,
+        "Y": -3246.8335,
+        "Z": -98.0098343,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 272.92334
+    },
+    {
+      "name": "Underground Weapons Lab",
+      "coordinates": {
+        "X": 904.94635,
+        "Y": -3200.714,
+        "Z": -97.18795,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 200.675415
+    },
+    {
+      "name": "Secret Weed Lab",
+      "coordinates": {
+        "X": -78.47778,
+        "Y": -1395.78577,
+        "Z": 29.3600044,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 197.426788
     }
   ],
   "blips": [
