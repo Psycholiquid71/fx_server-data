@@ -1143,6 +1143,17 @@
         "IsZero": false
       },
       "heading": 156.902542
+    },
+    {
+      "name": "Psychocologist office",
+      "coordinates": {
+        "X": 1040.36658,
+        "Y": -678.8995,
+        "Z": 56.71401,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 326.176239
     }
   ],
   "blips": [
