@@ -278,9 +278,9 @@
     {
       "name": "Ephedra Processing",
       "coordinates": {
-        "X": -1076.95593,
-        "Y": -1677.73267,
-        "Z": 4.57523537,
+        "X": -1078.62,
+        "Y": -1679.62,
+        "Z": 4.58,
         "IsNormalized": false,
         "IsZero": false
       },
@@ -1154,6 +1154,50 @@
         "IsZero": false
       },
       "heading": 326.176239
+    },
+    {
+      "name": "Cargo Shipping Warhouse",
+      "coordinates": {
+        "X": 605.3954,
+        "Y": -2702.17017,
+        "Z": 7.04926,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 283.745178
+    },
+    {
+      "name": "Prison Cells Bolingbroke",
+      "coordinates": {
+        "X": 1795.74536,
+        "Y": 2481.16455,
+        "Z": -122.69976,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 103.707123
+    },
+    {
+      "name": "Humane Labs Elevator B level 2",
+      "coordinates": {
+        "X": 3540.4187,
+        "Y": 3675.63672,
+        "Z": 28.1211433,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 168.6632
+    },
+    {
+      "name": "FBI Front Door",
+      "coordinates": {
+        "X": 94.26028,
+        "Y": -742.869263,
+        "Z": 45.7554855,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 266.441925
     }
   ],
   "blips": [

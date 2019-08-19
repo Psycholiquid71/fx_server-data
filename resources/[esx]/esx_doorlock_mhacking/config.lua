@@ -333,7 +333,29 @@ Config.DoorList = {
 		size = 0.3
 	},
 
+	--
+	--FBI Building and Garage
+	--
 	
+	-- Entrance
+	{
+		objName = 'v_ilev_fibl_door02',
+		objCoords  = {x = 106.37, y = -742.69, z = 46.18},
+		textCoords = {x = 106.37, y = -743.76, z = 46.18},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 3,
+		size = 1.3
+	},
+	{
+		objName = 'v_ilev_fibl_door01',
+		objCoords  = {x = 105.76, y = -746.64, z = 46.18},
+		textCoords = {x = 105.71, y = -745.28, z = 46.18},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 3,
+		size = 1.3
+	},
 
 
 	--
