@@ -27,6 +27,7 @@ local hasFocus = false
 local PhoneInCall = {}
 local currentPlaySound = false
 local soundDistanceMax = 8.0
+local TokoVoipID = nil
 
 
 --====================================================================================
@@ -159,7 +160,7 @@ function showFixePhoneHelper (coords)
       coords.x, coords.y, coords.z, 1)
     if dist <= 2.0 then
       SetTextComponentFormat("STRING")
-      AddTextComponentString("~g~" .. data.name .. ' ~o~' .. number .. '~n~~INPUT_PICKUP~~w~ Utiliser')
+      AddTextComponentString("~g~" .. data.name .. ' ~o~' .. number .. '~n~~INPUT_PICKUP~~w~ To Use')
       DisplayHelpTextFromStringLabel(0, 0, 0, -1)
       if IsControlJustPressed(1, KeyTakeCall) then
         startFixeCall(number)
@@ -380,8 +381,10 @@ RegisterNetEvent("gcPhone:acceptCall")
 AddEventHandler("gcPhone:acceptCall", function(infoCall, initiator)
   if inCall == false and USE_RTC == false then
     inCall = true
-    NetworkSetVoiceChannel(infoCall.id + 1)
-    NetworkSetTalkerProximity(0.0)
+    --NetworkSetVoiceChannel(infoCall.id + 1)                   -- Removed for TokoVoIP
+    --NetworkSetTalkerProximity(0.0)                            -- Removed for TokoVoIP
+    exports.tokovoip_script:addPlayerToRadio(infoCall.id + 120) -- Added for TokoVoip
+    TokoVoipID = infoCall.id + 120                              -- Added for TokoVoIP
   end
   if menuIsOpen == false then 
     TooglePhone()
@@ -395,7 +398,9 @@ AddEventHandler("gcPhone:rejectCall", function(infoCall)
   if inCall == true then
     inCall = false
     Citizen.InvokeNative(0xE036A705F989E049)
-    NetworkSetTalkerProximity(2.5)
+    --NetworkSetTalkerProximity(2.5)                          -- Removed for TokoVoIP
+    exports.tokovoip_script:removePlayerFromRadio(TokoVoipID) -- Added for TokoVoip
+    TokoVoipID = nil                                          -- Added for TokoVoIP
   end
   PhonePlayText()
   SendNUIMessage({event = 'rejectCall', infoCall = infoCall})
@@ -465,7 +470,9 @@ RegisterNUICallback('notififyUseRTC', function (use, cb)
   if USE_RTC == true and inCall == true then
     inCall = false
     Citizen.InvokeNative(0xE036A705F989E049)
-    NetworkSetTalkerProximity(2.5)
+    exports.tokovoip_script:removePlayerFromRadio(TokoVoipID) -- Added for TokoVoIP
+    TokoVoipID = nil                                          -- Added for TokoVoIP
+    --NetworkSetTalkerProximity(2.5)                          -- Removed for TokoVoIP
   end
   cb()
 end)
