@@ -1198,6 +1198,17 @@
         "IsZero": false
       },
       "heading": 266.441925
+    },
+    {
+      "name": "Spawn Zone",
+      "coordinates": {
+        "X": 193.952087,
+        "Y": -934.6369,
+        "Z": 30.6868038,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 309.630127
     }
   ],
   "blips": [
