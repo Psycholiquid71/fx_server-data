@@ -32,9 +32,7 @@ Citizen.CreateThread(function()
 
             if distance < Config.MaxDistance and InAction == false then
 
-                ESX.Game.Utils.DrawText3D({ x = bedID.objCoords.x, y = bedID.objCoords.y, z = bedID.objCoords.z + 1 }, bedID.text, 0.6)
-
-                --DrawText3Ds({ x = bedID.objCoords.x, y = bedID.objCoords.y, z = bedID.objCoords.z + 1 }, 'Press [~g~E~s~] to speak with a surgeon.', 0.6)
+                ESX.Game.Utils.DrawText3D({ x = bedID.objCoords.x, y = bedID.objCoords.y, z = bedID.objCoords.z + 1 }, bedID.text, 0.5)
 
                 if IsControlJustReleased(0, Keys['E']) then
                     bedActive(bedID.objCoords.x, bedID.objCoords.y, bedID.objCoords.z, bedID.heading, bedID)
@@ -62,12 +60,13 @@ function bedActive(x, y, z, heading)
             Citizen.Wait(0)
 
             if InAction == true then
-                headsUp('Press ~INPUT_VEH_DUCK~ to get back up')
-                if IsControlJustReleased(0, Keys['X']) then
+                headsUp('Press ~INPUT_PICKUP~ to get back up')
+                if IsControlJustReleased(0, Keys['E']) then
                     ClearPedTasks(GetPlayerPed(-1))
                     FreezeEntityPosition(GetPlayerPed(-1), false)
                     SetEntityCoords(GetPlayerPed(-1), x + 1.0, y, z)
-                    InAction = false
+                    InAction = falsequi
+
                 end
             end
         end
