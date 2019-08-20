@@ -241,10 +241,6 @@ Citizen.CreateThread(function()
 	end
 end)
 
-local blips = {
-	{x = 326.59,  y = -582.9,  z = 43.32,  heading= 10.00,  scale=1.0},
-}
-
 Citizen.CreateThread(function()
     RequestModel(GetHashKey("s_m_m_doctor_01"))
     while not HasModelLoaded(GetHashKey("s_m_m_doctor_01")) do

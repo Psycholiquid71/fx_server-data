@@ -54,6 +54,7 @@ AddEventHandler('playerSpawned', function()
 				end
 
 				ESX.ShowNotification(_U('combatlog_message'))
+				exports['mythic_notify']:DoHudText('error', _U('combatlog_message'))
 				RemoveItemsAfterRPDeath()
 			end
 		end)
@@ -122,7 +123,8 @@ AddEventHandler('esx_ambulancejob:useItem', function(itemName)
 			end
 	
 			TriggerEvent('esx_ambulancejob:heal', 'big', true)
-			ESX.ShowNotification(_U('used_medikit'))
+			--ESX.ShowNotification(_U('used_medikit'))
+			exports['mythic_notify']:DoHudText('success', 'You\'ve used a medkit')
 		end)
 
 	elseif itemName == 'bandage' then
@@ -139,7 +141,8 @@ AddEventHandler('esx_ambulancejob:useItem', function(itemName)
 			end
 
 			TriggerEvent('esx_ambulancejob:heal', 'small', true)
-			ESX.ShowNotification(_U('used_bandage'))
+			--ESX.ShowNotification(_U('used_bandage'))
+			exports['mythic_notify']:DoHudText('success', 'You\'ve used a bandage')
 		end)
 	end
 end)
@@ -183,7 +186,8 @@ function SendDistressSignal()
 	local playerPed = PlayerPedId()
 	local coords = GetEntityCoords(playerPed)
 
-	ESX.ShowNotification(_U('distress_sent'))
+	--ESX.ShowNotification(_U('distress_sent'))
+	exports['mythic_notify']:DoHudText('error', 'Distress signal has been sent')
 	TriggerServerEvent('esx_phone:send', 'ambulance', _U('distress_message'), false, {
 		x = coords.x,
 		y = coords.y,
