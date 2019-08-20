@@ -1,12 +1,21 @@
 (function () {
 
+	//let MenuTpl =
+	//	'<div id="menu_{{_namespace}}_{{_name}}" class="dialog {{#isBig}}big{{/isBig}}">' +
+	//		'<div class="head"><span>{{title}}</span></div>' +
+	//			'{{#isDefault}}<input type="text" name="value" id="inputText"/>{{/isDefault}}' +
+	//			'{{#isBig}}<textarea name="value"/>{{/isBig}}' +
+	//			'<button type="button" name="submit">Submit</button>' +
+	//			'<button type="button" name="cancel">Cancel</button>' + 
+	//		'</div>' +
+	//	'</div>'
+	//;
 	let MenuTpl =
 		'<div id="menu_{{_namespace}}_{{_name}}" class="dialog {{#isBig}}big{{/isBig}}">' +
-			'<div class="head"><span>{{title}}</span></div>' +
-				'{{#isDefault}}<input type="text" name="value" id="inputText"/>{{/isDefault}}' +
+			'{{#isDefault}}<input type="text" name="value" placeholder="{{title}}" id="inputText"/>{{/isDefault}}' +
 				'{{#isBig}}<textarea name="value"/>{{/isBig}}' +
-				'<button type="button" name="submit">Submit</button>' +
-				'<button type="button" name="cancel">Cancel</button>' + 
+				'<button type="button" name="submit">Accept</button>' +
+				'<button type="button" name="cancel">Cancel</button>'
 			'</div>' +
 		'</div>'
 	;
