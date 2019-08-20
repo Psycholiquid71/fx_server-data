@@ -70,7 +70,8 @@ function OpenShopMenu()
 								TriggerEvent('skinchanger:loadSkin', skin)
 							end)
 
-							ESX.ShowNotification(_U('not_enough_money'))
+							--ESX.ShowNotification(_U('not_enough_money'))
+							exports['mythic_notify']:DoHudText('error', _U('not_enough_money'))
 						
 						end
 
