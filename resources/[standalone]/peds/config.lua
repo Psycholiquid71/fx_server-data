@@ -12,8 +12,8 @@ Config.EnableCops                 = false    -- If true spawn All Cops at Depart
 --Cops--
 
 --Nightclub--
-Config.EnableNightclubs           = false    -- If true spawn Nightclub NPCs (Need a IPL Loader https://github.com/Bob74/bob74_ipl or other) (After Hours DLC)
-Config.EnableSolomun              = false    -- If true spawn Solomun at Nightclub DJ
+Config.EnableNightclubs           = true    -- If true spawn Nightclub NPCs (Need a IPL Loader https://github.com/Bob74/bob74_ipl or other) (After Hours DLC)
+Config.EnableSolomun              = true    -- If true spawn Solomun at Nightclub DJ
 Config.EnableDixon                = false   -- If true spawn Dixon at Nightclub DJ
 --Nightclub--
 

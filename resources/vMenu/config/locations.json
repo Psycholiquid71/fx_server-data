@@ -1099,6 +1099,17 @@
         "IsZero": false
       },
       "heading": 282.111481
+    },
+    {
+      "name": "Studio Lops Santos",
+      "coordinates": {
+        "X": -1570.10547,
+        "Y": -3013.31,
+        "Z": -74.40616,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 348.425934
     }
   ],
   "blips": [

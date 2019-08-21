@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		local playerPed = PlayerPedId()
@@ -47,7 +47,7 @@ Citizen.CreateThread(function()
 			Citizen.Wait(500)
 		end
 	end
-end)
+end)]]
 
 function ProcessWeed()
 	isProcessing = true

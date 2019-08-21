@@ -33,6 +33,13 @@ function loadInt(coordsTable, interiorProps, interiorsPropColors)
 	end
 end
 
+Citizen.CreateThread(function()
+  SwitchTrainTrack(0, true)
+  SwitchTrainTrack(3, true)
+  N_0x21973bbf8d17edfa(0, 120000)
+  SetRandomTrains(1)
+end)
+
 -- https://wiki.gtanet.work/index.php?title=Online_Interiors_and_locations
 -- IPL list 1.0.1290: https://pastebin.com/iNGLY32D
 -- Extra IPL info: https://pastebin.com/SE5t8CnE
