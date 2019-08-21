@@ -408,127 +408,6 @@
       "heading": 163.975281
     },
     {
-      "name": "Grapeseed Monestary",
-      "coordinates": {
-        "X": 2127.50513,
-        "Y": 4659.44531,
-        "Z": 33.3345337,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 94.26971
-    },
-    {
-      "name": "Vinewood Garage and Heli",
-      "coordinates": {
-        "X": -706.5538,
-        "Y": 967.9311,
-        "Z": 237.588608,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 238.732452
-    },
-    {
-      "name": "Vinewood Car Dealership",
-      "coordinates": {
-        "X": -572.7738,
-        "Y": 954.9998,
-        "Z": 242.801483,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 124.019989
-    },
-    {
-      "name": "Vinewood Aquadrome",
-      "coordinates": {
-        "X": -191.398468,
-        "Y": 792.226746,
-        "Z": 198.107422,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 168.091675
-    },
-    {
-      "name": "Vinewood Camping",
-      "coordinates": {
-        "X": -833.2417,
-        "Y": 849.6969,
-        "Z": 202.8867,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 329.7642
-    },
-    {
-      "name": "Vinewood Mustic Festival",
-      "coordinates": {
-        "X": -1949.91479,
-        "Y": 327.878845,
-        "Z": 89.88382,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 197.865845
-    },
-    {
-      "name": "Vinewood Snackbar 1",
-      "coordinates": {
-        "X": -878.388,
-        "Y": 423.716339,
-        "Z": 87.2104645,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 186.874237
-    },
-    {
-      "name": "Vinewood Resaurant",
-      "coordinates": {
-        "X": -784.9199,
-        "Y": 564.790161,
-        "Z": 125.548439,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 124.041664
-    },
-    {
-      "name": "Vinewood Cafe",
-      "coordinates": {
-        "X": -818.0278,
-        "Y": 628.70575,
-        "Z": 128.062088,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 133.404236
-    },
-    {
-      "name": "Vinewood Trailerpark",
-      "coordinates": {
-        "X": -553.5692,
-        "Y": 354.814362,
-        "Z": 84.8866,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 218.335464
-    },
-    {
-      "name": "Sandy Shores Alive",
-      "coordinates": {
-        "X": 1342.20618,
-        "Y": 3643.95679,
-        "Z": 41.1956253,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 351.732056
-    },
-    {
       "name": "Teleport to Racetrack",
       "coordinates": {
         "X": 1177.46082,
@@ -1209,6 +1088,17 @@
         "IsZero": false
       },
       "heading": 309.630127
+    },
+    {
+      "name": "Takilalas",
+      "coordinates": {
+        "X": -565.063,
+        "Y": 277.5028,
+        "Z": 83.13633,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 282.111481
     }
   ],
   "blips": [

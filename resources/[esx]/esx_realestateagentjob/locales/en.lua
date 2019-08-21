@@ -12,7 +12,7 @@ Locales['en'] = {
   ['client_poor'] = 'your client cannot afford that',
 
   -- Phone
-  ['client'] = 'client',
+  ['client'] = 'client Interested',
   
   -- Property menu
   ['property_name'] = 'property',
