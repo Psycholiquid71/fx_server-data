@@ -11,6 +11,9 @@ Locales['en'] = {
   ['boss_action'] = 'boss Actions',
   ['client_poor'] = 'your client cannot afford that',
 
+  -- Phone
+  ['client'] = 'client',
+  
   -- Property menu
   ['property_name'] = 'property',
   ['property_actions'] = 'actions',

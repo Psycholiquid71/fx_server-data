@@ -4,7 +4,7 @@ description 'ESX Nightclub Job & Addons'
 
 version '1.6.0'
 
-dependency 'bob74_ipl'
+dependency 'fivem-ipl'
 
 client_scripts {
   --JOB-- 

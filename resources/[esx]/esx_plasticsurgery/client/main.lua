@@ -243,26 +243,22 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-    RequestModel(GetHashKey("s_m_m_doctor_01"))
-    while not HasModelLoaded(GetHashKey("s_m_m_doctor_01")) do
-        Wait(0)
+    RequestModel(GetHashKey("s_m_y_autopsy_01"))
+	
+    while not HasModelLoaded(GetHashKey("s_m_y_autopsy_01")) do
+        Wait(1)
     end
-
-    for _, item in pairs(blips) do
-        item.blip = AddBlipForCoord(item.x, item.y, item.z)
-        SetBlipSprite(item.blip, item.id)
-        SetBlipColour(item.blip, item.color)
-        SetBlipAsShortRange(item.blip, true)
-        SetBlipScale(item.blip, item.scale)
-        BeginTextCommandSetBlipName("STRING")
-        AddTextComponentString(item.name)
-        EndTextCommandSetBlipName(item.blip)
-        CreatePed(4, 0xd47303ac, item.x, item.y, item.z, item.heading, false, true)
-        SetEntityHeading(item.blip, item.heading)
-        FreezeEntityPosition(item.blip, true)
-        SetEntityInvincible(item.blip, true)
-        SetBlockingOfNonTemporaryEvents(item.blip, true)
-    end
+	
+	if Config.EnablePeds then
+		for _, item in pairs(Config.Locations) do
+			local npc = CreatePed(4, 0xB2273D4E, item.x, item.y, item.z, item.heading, false, true)
+			
+			SetEntityHeading(npc, item.heading)
+			FreezeEntityPosition(npc, true)
+			SetEntityInvincible(npc, true)
+			SetBlockingOfNonTemporaryEvents(npc, true)
+		end
+	end
 end)
 
 function DrawText3Ds(x,y,z, text)
