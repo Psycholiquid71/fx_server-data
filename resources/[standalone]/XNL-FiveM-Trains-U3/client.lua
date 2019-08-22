@@ -140,10 +140,10 @@
 -- other users to make it more easy to adapt to their roleplay
 -- server for example.
 --=============================================================
-PayWithBank 			= 0		-- Change this to 1 if you want users to pay with bank card (NOTE: Do implement your OWN banking system here please!)
+PayWithBank 			= 1		-- Change this to 1 if you want users to pay with bank card (NOTE: Do implement your OWN banking system here please!)
 UserBankIDi 			= 3		-- 1 = Maze, 2 = Bank Of Liberty, 3 = Fleeca  (This will show the corresponding message when the player doesn't have enoug money)
-AllowEnterTrainWanted	= 0		-- Change to 1 if you want to allow players to ENTER the train when they have a wanted level
-TicketPrice				= 25	-- Change to any value YOU think is suitable for a Metro Ticket in your (RP) Server
+AllowEnterTrainWanted	= 1eaw		-- Change to 1 if you want to allow players to ENTER the train when they have a wanted level
+TicketPrice				= 50	-- Change to any value YOU think is suitable for a Metro Ticket in your (RP) Server
 StationsExitScanRadius	= 15.0	-- I would RECOMMEND to leave it at 15 for best detection in trains, this variable sets the 'scan radius size' per station marker.
 								-- NOTE: The StationsExitScanRadius HAS TO BE A FLOAT! (15.0 for example (which is the default!))
 
