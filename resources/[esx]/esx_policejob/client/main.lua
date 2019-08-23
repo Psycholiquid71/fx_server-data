@@ -292,6 +292,45 @@ function OpenArmoryMenu(station)
 	end)
 end
 
+function OpenEvidenceMenu(station)
+	local elements = {
+		}
+
+	if Config.EnableEvidenceManagement then
+		table.insert(elements, {label = _U('get_e_weapon'),     value = 'get_e_weapon'})
+		table.insert(elements, {label = _U('put_e_weapon'),     value = 'put_e_weapon'})
+		table.insert(elements, {label = _U('remove_e_object'),  value = 'get_e_stock'})
+		table.insert(elements, {label = _U('deposit_e_object'), value = 'put_e_stock'})
+	end
+
+	ESX.UI.Menu.CloseAll()
+
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'evidence',
+	{
+		title    = _U('evidence'),
+		align    = 'bottom-right',
+		elements = elements
+	}, function(data, menu)
+
+		if data.current.value == 'get_e_weapon' then
+			OpenGetWeaponEMenu()
+		elseif data.current.value == 'put_e_weapon' then
+			OpenPutWeaponEMenu()
+		elseif data.current.value == 'put_e_stock' then
+			OpenPutStocksEMenu()
+		elseif data.current.value == 'get_e_stock' then
+			OpenGetStocksEMenu()
+		end
+
+	end, function(data, menu)
+		menu.close()
+
+		CurrentAction     = 'menu_evidence'
+		CurrentActionMsg  = _U('open_evidence')
+		CurrentActionData = {station = station}
+	end)
+end
+
 function OpenVehicleSpawnerMenu(type, station, part, partNum)
 	local playerCoords = GetEntityCoords(PlayerPedId())
 	PlayerData = ESX.GetPlayerData()
@@ -1268,6 +1307,73 @@ function OpenPutWeaponMenu()
 	end)
 end
 
+function OpenGetWeaponEMenu()
+
+	ESX.TriggerServerCallback('esx_policejob:getArmoryEWeapons', function(weapons)
+		local elements = {}
+
+		for i=1, #weapons, 1 do
+			if weapons[i].count > 0 then
+				table.insert(elements, {
+					label = 'x' .. weapons[i].count .. ' ' .. ESX.GetWeaponLabel(weapons[i].name),
+					value = weapons[i].name
+				})
+			end
+		end
+
+		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'armory_get_e_weapon',
+		{
+			title    = _U('get_e_weapon_menu'),
+			align    = 'bottom-right',
+			elements = elements
+		}, function(data, menu)
+
+			menu.close()
+
+			ESX.TriggerServerCallback('esx_policejob:removeArmoryEWeapon', function()
+				OpenGetWeaponEMenu()
+			end, data.current.value)
+
+		end, function(data, menu)
+			menu.close()
+		end)
+	end)
+end
+
+function OpenPutWeaponEMenu()
+	local elements   = {}
+	local playerPed  = PlayerPedId()
+	local weaponList = ESX.GetWeaponList()
+
+	for i=1, #weaponList, 1 do
+		local weaponHash = GetHashKey(weaponList[i].name)
+
+		if HasPedGotWeapon(playerPed, weaponHash, false) and weaponList[i].name ~= 'WEAPON_UNARMED' then
+			table.insert(elements, {
+				label = weaponList[i].label,
+				value = weaponList[i].name
+			})
+		end
+	end
+
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'armory_put_e_weapon',
+	{
+		title    = _U('put_e_weapon_menu'),
+		align    = 'bottom-right',
+		elements = elements
+	}, function(data, menu)
+
+		menu.close()
+
+		ESX.TriggerServerCallback('esx_policejob:addArmoryEWeapon', function()
+			OpenPutWeaponEMenu()
+		end, data.current.value, true)
+
+	end, function(data, menu)
+		menu.close()
+	end)
+end
+
 function OpenBuyWeaponsMenu()
 
 	local elements = {}
@@ -1501,6 +1607,112 @@ function OpenPutStocksMenu()
 
 end
 
+function OpenGetStocksEMenu()
+
+	ESX.TriggerServerCallback('esx_policejob:getStockEItems', function(items)
+
+		local elements = {}
+
+		for i=1, #items, 1 do
+			table.insert(elements, {
+				label = 'x' .. items[i].count .. ' ' .. items[i].label,
+				value = items[i].name
+			})
+		end
+
+		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'e_stocks_menu',
+		{
+			title    = _U('police_stock'),
+			align    = 'bottom-right',
+			elements = elements
+		}, function(data, menu)
+
+			local itemName = data.current.value
+
+			ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'e_stocks_menu_get_item_count', {
+				title = _U('quantity')
+			}, function(data2, menu2)
+
+				local count = tonumber(data2.value)
+
+				if count == nil then
+					ESX.ShowNotification(_U('quantity_invalid'))
+				else
+					menu2.close()
+					menu.close()
+					TriggerServerEvent('esx_policejob:getStockEItem', itemName, count)
+
+					Citizen.Wait(300)
+					OpenGetStocksMenu()
+				end
+
+			end, function(data2, menu2)
+				menu2.close()
+			end)
+
+		end, function(data, menu)
+			menu.close()
+		end)
+
+	end)
+
+end
+
+function OpenPutStocksEMenu()
+
+	ESX.TriggerServerCallback('esx_policejob:getPlayerInventory', function(inventory)
+
+		local elements = {}
+
+		for i=1, #inventory.items, 1 do
+			local item = inventory.items[i]
+
+			if item.count > 0 then
+				table.insert(elements, {
+					label = item.label .. ' x' .. item.count,
+					type = 'item_standard',
+					value = item.name
+				})
+			end
+		end
+
+		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'e_stocks_menu',
+		{
+			title    = _U('inventory'),
+			align    = 'bottom-right',
+			elements = elements
+		}, function(data, menu)
+
+			local itemName = data.current.value
+
+			ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'e_stocks_menu_put_item_count', {
+				title = _U('quantity')
+			}, function(data2, menu2)
+
+				local count = tonumber(data2.value)
+
+				if count == nil then
+					ESX.ShowNotification(_U('quantity_invalid'))
+				else
+					menu2.close()
+					menu.close()
+					TriggerServerEvent('esx_policejob:putStockEItems', itemName, count)
+
+					Citizen.Wait(300)
+					OpenPutStocksMenu()
+				end
+
+			end, function(data2, menu2)
+				menu2.close()
+			end)
+
+		end, function(data, menu)
+			menu.close()
+		end)
+	end)
+
+end
+
 RegisterNetEvent('esx:setJob')
 AddEventHandler('esx:setJob', function(job)
 	PlayerData.job = job
@@ -1542,6 +1754,12 @@ AddEventHandler('esx_policejob:hasEnteredMarker', function(station, part, partNu
 		CurrentAction     = 'menu_armory'
 		CurrentActionMsg  = _U('open_armory')
 		CurrentActionData = {station = station}
+
+	elseif part == 'Evidence' then
+
+		CurrentAction     = 'menu_evidence'
+		CurrentActionMsg  = _U('open_evidence')
+		CurrentActionData = {station = station}	
 
 	elseif part == 'Vehicles' then
 
@@ -1878,6 +2096,19 @@ Citizen.CreateThread(function()
 					end
 				end
 
+				for i=1, #v.Evidence, 1 do
+					local distance = GetDistanceBetweenCoords(coords, v.Evidence[i], true)
+
+					if distance < Config.DrawDistance then
+						DrawMarker(21, v.Evidence[i], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
+						letSleep = false
+					end
+
+					if distance < Config.MarkerSize.x then
+						isInMarker, currentStation, currentPart, currentPartNum = true, k, 'Evidence', i
+					end
+				end
+
 				for i=1, #v.Vehicles, 1 do
 					local distance = GetDistanceBetweenCoords(coords, v.Vehicles[i].Spawner, true)
 
@@ -2023,6 +2254,14 @@ Citizen.CreateThread(function()
 					else
 						ESX.ShowNotification(_U('service_not'))
 					end
+				elseif CurrentAction == 'menu_evidence' then
+					if Config.MaxInService == -1 then
+						OpenEvidenceMenu(CurrentActionData.station)
+					elseif playerInService then
+						OpenEvidenceMenu(CurrentActionData.station)
+					else
+						ESX.ShowNotification(_U('service_not'))
+					end	
 				elseif CurrentAction == 'menu_vehicle_spawner' then
 					if Config.MaxInService == -1 then
 						OpenVehicleSpawnerMenu('car', CurrentActionData.station, CurrentActionData.part, CurrentActionData.partNum)

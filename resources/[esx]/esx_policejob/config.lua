@@ -7,6 +7,7 @@ Config.MarkerColor                = { r = 50, g = 50, b = 204 }
 
 Config.EnablePlayerManagement     = true
 Config.EnableArmoryManagement     = true
+Config.EnableEvidenceManagement	  = true
 Config.EnableESXIdentity          = true -- enable if you're using esx_identity
 Config.EnableNonFreemodePeds      = false -- turn this on if you want custom peds
 Config.EnableLicenses             = true -- enable if you're using esx_license
@@ -37,6 +38,10 @@ Config.PoliceStations = {
 
 		Armories = {
 			vector3(451.7, -980.1, 30.6)
+		},
+
+		Evidence = {
+			vector3(476.83, -984.42, 25.91)
 		},
 
 		Vehicles = {
@@ -93,6 +98,10 @@ Config.PoliceStations = {
 
 		Armories = {
 			vector3(1851.06, 3683.2, 34.27)
+		},
+
+		Evidence = {
+			vector3(476.83, -1984.42, 25.91)
 		},
 
 		Vehicles = {
