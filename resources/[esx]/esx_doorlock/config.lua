@@ -143,6 +143,16 @@ Config.DoorList = {
 		locked = true
 	},
 
+	-- Evidence Room
+	{
+		objName = 'v_ilev_ph_gendoor006',
+		objYaw = 0.0,
+		objCoords  = vector3(477.68, -987.73, 24.91),
+		textCoords = vector3(477.71, -986.62, 24.91),
+		authorizedJobs = { 'police' },
+		locked = true
+	},
+
 	-- To Back
 	{
 		objName = 'v_ilev_gtdoor',
