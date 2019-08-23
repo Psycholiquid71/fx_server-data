@@ -60,7 +60,7 @@ end
 --[[------------------------------------------------------------------------
     Police Vehicle Radar 
 ------------------------------------------------------------------------]]--
-local radarEnabled = false 
+local radarEnabled = true 
 local hidden = false 
 local radarInfo = 
 { 
@@ -437,12 +437,12 @@ Citizen.CreateThread( function()
         -- These control pressed natives must be the disabled check ones. 
 
         -- LCtrl is pressed and M has just been pressed 
-        if ( IsDisabledControlPressed( 1, 36 ) and IsDisabledControlJustPressed( 1, 244 ) ) then 
+        if ( IsDisabledControlPressed( 1, 36 ) and IsDisabledControlJustPressed( 1, 249 ) ) then 
             TriggerEvent( 'wk:radarRC' )
         end 
 
         -- LCtrl is not being pressed and M has just been pressed 
-        if ( not IsDisabledControlPressed( 1, 36 ) and IsDisabledControlJustPressed( 1, 244 ) ) then 
+        if ( not IsDisabledControlPressed( 1, 36 ) and IsDisabledControlJustPressed( 1, 249 ) ) then 
             ResetFrontFast()
             ResetRearFast()
         end 

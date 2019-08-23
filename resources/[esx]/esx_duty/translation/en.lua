@@ -5,4 +5,5 @@ Locales['en'] = {
 	['offduty'] = 'You went offduty.',
 	['notpol'] = 'You are not a policemen.',
 	['notamb'] = 'You are not a doctor.',
+	['notmec'] = 'You are not a mechanic.',
 }

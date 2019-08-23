@@ -25,4 +25,11 @@ Config.Zones = {
     Color = { r = 0, g = 255, b = 0 },
     Type = 27,
   },
+
+  MechanicDuty2 = {
+    Pos = { x = -203.96, y = -1339.36, z = 33.92 },
+    Size = { x = 1.5, y = 1.5, z = 1.5 },
+    Color = { r = 0, g = 255, b = 0 },
+    Type = 27,
+  },
 }

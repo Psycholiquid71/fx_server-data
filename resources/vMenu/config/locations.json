@@ -1110,6 +1110,17 @@
         "IsZero": false
       },
       "heading": 348.425934
+    },
+    {
+      "name": "Mechanic On/Off Duty Benny's",
+      "coordinates": {
+        "X": -204.636414,
+        "Y": -1340.17114,
+        "Z": 34.8940544,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 115.317863
     }
   ],
   "blips": [

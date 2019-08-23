@@ -59,6 +59,11 @@ AddEventHandler('esx_duty:hasEnteredMarker', function (zone)
     CurrentActionMsg  = _U('duty')
     CurrentActionData = {}
   end
+  if zone == 'MechanicDuty2' then
+    CurrentAction     = 'mechanic_duty'
+    CurrentActionMsg  = _U('duty')
+    CurrentActionData = {}
+  end
 end)
 
 AddEventHandler('esx_duty:hasExitedMarker', function (zone)
