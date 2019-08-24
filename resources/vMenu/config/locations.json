@@ -1121,6 +1121,17 @@
         "IsZero": false
       },
       "heading": 115.317863
+    },
+    {
+      "name": "Mechaic Garage (addon)",
+      "coordinates": {
+        "X": 47.07092,
+        "Y": -872.164551,
+        "Z": 30.4477062,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 154.042389
     }
   ],
   "blips": [
