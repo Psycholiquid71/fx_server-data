@@ -181,5 +181,12 @@ files {
   "html/img/items/icedtea.png",
   "html/img/items/powerade.png",
   "html/img/items/teddybear.png",
-  "html/img/items/weed_pooch.png"
+  "html/img/items/weed_pooch.png",
+  -- Lenzh_chopshop
+  "html/img/items/battery.png",
+  "html/img/items/lowradio.png",
+  "html/img/items/stockrim.png",
+  "html/img/items/airbag.png",
+  "html/img/items/highradio.png",
+  "html/img/items/highrim.png"
 }

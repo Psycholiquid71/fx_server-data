@@ -6,7 +6,7 @@ Config.IsMechanicJobOnly = false
 Config.Zones = {
 
 	ls1 = { -- south of city, near airport
-		Pos   = { x = -1155.53, y = -2007.18, z = 12.74},
+		Pos   = { x = -1155.53, y = -2007.18, z = 12.14},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
 		Marker= 1,
@@ -15,7 +15,7 @@ Config.Zones = {
 	},
 
 	ls2 = { -- near legion
-		Pos   = { x = 731.81, y = -1088.82, z = 21.73},
+		Pos   = { x = 731.81, y = -1088.82, z = 21.13},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
 		Marker= 1,
@@ -24,7 +24,7 @@ Config.Zones = {
 	},
 
 	ls3 = { -- sandy
-		Pos   = { x = 1175.04, y = 2640.21, z = 37.32},
+		Pos   = { x = 1175.04, y = 2640.21, z = 36.82},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
 		Marker= 1,
@@ -33,7 +33,7 @@ Config.Zones = {
 	},
 
 	ls4 = { -- paleto
-		Pos   = { x = 110.99, y = 6626.39, z = 30.89},
+		Pos   = { x = 110.99, y = 6626.39, z = 30.79},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
 		Marker= 1,
