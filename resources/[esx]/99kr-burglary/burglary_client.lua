@@ -798,7 +798,10 @@ function OpenSellMenu()
               {label = 'Laptop ($350)', value = 'laptop'},
               {label = 'Samsung S10 ($215)', value = 'samsungS10'},
               {label = 'Xbox One ($75)', value = 'xbox'},
-              {label = 'Playstation 4 (80$)', value = 'playstation'},
+              {label = 'Aftermarket Radio (50$)', value = 'highreadio'},
+              {label = 'Stock Radio (20$)', value = 'lowradio'},
+              {label = 'Stock Rims (50$)', value = 'stockrim'},
+              {label = 'Highedn Rim (100$)', value = 'highrim'},
           }
       },
       function(data, menu)
