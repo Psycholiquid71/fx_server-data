@@ -49,7 +49,7 @@ local carUnlocked = "You have unlocked the car"
 local youFound = "From the" -- when you steal something
 local burglaryDetected = "A burglary has been detected at" -- text 1 cops gets sent
 local sentPhoto = "We've sent you a photo of the criminal." -- if you use qalle's camerasystem this will be in the message too
-local item = {'ring', 'gpixel', 'laptop', 'cocain', 'marijuana', 'samsungS10', 'iphone', 'rolex', 'xbox', 'lotteryticket', 'playstation'}
+local item = {'highrim','stockrim','lowradio','highradio','ring', 'gpixel', 'laptop', 'cocain', 'marijuana', 'samsungS10', 'iphone', 'rolex', 'xbox', 'lotteryticket', 'playstation'}
 local exitPos = {pos = {x = 0, y = 0, z = 0, h = 0 }}
 local lastDoor = 0
 local noiseXYZ = { x = 346.53 , y = -1003.44 , z = -99.2}
@@ -806,9 +806,7 @@ function OpenSellMenu()
       },
       function(data, menu)
           if data.current.value == 'ring' then
-														
-												  
-              TriggerServerEvent('99kr-burglary:sellring')
+							TriggerServerEvent('99kr-burglary:sellring')
           elseif data.current.value == 'rolex' then
               TriggerServerEvent('99kr-burglary:sellrolex')
           elseif data.current.value == 'gpixel' then
@@ -824,13 +822,13 @@ function OpenSellMenu()
           elseif data.current.value == 'samsungS10' then
               TriggerServerEvent('99kr-burglary:sellsamsungS10')
           elseif data.current.value == 'highradio' then
-              TriggerServerEvent('99kr-burglary:highradio')
+              TriggerServerEvent('99kr-burglary:sellhighradio')
           elseif data.current.value == 'lowradio' then
-              TriggerServerEvent('99kr-burglary:lowradio')
+              TriggerServerEvent('99kr-burglary:selllowradio')
           elseif data.current.value == 'stockrim' then
-              TriggerServerEvent('99kr-burglary:stockrim')
+              TriggerServerEvent('99kr-burglary:sellstockrim')
           elseif data.current.value == 'highrim' then
-              TriggerServerEvent('99kr-burglary:highrim')                
+              TriggerServerEvent('99kr-burglary:sellhighrim')                
           end
       end,
       function(data, menu)

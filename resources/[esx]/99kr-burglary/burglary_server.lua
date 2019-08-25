@@ -212,7 +212,99 @@ AddEventHandler('99kr-burglary:sellplaystation', function()
 			xPlayer.addMoney(80)
 			TriggerClientEvent('esx:showNotification', xPlayer.source, "$80 added")
 		else 
-			TriggerClientEvent('esx:showNotification', xPlayer.source, "You don't have a PLaystation 4 to sell!")
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "You don't have a Playstation 4 to sell!")
+		end
+end)
+
+RegisterServerEvent('99kr-burglary:sellhighradio')
+AddEventHandler('99kr-burglary:sellhighradio', function()
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	local samsungS10 = 0
+			
+	for i=1, #xPlayer.inventory, 1 do
+		local item = xPlayer.inventory[i]
+			
+		if item.name == "highradio" then
+			samsungS10 = item.count
+		end
+	end
+				
+		if samsungS10 > 0 then
+			xPlayer.removeInventoryItem('highradio', 1)
+			xPlayer.addMoney(50)
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "$50 added")
+		else 
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "You don't have a Aftermarket Radio to sell!")
+		end
+end)
+
+RegisterServerEvent('99kr-burglary:selllowradio')
+AddEventHandler('99kr-burglary:selllowradio', function()
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	local samsungS10 = 0
+			
+	for i=1, #xPlayer.inventory, 1 do
+		local item = xPlayer.inventory[i]
+			
+		if item.name == "lowradio" then
+			samsungS10 = item.count
+		end
+	end
+				
+		if samsungS10 > 0 then
+			xPlayer.removeInventoryItem('lowradio', 1)
+			xPlayer.addMoney(20)
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "$20 added")
+		else 
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "You don't have a Stock Radio to sell!")
+		end
+end)
+
+RegisterServerEvent('99kr-burglary:sellstockrim')
+AddEventHandler('99kr-burglary:sellstockrim', function()
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	local samsungS10 = 0
+			
+	for i=1, #xPlayer.inventory, 1 do
+		local item = xPlayer.inventory[i]
+			
+		if item.name == "stockrim" then
+			samsungS10 = item.count
+		end
+	end
+				
+		if samsungS10 > 0 then
+			xPlayer.removeInventoryItem('stockrim', 1)
+			xPlayer.addMoney(50)
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "$50 added")
+		else 
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "You don't have a Stock Rim to sell!")
+		end
+end)
+
+RegisterServerEvent('99kr-burglary:sellhighrim')
+AddEventHandler('99kr-burglary:sellhighrim', function()
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	local samsungS10 = 0
+			
+	for i=1, #xPlayer.inventory, 1 do
+		local item = xPlayer.inventory[i]
+			
+		if item.name == "highrim" then
+			samsungS10 = item.count
+		end
+	end
+				
+		if samsungS10 > 0 then
+			xPlayer.removeInventoryItem('highrim', 1)
+			xPlayer.addMoney(100)
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "$100 added")
+		else 
+			TriggerClientEvent('esx:showNotification', xPlayer.source, "You don't have a Highend Rim to sell!")
 		end
 end)
 			
