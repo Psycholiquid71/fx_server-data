@@ -41,8 +41,8 @@ Config.Zones = {
 		Hint  = _U('press_custom')
 	},
 
-	ls5 = {
-		Pos   = { x = -211.82, y = -1324.75, z = 30.1},
+	ls5 = { -- Beenys
+		Pos   = { x = -211.82, y = -1324.75, z = 29.85},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
 		Marker= 1,

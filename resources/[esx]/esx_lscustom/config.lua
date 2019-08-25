@@ -5,37 +5,37 @@ Config.IsMechanicJobOnly = true
 
 Config.Zones = {
 
-	ls1 = {
-		Pos   = { x = -337.38, y = -136.92, z = 38.57},
+	ls1 = { -- south of city, near airport
+ 		Pos   = { x = -337.38, y = -136.92, z = 38.57},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
-		Color = {r = 204, g = 204, b = 0},
+		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
 		Name  = _U('blip_name'),
 		Hint  = _U('press_custom')
 	},
 
-	ls2 = {
+	ls2 = { -- near legion
 		Pos   = { x = -1155.53, y = -2007.18, z = 12.44},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
-		Color = {r = 204, g = 204, b = 0},
+		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
 		Name  = _U('blip_name'),
 		Hint  = _U('press_custom')
 	},
 
-	ls3 = {
+	ls3 = { -- sandy
 		Pos   = { x = 731.81, y = -1088.82, z = 21.73},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
-		Color = {r = 204, g = 204, b = 0},
+		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
 		Name  = _U('blip_name'),
 		Hint  = _U('press_custom')
 	},
 
-	ls4 = {
+	ls4 = { -- paleto
 		Pos   = { x = 1175.04, y = 2640.21, z = 37.32},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
-		Color = {r = 204, g = 204, b = 0},
+		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
 		Name  = _U('blip_name'),
 		Hint  = _U('press_custom')
@@ -44,24 +44,39 @@ Config.Zones = {
 	ls5 = {
 		Pos   = { x = 110.99, y = 6626.39, z = 30.89},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
-		Color = {r = 204, g = 204, b = 0},
+		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
 		Name  = _U('blip_name'),
 		Hint  = _U('press_custom')
 	},
 
-	ls6 = {
-		Pos   = { x = -211.82, y = -1324.75, z = 30.1},
+	ls6 = {  -- Bennys
+		Pos   = { x = -222.97, y = -1326.23, z = 29.85},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
-		Color = {r = 204, g = 204, b = 0},
+		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
 		Name  = _U('blip_name'),
 		Hint  = _U('press_custom')
+	},
+
+	ls7 = { -- Casino Racetrack
+		Pos   = { x = 1174.10, y = 297.48, z = 80.90},
+		Size  = {x = 2.0, y = 2.0, z = 1.0},
+		Color = {r = 232, g = 3, b = 252},
+		Marker= 24,
+		Name  = _U('blip_name'),
+		Hint  = _U('press_custom')
+	},
+
+	ls8 = { -- Sandy Shares Airstrip
+		Pos   = { x = 1692.41, y = 3286.56, z = 40.60},
+		Size  = {x = 2.0, y = 2.0, z = 1.0},
+		Color = {r = 232, g = 3, b = 252},
+		Marker= 24,
+		Name  = _U('blip_name'),
+		Hint  = _U('press_custom')
 	}
-
 }
-
-
 
 Config.Colors = {
 	{ label = _U('black'), value = 'black'},
@@ -454,8 +469,8 @@ Config.Menus = {
 	main = {
 		label		= 'LS CUSTOMS',
 		parent		= nil,
-		upgrades	= _U('upgrades'),
-		cosmetics	= _U('cosmetics')
+		upgrades	= _U('upgrades')
+		--cosmetics	= _U('cosmetics')
 	},
 	upgrades = {
 		label			= _U('upgrades'),
@@ -502,8 +517,8 @@ Config.Menus = {
 		parent = 'upgrades',
 		modType = 17,
 		price = {55.81}
-	},
-	cosmetics = {
+	}
+	--[[cosmetics = {
 		label				= _U('cosmetics'),
 		parent				= 'main',
 		bodyparts			= _U('bodyparts'),
@@ -916,6 +931,6 @@ Config.Menus = {
 		parent = 'wheels',
 		modType = 'tyreSmokeColor',
 		price = 1.12
-	}
+	}]]
 
 }

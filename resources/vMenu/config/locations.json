@@ -1132,6 +1132,17 @@
         "IsZero": false
       },
       "heading": 154.042389
+    },
+    {
+      "name": "Casino Race Track",
+      "coordinates": {
+        "X": 1206.29565,
+        "Y": 332.8379,
+        "Z": 81.9910049,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 140.096786
     }
   ],
   "blips": [
