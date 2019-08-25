@@ -225,7 +225,7 @@ function PackPackage(packageId)
 		
 		Citizen.Wait(1)
 
-		local TimeToTake = 60000 * 1.20 -- Minutes
+		local TimeToTake = 60000 * 0.20 -- Minutes
 		local PackPercent = (GetGameTimer() - StartTime) / TimeToTake * 100
 
 		if not IsPedUsingScenario(PlayerPedId(), "PROP_HUMAN_BUM_BIN") then

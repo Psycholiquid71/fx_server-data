@@ -68,7 +68,7 @@ AddEventHandler('esx_lockpick:onUse', function()
                 useWhileDead = false,
                 canCancel = true,
                 controlDisables = {
-                    disableMovement = true,
+                    disableMovement = false,
                     disableCarMovement = true,
                     disableMouse = false,
                     disableCombat = true,
