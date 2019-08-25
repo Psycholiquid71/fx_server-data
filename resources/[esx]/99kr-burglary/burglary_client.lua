@@ -170,6 +170,78 @@ local burglaryPlaces = {
     animPos = { x = 1229.1, y = -725.47, z = 60.80, h = 89.98 }, -- The animation position
     doorTime = {}
     },
+    ["Robban 2"] = {
+    door = 2,
+    locked = true,
+    pos = { x = 1223.01, y = -696.97, z = 60.80, h = 283.03 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1223.01, y = -696.97, z = 60.80, h = 283.03 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 3"] = {
+    door = 3,
+    locked = true,
+    pos = { x = 1203.64, y = -598.48, z = 68.06, h = 354.93 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1203.64, y = -598.48, z = 68.06, h = 354.93 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 4"] = {
+    door = 4,
+    locked = true,
+    pos = { x = 1201.10, y = -575.60, z = 69.14, h = 312.57 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1201.10, y = -575.60, z = 69.14, h = 312.57 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 5"] = {
+    door = 5,
+    locked = true,
+    pos = { x = 1204.88, y = -557.80, z = 69.62, h = 295.40 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1201.10, y = -575.60, z = 69.14, h = 312.57 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 6"] = {
+    door = 6,
+    locked = true,
+    pos = { x = 1236.80, y = -589.55, z = 69.78, h = 179.78 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1236.80, y = -589.55, z = 69.78, h = 179.78 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 7"] = {
+    door = 7,
+    locked = true,
+    pos = { x = 1250.78, y = -620.93, z = 69.57, h = 22.91 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1250.78, y = -620.93, z = 69.57, h = 22.91 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 8"] = {
+    door = 8,
+    locked = true,
+    pos = { x = 1265.56, y = -648.7, z = 68.12, h = 208.95 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1265.56, y = -648.7, z = 68.12, h = 208.95 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 9"] = {
+    door = 9,
+    locked = true,
+    pos = { x = 1270.92, y = -683.56, z = 66.03, h = 186.97 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1270.92, y = -683.56, z = 66.03, h = 186.97 }, -- The animation position
+    doorTime = {}
+    },
+    ["Robban 10"] = {
+    door = 10,
+    locked = true,
+    pos = { x = 1264.76, y = -702.80, z = 64.91, h = 60.41 }, -- door coords
+    inside = { x = 346.52 , y = -1013.19 , z = -99.2, h = 357.81 }, -- Inside coords
+    animPos = { x = 1264.76, y = -702.80, z = 64.91, h = 60.41 }, -- The animation position
+    doorTime = {}
+    },
   ["Grove Street 1"] = {
     door = 2,
     locked = true,
@@ -385,7 +457,175 @@ local burglaryPlaces = {
     inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
     animPos = { x = -7.91 , y = 467.87 , z = 145.85, h = 161.03 }, -- The animation position
     doorTime = {}
-   }
+   },
+   ["Vinewood Hills 9"] = {
+    door = 9,
+     locked = true,
+    pos = { x = -66.85 , y = 490.06 , z = 144.88, h = 156.34 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -66.85 , y = 490.06 , z = 144.88, h = 156.34 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 10"] = {
+    door = 10,
+     locked = true,
+    pos = { x = -230.45 , y = 487.89 , z = 128.77, h = 190.57 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -230.45 , y = 487.89 , z = 128.77, h = 190.57 }, -- The animation position
+    doorTime = {}
+   }, 
+   ["Vinewood Hills 11"] = {
+    door = 11,
+     locked = true,
+    pos = { x = -311.73 , y = 474.68 , z = 111.82, h = 302.42 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -311.73 , y = 474.68 , z = 111.82, h = 302.42 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 12"] = {
+    door = 12,
+     locked = true,
+    pos = { x = -304.82 , y = 431.52 , z = 110.48, h = 189.8 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -304.82 , y = 431.52 , z = 110.48, h = 189.8 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 13"] = {
+    door = 13,
+     locked = true,
+    pos = { x = -355.91 , y = 458.37 , z = 116.65, h = 145.06 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -355.91 , y = 458.37 , z = 116.65, h = 145.06 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 14"] = {
+    door = 14,
+     locked = true,
+    pos = { x = -340.71 , y = 423.99 , z = 111.05, h = 109.14 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -340.71 , y = 423.99 , z = 111.05, h = 109.14 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 15"] = {
+    door = 15,
+     locked = true,
+    pos = { x = -401.16 , y = 427.7 , z = 112.4, h = 69.19 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -401.16 , y = 427.7 , z = 112.4, h = 69.19 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 16"] = {
+    door = 16,
+     locked = true,
+    pos = { x = -348.88 , y = 515.09 , z = 120.65, h = 319.04 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -348.88 , y = 515.09 , z = 120.65, h = 319.04 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 17"] = {
+    door = 17,
+     locked = true,
+    pos = { x = -386.84 , y = 504.18 , z = 120.41, h = 145.61 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -386.84 , y = 504.18 , z = 120.41, h = 145.61 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 18"] = {
+    door = 18,
+     locked = true,
+    pos = { x = -459.21 , y = 537.09 , z = 121.46, h = 185.61 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -459.21 , y = 537.09 , z = 121.46, h = 185.61 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 19"] = {
+    door = 19,
+     locked = true,
+    pos = { x = -500.9 , y = 552.06 , z = 120.6, h = 155.83 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -500.9 , y = 552.06 , z = 120.6, h = 155.83 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 20"] = {
+    door = 20,
+     locked = true,
+    pos = { x = -520.74 , y = 594.24 , z = 120.84, h = 100.67 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -520.74 , y = 594.24 , z = 120.84, h = 100.67 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 21"] = {
+    door = 21,
+     locked = true,
+    pos = { x = -474.3 , y = 585.89 , z = 128.68, h = 271.08 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -474.3 , y = 585.89 , z = 128.68, h = 271.08 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 1"] = {
+    door = 1,
+     locked = true,
+    pos = { x = -1125.79 , y = -1172.00 , z = 2.36, h = 290.73 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1125.79 , y = -1172.00 , z = 2.36, h = 290.73 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 2"] = {
+    door = 2,
+     locked = true,
+    pos = { x = -1129.15 , y = -1162.69 , z = 6.49, h = 115.87 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1129.15 , y = -1162.69 , z = 6.49, h = 115.87 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 3"] = {
+    door = 3,
+     locked = true,
+    pos = { x = -1135.63 , y = -1153.37 , z = 2.74, h = 294.25 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1135.63 , y = -1153.37 , z = 2.74, h = 294.25 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 4"] = {
+    door = 4,
+     locked = true,
+    pos = { x = -1142.5 , y = -1144.21 , z = 2.85, h = 294.14 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1142.5 , y = -1144.21 , z = 2.85, h = 294.14 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 5"] = {
+    door = 5,
+     locked = true,
+    pos = { x = -1114.13 , y = -1069.28 , z = 2.15, h = 210.18 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1114.13 , y = -1069.28 , z = 2.15, h = 210.18 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 6"] = {
+    door = 6,
+     locked = true,
+    pos = { x = -1122.16 , y = -1046.26 , z = 2.15, h = 24.84 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1122.16 , y = -1046.26 , z = 2.15, h = 24.84 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 7"] = {
+    door = 7,
+     locked = true,
+    pos = { x = -1104.05 , y = -1059.99 , z = 2.73, h = 209.73 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1104.05 , y = -1059.99 , z = 2.73, h = 209.73 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vespucci Canals 8"] = {
+    door = 8,
+     locked = true,
+    pos = { x = -1108.61 , y = -1040.83 , z = 2.15, h = 26.85 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -1108.61 , y = -1040.83 , z = 2.15, h = 26.85 }, -- The animation position
+    doorTime = {}
+   }          
 }
 
 residents = {
