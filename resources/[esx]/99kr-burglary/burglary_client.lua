@@ -49,7 +49,7 @@ local carUnlocked = "You have unlocked the car"
 local youFound = "From the" -- when you steal something
 local burglaryDetected = "A burglary has been detected at" -- text 1 cops gets sent
 local sentPhoto = "We've sent you a photo of the criminal." -- if you use qalle's camerasystem this will be in the message too
-local item = {'highrim','stockrim','lowradio','highradio','ring', 'gpixel', 'laptop', 'cocain', 'marijuana', 'samsungS10', 'iphone', 'rolex', 'xbox', 'lotteryticket', 'playstation'}
+local item = {'ring', 'gpixel', 'laptop', 'cocain', 'marijuana', 'samsungS10', 'iphone', 'rolex', 'xbox', 'lotteryticket', 'playstation'}--,'highrim','stockrim','lowradio','highradio'}
 local exitPos = {pos = {x = 0, y = 0, z = 0, h = 0 }}
 local lastDoor = 0
 local noiseXYZ = { x = 346.53 , y = -1003.44 , z = -99.2}
@@ -112,12 +112,12 @@ if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
       end
 		  TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_BUM_BIN", 0, true)
 			  if useInteractSound then
-			    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3.0, 'adLockpick', 0.7)
+			    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3.0, 'adlockpick', 0.7)
 			  end
 
 			Citizen.CreateThread(function()
 				ThreadID = GetIdOfThisThread()
-				CurrentAction = 'adLockpick'
+				CurrentAction = 'adlockpick'
 
 				Citizen.Wait(5000)
 
@@ -153,8 +153,8 @@ if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
 		end)
 	end
 end)
-RegisterNetEvent('99kr-burglary:adLockpick')
-AddEventHandler('99kr-burglary:adLockpick', function(xPlayer)
+RegisterNetEvent('99kr-burglary:adlockpick')
+AddEventHandler('99kr-burglary:adlockpick', function(xPlayer)
   lockpicking = true
   Citizen.Wait(100)
   lockpicking = false
@@ -329,6 +329,62 @@ local burglaryPlaces = {
     inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
     animPos = { x = 223.89 , y = 513.81 , z = 140.77, h = 222.67 }, -- The animation position
     doorTime = {}
+   },
+   ["Vinewood Hills 2"] = {
+    door = 2,
+     locked = true,
+    pos = { x = 167.47 , y = 473.83 , z = 142.51, h = 260.55 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 167.47 , y = 473.83 , z = 142.51, h = 260.55 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 3"] = {
+    door = 3,
+     locked = true,
+    pos = { x = 119.85 , y = 494.34 , z = 147.34, h = 284.3 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 119.85 , y = 494.34 , z = 147.34, h = 284.3 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 4"] = {
+    door = 4,
+     locked = true,
+    pos = { x = 107.02 , y = 466.71 , z = 147.56, h = 177.88 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 107.02 , y = 466.71 , z = 147.56, h = 177.88 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 5"] = {
+    door = 5,
+     locked = true,
+    pos = { x = 80.02 , y = 486.26 , z = 148.2, h = 26.27 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 80.02 , y = 486.26 , z = 148.2, h = 26.27 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 6"] = {
+    door = 6,
+     locked = true,
+    pos = { x = 57.6 , y = 449.65 , z = 147.03, h = 144.58 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 57.6 , y = 449.65 , z = 147.03, h = 144.58 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 7"] = {
+    door = 7,
+     locked = true,
+    pos = { x = 43.11 , y = 468.87 , z = 148.1, h = 365.05 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 43.11 , y = 468.87 , z = 148.1, h = 365.05 }, -- The animation position
+    doorTime = {}
+   },
+   ["Vinewood Hills 8"] = {
+    door = 8,
+     locked = true,
+    pos = { x = -7.91 , y = 467.87 , z = 145.85, h = 161.03 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = -7.91 , y = 467.87 , z = 145.85, h = 161.03 }, -- The animation position
+    doorTime = {}
    }
 }
 
@@ -472,13 +528,13 @@ function confMenu(house)
   exitPos = {pos ={x = v.pos.x, y = v.pos.y, z = v.pos.z, h = v.pos.h }}
   Citizen.CreateThread(function()
     local inventory = ESX.GetPlayerData().inventory
-    local adLockpickAmount = nil
+    local adlockpickAmount = nil
       for i=1, #inventory, 1 do                          
-        if inventory[i].name == 'adLockpick' then
-          adLockpickAmount = inventory[i].count
+        if inventory[i].name == 'adlockpick' then
+          adlockpickAmount = inventory[i].count
         end
       end
-        if adLockpickAmount > 0 then
+        if adlockpickAmount > 0 then
           SpawnResidents(home)
           HouseBreak(house) 
           v.locked = false
