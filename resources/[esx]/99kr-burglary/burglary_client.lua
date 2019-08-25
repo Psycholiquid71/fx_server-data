@@ -798,7 +798,7 @@ function OpenSellMenu()
               {label = 'Laptop ($350)', value = 'laptop'},
               {label = 'Samsung S10 ($215)', value = 'samsungS10'},
               {label = 'Xbox One ($75)', value = 'xbox'},
-              {label = 'Aftermarket Radio (50$)', value = 'highreadio'},
+              {label = 'Aftermarket Radio (50$)', value = 'highradio'},
               {label = 'Stock Radio (20$)', value = 'lowradio'},
               {label = 'Stock Rims (50$)', value = 'stockrim'},
               {label = 'Highedn Rim (100$)', value = 'highrim'},
@@ -823,6 +823,14 @@ function OpenSellMenu()
               TriggerServerEvent('99kr-burglary:sellplaystationn')
           elseif data.current.value == 'samsungS10' then
               TriggerServerEvent('99kr-burglary:sellsamsungS10')
+          elseif data.current.value == 'highradio' then
+              TriggerServerEvent('99kr-burglary:highradio')
+          elseif data.current.value == 'lowradio' then
+              TriggerServerEvent('99kr-burglary:lowradio')
+          elseif data.current.value == 'stockrim' then
+              TriggerServerEvent('99kr-burglary:stockrim')
+          elseif data.current.value == 'highrim' then
+              TriggerServerEvent('99kr-burglary:highrim')                
           end
       end,
       function(data, menu)
