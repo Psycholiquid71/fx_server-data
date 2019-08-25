@@ -321,6 +321,14 @@ local burglaryPlaces = {
     inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
     animPos = { x = 114.4 , y = -1961.23 , z = 21.12, h = 220.54 }, -- The animation position
     doorTime = {}
+   },
+   ["Vinewood Hills 1"] = {
+    door = 1,
+     locked = true,
+    pos = { x = 223.89 , y = 513.81 , z = 140.77, h = 222.67 },  -- door coords
+    inside = { x = 346.52, y = -1013.19, z = -99.2, h = 357.81 },  -- Inside the house coords
+    animPos = { x = 223.89 , y = 513.81 , z = 140.77, h = 222.67 }, -- The animation position
+    doorTime = {}
    }
 }
 

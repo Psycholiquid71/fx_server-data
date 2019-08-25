@@ -15,10 +15,10 @@ AddEventHandler('99kr-burglary:Remove', function(item, qtty)
 	xPlayer.removeInventoryItem(item, qtty)
 end)
 
-ESX.RegisterUsableItem('adLockpick', function(source)
+ESX.RegisterUsableItem('adlockpick', function(source)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-	TriggerClientEvent('99kr-burglary:adLockpick', _source)
+	TriggerClientEvent('99kr-burglary:adlockpick', _source)
 	TriggerClientEvent('99kr-burglary:onUse', _source)
 end)
 
@@ -26,7 +26,7 @@ RegisterNetEvent('99kr-burglary:removeKit')
 AddEventHandler('99kr-burglary:removeKit', function()
 	local _source = source 
 	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('adLockpick', 1)
+		xPlayer.removeInventoryItem('adlockpick', 1)
 end)
 
 
