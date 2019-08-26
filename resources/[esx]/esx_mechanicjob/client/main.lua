@@ -342,7 +342,7 @@ function OpenMobileMechanicActionsMenu()
 
 			if DoesEntityExist(vehicle) then
 				isBusy = true
-				TaskStartScenarioInPlace(playerPed, 'PROP_HUMAN_BUM_BIN', 0, true)
+				TaskStartScenarioInPlace(playerPed, 'PROP_HUMAN_PARKING_METER', 0, true)
 				Citizen.CreateThread(function()
 					Citizen.Wait(20000)
 

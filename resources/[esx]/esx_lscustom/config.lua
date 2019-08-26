@@ -6,7 +6,7 @@ Config.IsMechanicJobOnly = true
 Config.Zones = {
 
 	ls1 = { -- south of city, near airport
- 		Pos   = { x = -337.38, y = -136.92, z = 38.57},
+ 		Pos   = { x = -337.38, y = -136.92, z = 38.02},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
@@ -51,7 +51,7 @@ Config.Zones = {
 	},
 
 	ls6 = {  -- Bennys
-		Pos   = { x = -222.97, y = -1326.23, z = 29.85},
+		Pos   = { x = -222.97, y = -1324.23, z = 29.85},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 232, g = 3, b = 252},
 		Marker= 1,
@@ -73,6 +73,15 @@ Config.Zones = {
 		Size  = {x = 2.0, y = 2.0, z = 1.0},
 		Color = {r = 232, g = 3, b = 252},
 		Marker= 24,
+		Name  = _U('blip_name'),
+		Hint  = _U('press_custom')
+	},
+
+	ls9 = {  -- Bennys
+		Pos   = { x = -210.64, y = -1313.78, z = 29.85},
+		Size  = {x = 3.0, y = 3.0, z = 0.2},
+		Color = {r = 232, g = 3, b = 252},
+		Marker= 1,
 		Name  = _U('blip_name'),
 		Hint  = _U('press_custom')
 	}
