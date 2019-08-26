@@ -8,16 +8,16 @@ menuConfigs = {
         data = {                                    -- Data that is passed to Javascript
             keybind = "F3",                         -- Wheel keybind to use (case sensitive, must match entry in keybindControls table)
             style = {                               -- Wheel style settings
-                sizePx = 600,                       -- Wheel size in pixels
+                sizePx = 500,                       -- Wheel size in pixels
                 slices = {                          -- Slice style settings
                     default = { ['fill'] = '#000000', ['stroke'] = '#000000', ['stroke-width'] = 2, ['opacity'] = 0.60 },
                     hover = { ['fill'] = '#ff8000', ['stroke'] = '#000000', ['stroke-width'] = 2, ['opacity'] = 0.80 },
                     selected = { ['fill'] = '#ff8000', ['stroke'] = '#000000', ['stroke-width'] = 2, ['opacity'] = 0.80 }
                 },
                 titles = {                          -- Text style settings
-                    default = { ['fill'] = '#ffffff', ['stroke'] = 'none', ['font'] = 'Helvetica', ['font-size'] = 16, ['font-weight'] = 'bold' },
-                    hover = { ['fill'] = '#ffffff', ['stroke'] = 'none', ['font'] = 'Helvetica', ['font-size'] = 16, ['font-weight'] = 'bold' },
-                    selected = { ['fill'] = '#ffffff', ['stroke'] = 'none', ['font'] = 'Helvetica', ['font-size'] = 16, ['font-weight'] = 'bold' }
+                    default = { ['fill'] = '#ffffff', ['stroke'] = 'none', ['font'] = 'Helvetica', ['font-size'] = 9.5, ['font-weight'] = 'bold' },
+                    hover = { ['fill'] = '#ffffff', ['stroke'] = 'none', ['font'] = 'Helvetica', ['font-size'] = 9.5, ['font-weight'] = 'bold' },
+                    selected = { ['fill'] = '#ffffff', ['stroke'] = 'none', ['font'] = 'Helvetica', ['font-size'] = 9.5, ['font-weight'] = 'bold' }
                 },
                 icons = {
                     width = 64,
@@ -27,17 +27,24 @@ menuConfigs = {
             wheels = {                              -- Array of wheels to display
                 {
                     navAngle = 270,                 -- Oritentation of wheel
-                    minRadiusPercent = 0.3,         -- Minimum radius of wheel in percentage
-                    maxRadiusPercent = 0.6,         -- Maximum radius of wheel in percentage
+                    minRadiusPercent = 0.2,         -- Minimum radius of wheel in percentage
+                    maxRadiusPercent = 0.4,         -- Maximum radius of wheel in percentage
                     labels = {"CANCEL", "NO", "CHEER", "CLAP", "FOLDARMS", "LEAN"},
-                    commands = {"e cancel", "e no", "e cheer", "e slowclap", "e foldarms", "e leanwall"}
+                    commands = {"e stop", "e no", "e cheer", "e slowclap", "e foldarms", "e leanwall"}
                 },
                 {
                     navAngle = 285,                 -- Oritentation of wheel
+                    minRadiusPercent = 0.4,         -- Minimum radius of wheel in percentage
+                    maxRadiusPercent = 0.6,         -- Maximum radius of wheel in percentage
+                    labels = {"MECH1", "FINGER", "PEACE", "FACEPALM", "DAMN", "FAIL", "DEAD", "GANG1", "GANG2", "COP", "HOLSTER", "CROWDS"},
+                    commands = {"e mech01", "e finger", "e peace", "e palm", "e damn", "e fail", "e dead", "e gang1", "e gang2", "e copidle", "e holster", "e copcrowd2"}
+                },
+                {
+                    navAngle = 300,                 -- Oritentation of wheel
                     minRadiusPercent = 0.6,         -- Minimum radius of wheel in percentage
-                    maxRadiusPercent = 0.9,         -- Maximum radius of wheel in percentage
-                    labels = {"SALUTE", "FINGER", "PEACE", "FACEPALM", "DAMN", "FAIL", "DEAD", "GANG1", "GANG2", "COP", "HOLSTER", "CROWDS"},
-                    commands = {"e salute", "e finger", "e peace", "e palm", "e damn", "e fail", "e dead", "e gang1", "e gang2", "e copidle", "e holster", "e copcrowd2"}
+                    maxRadiusPercent = 0.8,         -- Maximum radius of wheel in percentage
+                    labels = {"MECHDW", "MECHUP", "INSPECT", "FACEPALM", "DAMN", "FAIL", "DEAD", "GANG1", "GANG2", "COP", "HOLSTER", "CROWDS"},
+                    commands = {"e mech01", "e mech02", "e mech03", "e palm", "e damn", "e fail", "e dead", "e gang1", "e gang2", "e copidle", "e holster", "e copcrowd2"}
                 }
             }
         }
@@ -48,7 +55,7 @@ menuConfigs = {
             return IsPedInAnyVehicle(player, false)
         end,
         data = {                                    -- Data that is passed to Javascript
-            keybind = "F6",                         -- Wheel keybind to use (case sensitive, must match entry in keybindControls table)
+            keybind = "F5",                         -- Wheel keybind to use (case sensitive, must match entry in keybindControls table)
             style = {                               -- Wheel style settings
                 sizePx = 400,                       -- Wheel size in pixels
                 slices = {                          -- Slice style settings
