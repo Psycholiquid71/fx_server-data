@@ -11,8 +11,8 @@ local bedOccupyingData = nil
 
 local cam = nil
 
-local inBedDict = "anim@gangops@morgue@table@"
-local inBedAnim = "ko_front"
+local inBedDict = "timetable@floyd@cryingonbed_ig_5@"
+local inBedAnim = "base"
 local getOutDict = 'switch@franklin@bed'
 local getOutAnim = 'sleep_getup_rubeyes'
 ESX = nil
@@ -113,7 +113,7 @@ AddEventHandler('mythic_hospital:client:SendToBed', function(id, data)
         Citizen.Wait(0)
     end
     TaskPlayAnim(PlayerPedId(), inBedDict , inBedAnim ,8.0, -8.0, -1, 1, 0, false, false, false )
-    SetEntityHeading(PlayerPedId(), data.h + 180)
+    SetEntityHeading(PlayerPedId(), data.h + 240)
     SetEntityInvincible(PlayerPedId(), true)
 
     cam = CreateCam("DEFAULT_SCRIPTED_CAMERA", 1)

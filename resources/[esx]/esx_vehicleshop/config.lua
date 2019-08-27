@@ -1,9 +1,9 @@
 Config                            = {}
 Config.DrawDistance               = 10.0
 Config.MarkerColor                = { r = 120, g = 120, b = 240 }
-Config.EnablePlayerManagement     = false -- enables the actual car dealer job. You'll need esx_addonaccount, esx_billing and esx_society
+Config.EnablePlayerManagement     = true -- enables the actual car dealer job. You'll need esx_addonaccount, esx_billing and esx_society
 Config.EnableOwnedVehicles        = true
-Config.EnableSocietyOwnedVehicles = false -- use with EnablePlayerManagement disabled, or else it wont have any effects
+Config.EnableSocietyOwnedVehicles = true -- use with EnablePlayerManagement disabled, or else it wont have any effects
 Config.ResellPercentage           = 65
 
 Config.Locale                     = 'en'
