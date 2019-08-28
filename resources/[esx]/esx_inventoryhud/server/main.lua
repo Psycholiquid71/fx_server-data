@@ -141,6 +141,22 @@ ESX.RegisterServerCallback("suku:getShopItems", function(source, cb, shoptype)
 				end
 			end
 		end
+		if shoptype == "machineshop" then
+			for _, v in pairs(Config.Shops.MachineShop.Items) do
+				if v.name == itemResult[i].name then
+					table.insert(itemShopList, {
+						type = "item_standard",
+						name = itemInformation[itemResult[i].name].name,
+						label = itemInformation[itemResult[i].name].label,
+						limit = itemInformation[itemResult[i].name].limit,
+						rare = itemInformation[itemResult[i].name].rare,
+						can_remove = itemInformation[itemResult[i].name].can_remove,
+						price = itemInformation[itemResult[i].name].price,
+						count = 99999999
+					})
+				end
+			end
+		end
 		if shoptype == "prison" then
 			for _, v in pairs(Config.Shops.PrisonShop.Items) do
 				if v.name == itemResult[i].name then

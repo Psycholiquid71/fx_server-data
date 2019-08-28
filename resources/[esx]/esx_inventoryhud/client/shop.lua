@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
         player = GetPlayerPed(-1)
         coords = GetEntityCoords(player)
-        if IsInRegularShopZone(coords) or IsInRobsLiquorZone(coords) or IsInYouToolZone(coords) or IsInPrisonShopZone(coords) or IsInWeaponShopZone(coords) then
+        if IsInRegularShopZone(coords) or IsInRobsLiquorZone(coords) or IsInYouToolZone(coords) or IsInMachineShopZone(coords) or IsInPrisonShopZone(coords) or IsInWeaponShopZone(coords) then
             if IsInRegularShopZone(coords) then
                 if IsControlJustReleased(0, Keys["E"]) then
                     OpenShopInv("regular")
@@ -35,6 +35,12 @@ Citizen.CreateThread(function()
             if IsInYouToolZone(coords) then
                 if IsControlJustReleased(0, Keys["E"]) then
                     OpenShopInv("youtool")
+                    Citizen.Wait(2000)
+                end
+            end
+            if IsInMachineShopZone(coords) then
+                if IsControlJustReleased(0, Keys["E"]) then
+                    OpenShopInv("machineshop")
                     Citizen.Wait(2000)
                 end
             end
@@ -180,6 +186,16 @@ function IsInYouToolZone(coords)
     return false
 end
 
+function IsInMachineShopZone(coords)
+    MachineShop = Config.Shops.MachineShop.Locations
+    for i = 1, #MachineShop, 1 do
+        if GetDistanceBetweenCoords(coords, MachineShop[i].x, MachineShop[i].y, MachineShop[i].z, true) < 1.5 then
+            return true
+        end
+    end
+    return false
+end
+
 function IsInPrisonShopZone(coords)
     PrisonShop = Config.Shops.PrisonShop.Locations
     for i = 1, #PrisonShop, 1 do
@@ -263,6 +279,10 @@ Citizen.CreateThread(function()
         CreateBlip(vector3(Config.Shops.YouTool.Locations[k].x, Config.Shops.YouTool.Locations[k].y, Config.Shops.YouTool.Locations[k].z ), "YouTool", 3.0, Config.Color, Config.YouToolBlipID)
     end
 
+    for k, v in pairs(Config.Shops.MachineShop.Locations) do
+        CreateBlip(vector3(Config.Shops.MachineShop.Locations[k].x, Config.Shops.MachineShop.Locations[k].y, Config.Shops.MachineShop.Locations[k].z ), "MachineShop", 3.0, Config.Color, Config.MachineShopBlipID)
+    end
+
     for k, v in pairs(Config.Shops.YouTool.Locations) do
         CreateBlip(vector3(Config.Shops.PrisonShop.Locations[k].x, Config.Shops.PrisonShop.Locations[k].y, Config.Shops.PrisonShop.Locations[k].z), "Prison Commissary", 3.0, Config.Color, Config.PrisonShopBlipID)
     end
@@ -295,6 +315,12 @@ Citizen.CreateThread(function()
         for k, v in pairs(Config.Shops.YouTool.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.YouTool.Locations[k].x, Config.Shops.YouTool.Locations[k].y, Config.Shops.YouTool.Locations[k].z, true) < 3.0 then
                 ESX.Game.Utils.DrawText3D(vector3(Config.Shops.YouTool.Locations[k].x, Config.Shops.YouTool.Locations[k].y, Config.Shops.YouTool.Locations[k].z + 1.0), "Press [E] to open shop", 0.6)
+            end
+        end
+
+        for k, v in pairs(Config.Shops.MachineShop.Locations) do
+            if GetDistanceBetweenCoords(coords, Config.Shops.MachineShop.Locations[k].x, Config.Shops.MachineShop.Locations[k].y, Config.Shops.MachineShop.Locations[k].z, true) < 3.0 then
+                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.MachineShop.Locations[k].x, Config.Shops.MachineShop.Locations[k].y, Config.Shops.MachineShop.Locations[k].z + 1.0), "Press [E] to open shop", 0.6)
             end
         end
 

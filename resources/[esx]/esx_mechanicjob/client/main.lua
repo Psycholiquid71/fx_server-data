@@ -355,12 +355,12 @@ function OpenMechanicActionsMenu()
 	end)
 end
 
-function OpenMechanicHarvestMenu()
+--[[function OpenMechanicHarvestMenu()
 	if Config.EnablePlayerManagement and ESX.PlayerData.job and ESX.PlayerData.job.grade_name ~= 'recrue' then
 		local elements = {
-			{label = _U('gas_can'), value = 'gaz_bottle'},
-			{label = _U('repair_tools'), value = 'fix_tool'},
-			{label = _U('body_work_tools'), value = 'caro_tool'}
+			--{label = _U('gas_can'), value = 'gaz_bottle'},
+			--{label = _U('repair_tools'), value = 'fix_tool'},
+			--{label = _U('body_work_tools'), value = 'caro_tool'}
 		}
 
 		ESX.UI.Menu.CloseAll()
@@ -372,12 +372,12 @@ function OpenMechanicHarvestMenu()
 		}, function(data, menu)
 			menu.close()
 
-			if data.current.value == 'gaz_bottle' then
-				TriggerServerEvent('esx_mechanicjob:startHarvest')
-			elseif data.current.value == 'fix_tool' then
-				TriggerServerEvent('esx_mechanicjob:startHarvest2')
-			elseif data.current.value == 'caro_tool' then
-				TriggerServerEvent('esx_mechanicjob:startHarvest3')
+			--if data.current.value == 'gaz_bottle' then
+				--TriggerServerEvent('esx_mechanicjob:startHarvest')
+			--if data.current.value == 'fix_tool' then
+				--TriggerServerEvent('esx_mechanicjob:startHarvest2')
+			--elseif data.current.value == 'caro_tool' then
+				--TriggerServerEvent('esx_mechanicjob:startHarvest3')
 			end
 		end, function(data, menu)
 			menu.close()
@@ -388,7 +388,7 @@ function OpenMechanicHarvestMenu()
 	else
 		ESX.ShowNotification(_U('not_experienced_enough'))
 	end
-end
+end]]--
 
 function OpenMechanicCraftMenu()
 	if Config.EnablePlayerManagement and ESX.PlayerData.job and ESX.PlayerData.job.grade_name ~= 'recrue' then
@@ -402,7 +402,7 @@ function OpenMechanicCraftMenu()
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'mechanic_craft', {
 			title    = _U('craft'),
-			align    = 'top-left',
+			align    = 'bottom',
 			elements = elements
 		}, function(data, menu)
 			menu.close()
@@ -841,7 +841,7 @@ AddEventHandler('esx_mechanicjob:onFixkit', function()
 		end
 
 		if DoesEntityExist(vehicle) then
-			TaskStartScenarioInPlace(playerPed, 'PROP_HUMAN_BUM_BIN', 0, true)
+			TaskStartScenarioInPlace(playerPed, 'WORLD_HUMAN_VEHICLE_MECHANIC', 0, true)
 			Citizen.CreateThread(function()
 				Citizen.Wait(20000)
 				SetVehicleFixed(vehicle)

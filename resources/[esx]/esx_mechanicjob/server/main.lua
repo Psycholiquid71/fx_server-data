@@ -60,15 +60,15 @@ end)
 
 -- End Scrap Yard Realism
 
-RegisterServerEvent('esx_mechanicjob:startHarvest')
+--[[RegisterServerEvent('esx_mechanicjob:startHarvest')
 AddEventHandler('esx_mechanicjob:startHarvest', function()
 	local _source = source
 	PlayersHarvesting[_source] = true
 	TriggerClientEvent('esx:showNotification', _source, _U('recovery_gas_can'))
 	Harvest(source)
-end)
+end)]]
 
-RegisterServerEvent('esx_mechanicjob:stopHarvest')
+--[[RegisterServerEvent('esx_mechanicjob:stopHarvest')
 AddEventHandler('esx_mechanicjob:stopHarvest', function()
 	local _source = source
 	PlayersHarvesting[_source] = false
@@ -135,7 +135,7 @@ RegisterServerEvent('esx_mechanicjob:stopHarvest3')
 AddEventHandler('esx_mechanicjob:stopHarvest3', function()
 	local _source = source
 	PlayersHarvesting3[_source] = false
-end)
+end)]]
 
 local function Craft(source)
 	SetTimeout(4000, function()
@@ -148,7 +148,7 @@ local function Craft(source)
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough_gas_can'))
 			else
 				xPlayer.removeInventoryItem('gazbottle', 1)
-				xPlayer.addInventoryItem('blowpipe', 1)
+				xPlayer.addInventoryItem('blowpipe', math.random(0, 3))
 				Craft(source)
 			end
 		end
@@ -180,8 +180,8 @@ local function Craft2(source)
 			if FixToolQuantity <= 5 then
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough_repair_tools'))
 			else
-				xPlayer.removeInventoryItem('fixtool', 1)
-				xPlayer.addInventoryItem('fixkit', 1)
+				xPlayer.removeInventoryItem('fixtool',1)
+				xPlayer.addInventoryItem('fixkit', math.random(0, 2))
 				Craft2(source)
 			end
 		end
@@ -214,7 +214,7 @@ local function Craft3(source)
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough_body_tools'))
 			else
 				xPlayer.removeInventoryItem('carotool', 1)
-				xPlayer.addInventoryItem('carokit', 1)
+				xPlayer.addInventoryItem('carokit', math.random(1, 3))
 				Craft3(source)
 			end
 		end

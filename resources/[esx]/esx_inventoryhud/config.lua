@@ -12,6 +12,7 @@ Config.CloseUiItems = {"headbag", "fishingrod", "tunerlaptop", "binoculars", "gp
 Config.ShopBlipID = 52
 Config.LiquorBlipID = 93
 Config.YouToolBlipID = 402
+Config.MachineShopBlipID = 402
 Config.PrisonShopBlipID = 52
 Config.WeedStoreBlipID = 140
 Config.WeaponShopBlipID = 110
@@ -19,6 +20,7 @@ Config.WeaponShopBlipID = 110
 Config.ShopLength = 14
 Config.LiquorLength = 10
 Config.YouToolLength = 2
+Config.MachineShopLength = 2
 Config.PrisonShopLength = 2
 
 Config.Color = 2
@@ -106,6 +108,22 @@ Config.Shops = {
             {name = 'highgradefert'},
             {name = 'plantpot'},
             {name = 'drugscales'},
+            {name = 'carotool'},
+            {name = 'adlockpick'}
+        }
+    },
+
+    MachineShop = {
+        Locations = {
+            {x = -185.26, y = 6271.39, z = 31.49},
+        },
+        Items = {
+            {name = 'drill'},
+            {name = 'fixkit'},
+            {name = 'fixtool'},
+            {name = 'radar'},
+            {name = 'lockpick'},
+            {name = 'blowtorch'},
             {name = 'adlockpick'}
         }
     },
