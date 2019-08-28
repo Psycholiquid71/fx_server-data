@@ -33,6 +33,8 @@ local function Harvest(source)
 	end)
 end
 
+-- Added for Scrap Yard Realism
+
 ESX.RegisterServerCallback('canPickUp', function(source, cb, item)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local xItem = xPlayer.getInventoryItem(item)
@@ -52,9 +54,11 @@ AddEventHandler('pickedUpParts', function()
 	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
 		TriggerClientEvent('esx:showNotification', _source, _U('gaz_inventoryfull'))
 	else
-		xPlayer.addInventoryItem(xItem.name, math.random(1, 5))
+		xPlayer.addInventoryItem(xItem.name, math.random(0, 1))
 	end
 end)
+
+-- End Scrap Yard Realism
 
 RegisterServerEvent('esx_mechanicjob:startHarvest')
 AddEventHandler('esx_mechanicjob:startHarvest', function()
