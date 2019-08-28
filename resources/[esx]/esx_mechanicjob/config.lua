@@ -18,6 +18,13 @@ Config.Vehicles = {
 	'buffalo'
 }
 
+Config.PartsZones = {
+	GazBottle = {coords = vector3(1047.77, 3584.66, 33.56)},
+	--CocaineField = {coords = vector3(1849.8, 4914.2, 44.92)},
+	--EphedrineField = {coords = vector3(1591.18, -1982.81, 95.12)},
+	--PoppyField = {coords = vector3(-1815.83, 1972.43, 132.71)},
+}
+
 Config.Zones = {
 
 	MechanicActions = {

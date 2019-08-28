@@ -79,4 +79,5 @@ vcf_files = {
 	"hwaycar10.xml",
 	"tflatbed4.xml",
 	"f550tow.xml",
+	"pd2.xml",
 }

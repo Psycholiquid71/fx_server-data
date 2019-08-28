@@ -3,6 +3,9 @@ local CurrentAction, CurrentActionMsg, CurrentActionData = nil, '', {}
 local CurrentlyTowedVehicle, Blips, NPCOnJob, NPCTargetTowable, NPCTargetTowableZone = nil, {}, false, nil, nil
 local NPCHasSpawnedTowable, NPCLastCancel, NPCHasBeenNextToTowable, NPCTargetDeleterZone = false, GetGameTimer() - 5 * 60000, false, false
 local isDead, isBusy = false, false
+local spawnedParts = 2
+local mechParts = {}
+local isPickingUp, isProcessing = false, false
 
 ESX = nil
 
@@ -18,6 +21,150 @@ Citizen.CreateThread(function()
 
 	ESX.PlayerData = ESX.GetPlayerData()
 end)
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+		local playerPed = PlayerPedId()
+		local coords = GetEntityCoords(playerPed)
+		local nearbyObject, nearbyID
+
+		for i=1, #mechParts, 1 do
+			if GetDistanceBetweenCoords(coords, GetEntityCoords(mechParts[i]), false) < 1 then
+				nearbyObject, nearbyID = mechParts[i], i
+			end
+		end
+
+		if nearbyObject and IsPedOnFoot(playerPed) then
+
+			if not isPickingUp then
+				ESX.ShowHelpNotification(_U('parts_pickupprompt'))
+			end
+
+			if IsControlJustReleased(0, Keys['E']) and not isPickingUp then
+				isPickingUp = true
+
+				ESX.TriggerServerCallback('canPickUp', function(canPickUp)
+
+					if canPickUp then
+						TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
+
+						Citizen.Wait(2000)
+						ClearPedTasks(playerPed)
+						Citizen.Wait(1500)
+
+						ESX.Game.DeleteObject(nearbyObject)
+
+						table.remove(mechParts, nearbyID)
+						spawnedParts = spawnedParts - 1
+
+						TriggerServerEvent('pickedUpParts')
+					else
+						ESX.ShowNotification(_U('you_do_not_room'))
+					end
+
+					isPickingUp = false
+
+				end, 'gazbottle')
+			end
+
+		else
+			Citizen.Wait(500)
+		end
+
+	end
+
+end)
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(10)
+		local coords = GetEntityCoords(PlayerPedId())
+
+		if GetDistanceBetweenCoords(coords, Config.PartsZones.GazBottle.coords, true) < 50 then
+			TriggerEvent('esx:showNotification', _U('you_smell_gas'))
+			SpawnParts()
+			Citizen.Wait(500)
+		else
+			Citizen.Wait(500)
+		end
+	end
+end)
+
+function SpawnParts()
+	while spawnedParts < 5 do
+		Citizen.Wait(0)
+		local partsCoords = GeneratePartsCoords()
+
+		ESX.Game.SpawnLocalObject('prop_ld_flow_bottle', partsCoords, function(obj)
+			PlaceObjectOnGroundProperly(obj)
+			FreezeEntityPosition(obj, true)
+
+			table.insert(mechParts, obj)
+			spawnedParts = spawnedParts + 1
+		end)
+	end
+end
+
+function GeneratePartsCoords()
+	while true do
+		Citizen.Wait(1)
+
+		local partCoordX, partCoordY
+
+		math.randomseed(GetGameTimer())
+		local modX = math.random(-20, 20)
+
+		Citizen.Wait(100)
+
+		math.randomseed(GetGameTimer())
+		local modY = math.random(-20, 20)
+
+		partCoordX = Config.PartsZones.GazBottle.coords.x + modX
+		partCoordY = Config.PartsZones.GazBottle.coords.y + modY
+
+		local coordZ = GetCoordZ(partCoordX, partCoordY)
+		local coord = vector3(partCoordX, partCoordY, coordZ)
+
+		if ValidatePartsCoord(coord) then
+			return coord
+		end
+	end
+end
+
+function GetCoordZ(x, y)
+	local groundCheckHeights = { 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0 }
+
+	for i, height in ipairs(groundCheckHeights) do
+		local foundGround, z = GetGroundZFor_3dCoord(x, y, height)
+
+		if foundGround then
+			return z
+		end
+	end
+
+	return 45.0
+end
+
+function ValidatePartsCoord(partCoord)
+	if spawnedParts > 0 then
+		local validate = true
+
+		for k, v in pairs(mechParts) do
+			if GetDistanceBetweenCoords(partCoord, GetEntityCoords(v), true) < 0.5 then
+				validate = false
+			end
+		end
+
+		if GetDistanceBetweenCoords(partCoord, Config.PartsZones.GazBottle.coords, false) > 5 then
+			validate = false
+		end
+
+		return validate
+	else
+		return true
+	end
+end
 
 function SelectRandomTowable()
 	local index = GetRandomIntInRange(1,  #Config.Towables)

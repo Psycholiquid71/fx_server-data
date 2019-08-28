@@ -33,6 +33,29 @@ local function Harvest(source)
 	end)
 end
 
+ESX.RegisterServerCallback('canPickUp', function(source, cb, item)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local xItem = xPlayer.getInventoryItem(item)
+
+	if xItem.limit ~= -1 and xItem.count >= xItem.limit then
+		cb(false)
+	else
+		cb(true)
+	end
+end)
+
+RegisterServerEvent('pickedUpParts')
+AddEventHandler('pickedUpParts', function()
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local xItem = xPlayer.getInventoryItem('gazbottle')
+
+	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
+		TriggerClientEvent('esx:showNotification', _source, _U('gaz_inventoryfull'))
+	else
+		xPlayer.addInventoryItem(xItem.name, math.random(1, 5))
+	end
+end)
+
 RegisterServerEvent('esx_mechanicjob:startHarvest')
 AddEventHandler('esx_mechanicjob:startHarvest', function()
 	local _source = source

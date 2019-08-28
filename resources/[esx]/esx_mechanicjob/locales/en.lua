@@ -83,4 +83,7 @@ Locales['en'] = {
   ['have_withdrawn']            = 'you have withdrawn ~y~x%s~s~ ~b~%s~s~',
   ['have_deposited']            = 'you have deposited ~y~x%s~s~ ~b~%s~s~',
   ['player_cannot_hold']        = 'you do ~r~not~s~ have enough ~y~free space~s~ in your inventory!',
+  ['parts_pickupprompt']        = 'you have found a half full gas bottle press ~INPUT_CONTEXT~ to pick it up. ',
+  ['you_smell_gas']             = 'you smell gas, maybe there are gas bottles about.',
+  ['gaz_inventoryfull']         = 'you can hold no more bottles.'
 }
