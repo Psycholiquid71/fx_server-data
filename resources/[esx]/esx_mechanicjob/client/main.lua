@@ -243,7 +243,7 @@ function OpenMechanicActionsMenu()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'mechanic_actions', {
 		title    = _U('mechanic'),
-		align    = 'top-left',
+		align    = 'bottom',
 		elements = elements
 	}, function(data, menu)
 		if data.current.value == 'vehicle_list' then
@@ -261,7 +261,7 @@ function OpenMechanicActionsMenu()
 
 					ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'vehicle_spawner', {
 						title    = _U('service_vehicle'),
-						align    = 'top-left',
+						align    = 'bottom',
 						elements = elements
 					}, function(data, menu)
 						menu.close()
@@ -295,7 +295,7 @@ function OpenMechanicActionsMenu()
 
 				ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'spawn_vehicle', {
 					title    = _U('service_vehicle'),
-					align    = 'top-left',
+					align    = 'bottom',
 					elements = elements
 				}, function(data, menu)
 					if Config.MaxInService == -1 then
@@ -431,7 +431,7 @@ function OpenMobileMechanicActionsMenu()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'mobile_mechanic_actions', {
 		title    = _U('mechanic'),
-		align    = 'top-left',
+		align    = 'bottom',
 		elements = {
 			{label = _U('billing'),       value = 'billing'},
 			{label = _U('hijack'),        value = 'hijack_vehicle'},
@@ -536,7 +536,8 @@ function OpenMobileMechanicActionsMenu()
 					SetVehicleDirtLevel(vehicle, 0)
 					ClearPedTasksImmediately(playerPed)
 
-					ESX.ShowNotification(_U('vehicle_cleaned'))
+					--ESX.ShowNotification(_U('vehicle_cleaned'))
+					exports['mythic_notify']:DoHudText('success', _U('vehicle_cleaned'))
 					isBusy = false
 				end)
 			else
@@ -640,7 +641,7 @@ function OpenMobileMechanicActionsMenu()
 
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'mobile_mechanic_actions_spawn', {
 				title    = _U('objects'),
-				align    = 'top-left',
+				align    = 'bottom',
 				elements = {
 					{label = _U('roadcone'), value = 'prop_roadcone02a'},
 					{label = _U('toolbox'),  value = 'prop_toolchest_01'}
@@ -682,7 +683,7 @@ function OpenGetStocksMenu()
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'stocks_menu', {
 			title    = _U('mechanic_stock'),
-			align    = 'top-left',
+			align    = 'bottom',
 			elements = elements
 		}, function(data, menu)
 			local itemName = data.current.value
@@ -729,7 +730,7 @@ function OpenPutStocksMenu()
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'stocks_menu', {
 			title    = _U('inventory'),
-			align    = 'top-left',
+			align    = 'bottom',
 			elements = elements
 		}, function(data, menu)
 			local itemName = data.current.value
@@ -873,10 +874,10 @@ AddEventHandler('esx_mechanicjob:hasEnteredMarker', function(zone)
 		CurrentAction     = 'mechanic_actions_menu'
 		CurrentActionMsg  = _U('open_actions')
 		CurrentActionData = {}
-	elseif zone == 'Garage' then
+	--[[elseif zone == 'Garage' then
 		CurrentAction     = 'mechanic_harvest_menu'
 		CurrentActionMsg  = _U('harvest_menu')
-		CurrentActionData = {}
+		CurrentActionData = {}]]
 	elseif zone == 'Craft' then
 		CurrentAction     = 'mechanic_craft_menu'
 		CurrentActionMsg  = _U('craft_menu')
@@ -1097,8 +1098,8 @@ Citizen.CreateThread(function()
 
 				if CurrentAction == 'mechanic_actions_menu' then
 					OpenMechanicActionsMenu()
-				elseif CurrentAction == 'mechanic_harvest_menu' then
-					OpenMechanicHarvestMenu()
+				--[[elseif CurrentAction == 'mechanic_harvest_menu' then
+					OpenMechanicHarvestMenu()]]
 				elseif CurrentAction == 'mechanic_craft_menu' then
 					OpenMechanicCraftMenu()
 				elseif CurrentAction == 'delete_vehicle' then
