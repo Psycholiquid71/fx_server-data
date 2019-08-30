@@ -1143,6 +1143,17 @@
         "IsZero": false
       },
       "heading": 140.096786
+    },
+    {
+      "name": "Clothing Store",
+      "coordinates": {
+        "X": 426.933319,
+        "Y": -800.9666,
+        "Z": 29.49114,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 305.9844
     }
   ],
   "blips": [

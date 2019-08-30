@@ -59,6 +59,7 @@ function OpenMobileAmbulanceActionsMenu()
 
 				if closestPlayer == -1 or closestDistance > 1.5 then
 					ESX.ShowNotification(_U('no_players'))
+					exports['mythic_notify']:DoHudText('inform', _U('no_players'))
 				else
 
 					if data.current.value == 'revive' then
@@ -73,6 +74,7 @@ function OpenMobileAmbulanceActionsMenu()
 									local playerPed = PlayerPedId()
 
 									ESX.ShowNotification(_U('revive_inprogress'))
+									exports['mythic_notify']:DoHudText('inform', _U('revive_inprogress'))
 
 									local lib, anim = 'mini@cpr@char_a@cpr_str', 'cpr_pumpchest'
 
@@ -90,14 +92,18 @@ function OpenMobileAmbulanceActionsMenu()
 									-- Show revive award?
 									if Config.ReviveReward > 0 then
 										ESX.ShowNotification(_U('revive_complete_award', GetPlayerName(closestPlayer), Config.ReviveReward))
+										exports['mythic_notify']:DoHudText('success', _U('revive_complete_award'))
 									else
 										ESX.ShowNotification(_U('revive_complete', GetPlayerName(closestPlayer)))
+										exports['mythic_notify']:DoHudText('success', _U('revive_complete'))
 									end
 								else
 									ESX.ShowNotification(_U('player_not_unconscious'))
+									exports['mythic_notify']:DoHudText('error', _U('player_not_unconscious'))
 								end
 							else
 								ESX.ShowNotification(_U('not_enough_medikit'))
+								exports['mythic_notify']:DoHudText('error', _U('not_enough_medikit'))
 							end
 
 							IsBusy = false
@@ -116,6 +122,7 @@ function OpenMobileAmbulanceActionsMenu()
 
 									IsBusy = true
 									ESX.ShowNotification(_U('heal_inprogress'))
+									exports['mythic_notify']:DoHudText('inform', _U('heal_inprogress'))
 									TaskStartScenarioInPlace(playerPed, 'CODE_HUMAN_MEDIC_TEND_TO_DEAD', 0, true)
 									Citizen.Wait(10000)
 									ClearPedTasks(playerPed)
@@ -123,12 +130,15 @@ function OpenMobileAmbulanceActionsMenu()
 									TriggerServerEvent('esx_ambulancejob:removeItem', 'bandage')
 									TriggerServerEvent('esx_ambulancejob:heal', GetPlayerServerId(closestPlayer), 'small')
 									ESX.ShowNotification(_U('heal_complete', GetPlayerName(closestPlayer)))
+									exports['mythic_notify']:DoHudText('success', _U('heal_complete'))
 									IsBusy = false
 								else
 									ESX.ShowNotification(_U('player_not_conscious'))
+									exports['mythic_notify']:DoHudText('error', _U('player_not_conscious'))
 								end
 							else
 								ESX.ShowNotification(_U('not_enough_bandage'))
+								exports['mythic_notify']:DoHudText('error', _U('not_enough_bandage'))
 							end
 						end, 'bandage')
 
@@ -154,9 +164,11 @@ function OpenMobileAmbulanceActionsMenu()
 									IsBusy = false
 								else
 									ESX.ShowNotification(_U('player_not_conscious'))
+									exports['mythic_notify']:DoHudText('error', _U('player_not_conscious'))
 								end
 							else
 								ESX.ShowNotification(_U('not_enough_medikit'))
+								exports['mythic_notify']:DoHudText('error', _U('not_enough_medikit'))
 							end
 						end, 'medikit')
 
@@ -518,10 +530,12 @@ function OpenVehicleSpawnerMenu(hospital, partNum)
 
 									TriggerServerEvent('esx_vehicleshop:setJobVehicleState', data2.current.vehicleProps.plate, false)
 									ESX.ShowNotification(_U('garage_released'))
+									exports['mythic_notify']:DoHudText('success', _U('garage_released'))
 								end)
 							end
 						else
 							ESX.ShowNotification(_U('garage_notavailable'))
+							exports['mythic_notify']:DoHudText('error', _U('garage_notavailable'))
 						end
 					end, function(data2, menu2)
 						menu2.close()
@@ -529,6 +543,7 @@ function OpenVehicleSpawnerMenu(hospital, partNum)
 
 				else
 					ESX.ShowNotification(_U('garage_empty'))
+					exports['mythic_notify']:DoHudText('inform', _U('garage_empty'))
 				end
 			end, 'car')
 
@@ -558,6 +573,7 @@ function StoreNearbyVehicle(playerCoords)
 		end
 	else
 		ESX.ShowNotification(_U('garage_store_nearby'))
+		exports['mythic_notify']:DoHudText('inform', _U('garage_store_nearby'))
 		return
 	end
 
@@ -598,8 +614,10 @@ function StoreNearbyVehicle(playerCoords)
 
 			IsBusy = false
 			ESX.ShowNotification(_U('garage_has_stored'))
+			exports['mythic_notify']:DoHudText('success', _U('garage_has_stored'))
 		else
 			ESX.ShowNotification(_U('garage_has_notstored'))
+			exports['mythic_notify']:DoHudText('error', _U('garage_has_notstored'))
 		end
 	end, vehiclePlates)
 end
@@ -619,6 +637,7 @@ function GetAvailableVehicleSpawnPoint(hospital, part, partNum)
 		return true, foundSpawnPoint
 	else
 		ESX.ShowNotification(_U('garage_blocked'))
+		exports['mythic_notify']:DoHudText('error', _U('garage_blocked'))
 		return false
 	end
 end
@@ -656,6 +675,7 @@ function OpenHelicopterSpawnerMenu(hospital, partNum)
 				end
 			else
 				ESX.ShowNotification(_U('helicopter_notauthorized'))
+				exports['mythic_notify']:DoHudText('error', _U('helicopter_notauthorized'))
 				return
 			end
 
@@ -700,10 +720,12 @@ function OpenHelicopterSpawnerMenu(hospital, partNum)
 
 									TriggerServerEvent('esx_vehicleshop:setJobVehicleState', data2.current.vehicleProps.plate, false)
 									ESX.ShowNotification(_U('garage_released'))
+									exports['mythic_notify']:DoHudText('success', _U('garage_released'))
 								end)
 							end
 						else
 							ESX.ShowNotification(_U('garage_notavailable'))
+							exports['mythic_notify']:DoHudText('error', _U('garage_notavailable'))
 						end
 					end, function(data2, menu2)
 						menu2.close()
@@ -711,6 +733,7 @@ function OpenHelicopterSpawnerMenu(hospital, partNum)
 
 				else
 					ESX.ShowNotification(_U('garage_empty'))
+					exports['mythic_notify']:DoHudText('inform', _U('garage_empty'))
 				end
 			end, 'helicopter')
 
@@ -752,6 +775,7 @@ function OpenShopMenu(elements, restoreCoords, shopCoords)
 				ESX.TriggerServerCallback('esx_ambulancejob:buyJobVehicle', function (bought)
 					if bought then
 						ESX.ShowNotification(_U('vehicleshop_bought', data.current.name, ESX.Math.GroupDigits(data.current.price)))
+						exports['mythic_notify']:DoHudText('success', _U('vehicleshop_bought', data.current.name, ESX.Math.GroupDigits(data.current.price)))
 
 						isInShopMenu = false
 						ESX.UI.Menu.CloseAll()
@@ -763,6 +787,7 @@ function OpenShopMenu(elements, restoreCoords, shopCoords)
 						ESX.Game.Teleport(playerPed, restoreCoords)
 					else
 						ESX.ShowNotification(_U('vehicleshop_money'))
+						exports['mythic_notify']:DoHudText('inform', _U('vehicleshop_money'))
 						menu2.close()
 					end
 				end, props, data.current.type)
@@ -898,6 +923,7 @@ function WarpPedInClosestVehicle(ped)
 		end
 	else
 		ESX.ShowNotification(_U('no_vehicles'))
+		exports['mythic_notify']:DoHudText('error', _U('no_vehicles'))
 	end
 end
 
@@ -916,5 +942,6 @@ AddEventHandler('esx_ambulancejob:heal', function(healType, quiet)
 
 	if not quiet then
 		ESX.ShowNotification(_U('healed'))
+		exports['mythic_notify']:DoHudText('success', _U('healed'))
 	end
 end)
