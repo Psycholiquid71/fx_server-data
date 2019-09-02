@@ -2,6 +2,110 @@
 <CVehicleModelInfoVariation>
   <variationData>
   	<Item>
+<modelName>3500cc</modelName>
+  <colors>
+    <Item>
+      <indices content="char_array">
+        134
+        134
+        156
+        156
+      </indices>
+      <liveries>
+        <Item value="true" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+      </liveries>
+    </Item>
+    <Item>
+      <indices content="char_array">
+        134
+        134
+        156
+        156
+      </indices>
+      <liveries>
+        <Item value="false" />
+        <Item value="true" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+      </liveries>
+    </Item>
+    <Item>
+      <indices content="char_array">
+        134
+        134
+        156
+        156
+      </indices>
+      <liveries>
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="true" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+      </liveries>
+    </Item>
+    <Item>
+      <indices content="char_array">
+        134
+        134
+        156
+        156
+      </indices>
+      <liveries>
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="true" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+      </liveries>
+    </Item>
+    <Item>
+      <indices content="char_array">
+        134
+        134
+        156
+        156
+      </indices>
+      <liveries>
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="true" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+        <Item value="false" />
+      </liveries>
+    </Item>
+  </colors>
+  <kits>
+    <Item>0_default_modkit</Item>
+  </kits>
+  <windowsWithExposedEdges />
+  <plateProbabilities>
+    <Probabilities />
+  </plateProbabilities>
+  <lightSettings value="1" />
+  <sirenSettings value="22" />
+</Item>
+    <Item>
       <modelName>16challenger</modelName>
       <colors>
         <Item>

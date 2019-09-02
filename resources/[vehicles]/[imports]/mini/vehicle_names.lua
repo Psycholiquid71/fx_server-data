@@ -3,5 +3,5 @@ function AddTextEntry(key, value)
 end
 Citizen.CreateThread(function()
     AddTextEntry('cooperworks', 'Mini Cooper') -- Enter Gamename from vehicles.lua and what you want it to display.
-    --AddTextEntry('gameName', 'Display_name')
+    AddTextEntry('COOPERS', '1965 Austin Mini Cooper')
 end)
