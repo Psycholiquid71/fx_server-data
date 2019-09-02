@@ -40,6 +40,43 @@
       <lightSettings value="20" />
       <sirenSettings value="0" />
     </Item>
+    <Item>
+      <modelName>rattfukt</modelName>
+			<colors>
+        <Item>
+          <indices content="char_array">
+            100
+            25
+            10
+            156
+          </indices>
+          <liveries>
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+			<windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="2" />
+      <sirenSettings value="813" />
+    </Item>
 
   </variationData>
 </CVehicleModelInfoVariation>

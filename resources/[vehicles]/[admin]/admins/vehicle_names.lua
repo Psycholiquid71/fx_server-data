@@ -2,6 +2,6 @@ function AddTextEntry(key, value)
 	Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), key, value)
 end
 Citizen.CreateThread(function()
-    AddTextEntry('gameName', 'Display_name') -- Enter Gamename from vehicles.lua and what you want it to display.
-    AddTextEntry('gameName', 'Display_name')
+    AddTextEntry('RATTFUKT', 'Dooms Day Hauler') -- Enter Gamename from vehicles.lua and what you want it to display.
+    AddTextEntry('kitt', 'Knight Industries 2000')
 end)

@@ -4,4 +4,5 @@ end
 Citizen.CreateThread(function()
     AddTextEntry('RX7TUNABLE', 'Mazda RX7 Spirit R') -- Enter Gamename from vehicles.lua and what you want it to display.
     AddTextEntry('na6', 'Mazda MX-5 Miata')
+    AddTextEntry('miata3', '1989 Mazda Miata 3')
 end)

@@ -3,5 +3,6 @@ function AddTextEntry(key, value)
 end
 Citizen.CreateThread(function()
     AddTextEntry('evo10', '2017 Mitsubishi Lancer Evolution') -- Enter Gamename from vehicles.lua and what you want it to display.
-    --AddTextEntry('gameName', 'Display_name')
+    AddTextEntry('3000GT', '1999 Mitsubishi 3000 GT')
+    AddTextEntry('3000GTA', '1999 Mitsubishi 3000 GTA')
 end)
