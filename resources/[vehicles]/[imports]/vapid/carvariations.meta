@@ -3,6 +3,170 @@
 <CVehicleModelInfoVariation>
   <variationData>  
     <Item>
+      <modelname>sandkinghdxl</modelname>
+      <colors>
+        <Item>
+          <indices>
+            <Item value="64" />
+            <Item value="0" />
+            <Item value="64" />
+            <Item value="156" />
+            <Item value="8" />
+            <Item value="8" />
+          </indices>
+          <liveries/>
+          </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>  
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Blue Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="5" />
+          </Item>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>White Plate 2</Name>
+            <Value value="5" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+    <Item>
+      <modelname>sandkinghd</modelname>
+      <colors>
+        <Item>
+          <indices>
+            <Item value="64" />
+            <Item value="0" />
+            <Item value="64" />
+            <Item value="156" />
+            <Item value="8" />
+            <Item value="8" />
+          </indices>
+          <liveries/>
+          </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>  
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Blue Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="5" />
+          </Item>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>White Plate 2</Name>
+            <Value value="5" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+    <Item>
+      <modelname>rancherxlextreme</modelname>
+      <colors>
+        <Item>
+          <indices>
+            <Item value="64" />
+            <Item value="0" />
+            <Item value="64" />
+            <Item value="156" />
+            <Item value="8" />
+            <Item value="8" />
+          </indices>
+          <liveries/>
+          </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>  
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Blue Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="5" />
+          </Item>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>White Plate 2</Name>
+            <Value value="5" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+    <Item>
+      <modelname>megram</modelname>
+      <colors>
+        <Item>
+          <indices>
+            <Item value="64" />
+            <Item value="0" />
+            <Item value="64" />
+            <Item value="156" />
+            <Item value="8" />
+            <Item value="8" />
+          </indices>
+          <liveries/>
+          </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>  
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Blue Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="5" />
+          </Item>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="45" />
+          </Item>
+          <Item>
+            <Name>White Plate 2</Name>
+            <Value value="5" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+    <Item>
       <modelName>domc</modelName>
       <colors>
         <Item>

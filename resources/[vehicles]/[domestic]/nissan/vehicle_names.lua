@@ -7,7 +7,7 @@ Citizen.CreateThread(function()
 	AddTextEntry('QASHQAI', '2016 Nissan Qashqai')
 	AddTextEntry('s15rb', 'Nissan Silva S15') 
 	AddTextEntry('NISMO20', 'Nissan Nismo 20') 
-	--AddTextEntry('', '') 
+	AddTextEntry('nissantitan17', '2017 Nissan Titan') 
 	--AddTextEntry('', '') 
 	
 end)
