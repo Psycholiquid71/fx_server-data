@@ -4,4 +4,5 @@ end
 Citizen.CreateThread(function()
     AddTextEntry('BGNX', '1987 Buick GNX') -- Enter Gamename from vehicles.lua and what you want it to display.
     AddTextEntry('ROADMASTER', '1996 Buick Roadmaster')
+    AddTextEntry('rmaster', '1957 Buick Roadmaster')
 end)

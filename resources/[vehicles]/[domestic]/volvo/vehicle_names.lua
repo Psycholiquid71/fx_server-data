@@ -3,5 +3,5 @@ function AddTextEntry(key, value)
 end
 Citizen.CreateThread(function()
     AddTextEntry('V242', 'Volvo 242 Turbo') -- Enter Gamename from vehicles.lua and what you want it to display.
-    --AddTextEntry('gameName', 'Display_name')
+    AddTextEntry('AMAZON', '1960 Volvo Amazon')
 end)
