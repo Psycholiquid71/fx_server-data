@@ -4,7 +4,7 @@ end
 Citizen.CreateThread(function()
     AddTextEntry('lex570', 'Lexus X570') -- Enter Gamename from vehicles.lua and what you want it to display.
     AddTextEntry('lc500', 'Lexus LC 500')
-	--AddTextEntry('', '')
+	AddTextEntry('gx460', 'Lexus GX460')
 	--AddTextEntry('', '')
 	--AddTextEntry('', '')
 	--AddTextEntry('', '')

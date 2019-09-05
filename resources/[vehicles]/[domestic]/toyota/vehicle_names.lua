@@ -7,8 +7,8 @@ Citizen.CreateThread(function()
     AddTextEntry('SUPRA2', 'Toyota Supra JZA80')
 	AddTextEntry('camry55', '2016 Toyota Camry')
 	AddTextEntry('DILETTAN', 'Toyota Prius')
-	AddTextEntry('', '')
-	AddTextEntry('', '')
+	AddTextEntry('SUPRAMK4', '1993 Toyota Supra MK IV')
+	AddTextEntry('SUPRA4MK', '1993 Toyota Supra MK IV (FnF)')
 	AddTextEntry('', '')
 
 	
