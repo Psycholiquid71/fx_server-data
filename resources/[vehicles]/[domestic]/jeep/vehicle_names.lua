@@ -10,7 +10,6 @@ Citizen.CreateThread(function()
 	AddTextEntry('SRT8B', '2015 Jeep SRT-8 Black')
 	AddTextEntry('wagoneer', '1986 Jeep Wagoneer')
 	AddTextEntry('CHERS84', 'Cherokee  Sport 1984  Off Road 4x4')
-	--AddTextEntry('', '')
-	
-	
+	AddTextEntry('crawler', 'Offroad Crawler')
+	AddTextEntry('RENEGADE', '2018 Jeep Renegade')	
 end)

@@ -3,6 +3,55 @@
 <CVehicleModelInfoVariation>
   <variationData>
 	<Item>
+      <modelName>hcbr17</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            134
+            134
+            0
+            0
+          </indices>
+          <liveries>
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+      </colors>
+      <kits>
+        <Item>2269_vehicles_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="25" />
+          </Item>
+          <Item>
+            <Name>White Plate 2</Name>
+            <Value value="25" />
+          </Item>
+          <Item>
+            <Name>Blue Plate</Name>
+            <Value value="25" />
+          </Item>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="25" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+  <Item>
       <modelName>cb500x</modelName>
       <colors>
         <Item>
@@ -755,7 +804,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>
+	    <Item>
           <indices content="char_array">
             111 
             111
@@ -791,7 +840,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>
+	    <Item>
           <indices content="char_array">
             31 
             73
@@ -809,7 +858,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>	
+	    <Item>	
           <indices content="char_array">
             33 
             73
@@ -827,7 +876,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>
+	    <Item>
           <indices content="char_array">
             143 
             73
@@ -845,7 +894,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>
+	    <Item>
           <indices content="char_array">
             141
             73
@@ -863,7 +912,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>
+	    <Item>
           <indices content="char_array">
             62 
             73
@@ -881,7 +930,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>
+	    <Item>
           <indices content="char_array">
             111 
             73
@@ -899,7 +948,7 @@
             <Item value="false" />
           </liveries>
         </Item>
-	<Item>
+	    <Item>
           <indices content="char_array">
             146 
             73

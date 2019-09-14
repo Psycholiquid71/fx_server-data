@@ -2,6 +2,38 @@
 <CVehicleModelInfoVariation>
   <variationData>
   	<Item>
+      <modelName>2008f150</modelName>
+      <colors>
+	<Item>
+          <indices content="char_array">
+            8 
+            8 
+            134 
+            156
+          </indices>
+          <liveries>
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="614" />
+      <sirenSettings value="0" />
+    </Item>
+    <Item>
       <modelName>mustang19</modelName>
       <colors>
         <Item>

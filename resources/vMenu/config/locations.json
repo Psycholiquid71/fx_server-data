@@ -1,17 +1,6 @@
 {
   "teleports": [
     {
-      "name": "Example Location",
-      "coordinates": {
-        "X": 472.94,
-        "Y": -3035.96,
-        "Z": 6.2,
-        "IsNormalized": false,
-        "IsZero": false
-      },
-      "heading": 356.1
-    },
-    {
       "name": "Mission Row Jail",
       "coordinates": {
         "X": 464.9925,
@@ -1154,6 +1143,17 @@
         "IsZero": false
       },
       "heading": 305.9844
+    },
+    {
+      "name": "Diner",
+      "coordinates": {
+        "X": 788.1,
+        "Y": -736.9543,
+        "Z": 27.6082249,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 277.53656
     }
   ],
   "blips": [
