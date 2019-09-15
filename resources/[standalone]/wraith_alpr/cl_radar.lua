@@ -60,7 +60,7 @@ end
 --[[------------------------------------------------------------------------
     Police Vehicle Radar 
 ------------------------------------------------------------------------]]--
-local radarEnabled = true 
+local radarEnabled = false 
 local hidden = false 
 local radarInfo = 
 { 

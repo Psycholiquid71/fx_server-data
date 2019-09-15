@@ -8,8 +8,8 @@ Citizen.CreateThread(function()
 	AddTextEntry('VIPERGTSACR', '1999 Dodge Viper')
 	AddTextEntry('chall70', '1970 Dodge Challenger')
 	AddTextEntry('3500cc', '1999 Dodge Ram 3500 King Cab')
-	--AddTextEntry('', '')
-	--AddTextEntry('', '')
+	AddTextEntry('dodgesrt2', '2004 Dodge Ram SRT')
+	AddTextEntry('19ram', '2019 Dodge Ram 1500 Slammed')
 	--AddTextEntry('', '')
 	
     
