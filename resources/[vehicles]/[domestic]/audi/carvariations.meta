@@ -572,7 +572,7 @@
         </Item>
       </colors>
       <kits>
-        <Item>898_rs4avant_modkit</Item>
+        <Item>897_rs4avant_modkit</Item>
       </kits>
       <windowsWithExposedEdges />
       <plateProbabilities>
@@ -583,7 +583,7 @@
           </Item>
         </Probabilities>
       </plateProbabilities>
-      <lightSettings value="898" />
+      <lightSettings value="897" />
       <sirenSettings value="0" />
     </Item>
 	<Item>

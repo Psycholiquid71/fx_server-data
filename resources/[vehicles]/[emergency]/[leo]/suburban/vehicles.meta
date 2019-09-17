@@ -8,7 +8,7 @@
       <txdName>suburban1</txdName>
       <handlingId>suburban1</handlingId>
       <gameName>suburban1</gameName>
-      <vehicleMakeName>chevy</vehicleMakeName>
+      <vehicleMakeName>Chevy</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
       <expressionName>null</expressionName>
       <animConvRoofDictName>null</animConvRoofDictName>
@@ -122,11 +122,11 @@
       </firstPersonDrivebyData>
     </Item>
     <Item>
-      <modelName>suburba2</modelName>
+      <modelName>suburban2</modelName>
       <txdName>suburban2</txdName>
       <handlingId>suburban2</handlingId>
       <gameName>suburban2</gameName>
-      <vehicleMakeName>chevy</vehicleMakeName>
+      <vehicleMakeName>Chevy</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
       <expressionName>null</expressionName>
       <animConvRoofDictName>null</animConvRoofDictName>

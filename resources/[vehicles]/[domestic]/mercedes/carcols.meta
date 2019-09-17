@@ -1740,8 +1740,8 @@
       <liveryNames />
     </Item>
 	<Item>
-      <kitName>952_600sel_modkit</kitName>
-      <id value="952" />	 	  
+      <kitName>953_600sel_modkit</kitName>
+      <id value="953" />	 	  
       <kitType>MKT_SPECIAL</kitType>
       <visibleMods> 
         <Item>
