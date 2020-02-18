@@ -6,6 +6,6 @@ I also stream helping people with other technology such as CentOS7 and game serv
 
 I am curently working with PixelWorldRP setting up cars and doing various System Adminsitration Tasks.
 
-<b>Remeber if you use scripts from this repo it may require some of the maps I have here also or you will not be able to reach the locations</b>
+<b>Remember if you use scripts from this repo it may require some of the maps I have here also or you will not be able to reach the locations</b>
 
 All scripts located on this repo are owned by their respective developers. I did none of this code other than to rearange stuff. If you find any issues that pertain to readmes or ownership not showing please contact me and I will add the readmes back in.
